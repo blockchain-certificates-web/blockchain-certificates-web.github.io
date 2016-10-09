@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="about about--03">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        {% if page.guide_back %}
+
+          <a href="/guide/schemas.html">❮ Back</a>
+
+        {% else %}
+
+        <div class="guide-sidebar">
+          <h6>Introduction</h6>
+          <ul>
+            <li {% if page.url == '/guide/' %}class="active"{% endif %}><a href="/guide/">Introduction</a></li>
+            <li {% if page.url == '/guide/identity-faq.html' %}class="active"{% endif %}><a href="/guide/identity-faq.html">Identity FAQ</a></li>
+            <li {% if page.url == '/guide/general-faq.html' %}class="active"{% endif %}><a href="/guide/general-faq.html">General FAQ</a></li>
+            <li {% if page.url == '/guide/technical-faq.html' %}class="active"{% endif %}><a href="/guide/technical-faq.html"> Bitcoin FAQ</a></li>
+          </ul>
+          <h6>Technical Docs</h6>
+          <ul>
+            <li {% if page.url == '/guide/quick-start.html' %}class="active"{% endif %}><a href="/guide/quick-start.html">Quick Start</a></li>
+            <li {% if page.url == '/guide/system-overview.html' %}class="active"{% endif %}><a href="/guide/system-overview.html">System Overview</a></li>
+            <li {% if page.url == '/guide/schemas.html' %}class="active"{% endif %}><a href="/guide/schemas.html">Schemas</a></li>
+            <li {% if page.url == '/guide/creating-certificates.html' %}class="active"{% endif %}><a href="/guide/creating-certificates.html">Creating Certificates</a></li>
+            <li {% if page.url == '/guide/batch-issuing.html' %}class="active"{% endif %}><a href="/guide/batch-issuing.html">Batch Issuing</a></li>
+            <li {% if page.url == '/guide/verification-process.html' %}class="active"{% endif %}><a href="/guide/verification-process.html">Verification Process</a></li>
+          </ul>
+        </div>
+        {% endif %}
+
+      </div>
+      <div class="col-lg-9 col-md-9 col-sm-12 guide-content">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</div>

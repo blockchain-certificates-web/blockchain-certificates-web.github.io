@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <meta name="description" content="Build apps that create, issue, view, and verify blockchain-based certificates within academic credentialing, professional certifications, and workforce development.">
+    <meta name="author" content="Blockcerts">
+    <meta charset="utf-8">
+    <meta property="og:title" content="Blockchain Certificates" />
+    <meta property="og:description" content="Build apps that create, issue, view, and verify blockchain-based certificates within academic credentialing, professional certifications, and workforce development." />
+    <meta property="og:url" content="http://blockcerts.org/" />
+    <meta property="og:site_name" content="Blockcerts" />
+    <meta property="article:tag" content="Blockchain Certificates" />
+    <meta property="og:image" content="/assets/img/pictures/blockcerts.png" />
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="/assets/js/main.js" defer></script>
+
+    <title>{% if page.title %}{{ page.title }} - {% endif %}Blockcerts : The Open Standard for Blockchain Certificates</title>
+  </head>
+
+  <body>
+    <main class="page_wrapper">
+      <nav data-menu-index="01" class="menu menu--01 js-menu">
+        <div class="menu__container">
+          <button type="button" class="menu__closer js-close-menu">close</button>
+          <div class="menu__box">
+            <ul class="menu__list">
+              <li class="menu__item active"><a href="/" class="menu__link">Home</a></li>
+              <li class="menu__item"><a href="/guide/" class="menu__link">Guide</a></li>
+              <li class="menu__item"><a href="/about.html" class="menu__link">About</a></li>
+              <li class="menu__item"><a href="https://github.com/blockchain-certificates" class="menu__link">Github</a></li>
+            </ul>
+            <ul class="social">
+              <li class="social__item social__item--left_margin"><a href="https://twitter.com/Blockcerts" title="Say hello in Twitter!" class="social__link social__link--twitter"></a></li>
+              <li class="social__item social__item--left_margin"><a href="https://www.facebook.com/blockcerts/" title="Say hello in Facebook!" class="social__link social__link--facebook"></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    {% if page.home %}
+      <div style="background-image: url('/assets/img/bg/bg--network.jpg'); min-height: 100vh;" class="cover cover--09 js-cover">
+    {% else %}
+      <div class="inner-page" style="min-height: 125px; background-color: #062451">
+    {% endif %}
+
+        <nav class="header header--01">
+          <div class="container header__container">
+            <div class="header__left_box"><a href="/" title="Home" class="header__logo_box"><img src="/assets/img/etc/blockcerts.png" alt="Learning Machine" class="header__logo_img"></a></div>
+            
+            <div class="header__right_box">
+              <ul class="header__menu_list header__item--desktop">
+                <li class="header__menu_item"><a href="/" class="header__menu_link header__menu_link--white">Home</a></li>
+                <li class="header__menu_item"><a href="/guide/" class="header__menu_link header__menu_link--white">Guide</a></li>
+                <li class="header__menu_item"><a href="/about.html" class="header__menu_link header__menu_link--white">About</a></li>
+                <li class="header__menu_item"><a href="https://github.com/blockchain-certificates" class="header__menu_link header__menu_link--white"><img src="/assets/img/icons/github.png" class="cover__img--16" style="width: 18px; top: -2px; position: relative; margin-right: 2px;"> Github</a></li>
+              </ul>
+              <button type="button" data-menu-index="01" class="header__burger_button js-open-menu header__item--mobile"></button>
+
+            </div>
+          </div>
+        </nav>
+
+
+
+        {% if page.home %}
+
+        <div class="container cover__container--16 cover__content_box--16">
+          <div class="cover__text_box--16">
+            <h2 class="cover__title--16"><span class="cover__title_text--16">The Open Standard <br/>for Blockchain Certificates</span></h2>
+
+            <div class="cover__description_box--16">
+              <span class="cover__description_text--16">Build apps that create, issue, view, and verify blockchain-based certificates within academic credentialing, professional certifications, and workforce development.</span>
+            </div>
+
+            <a href="/guide/" class="button button--border-white">Learn More</a>
+          </div>
+        </div>
+
+        {% endif %}
+
+      </div>
+    </div>
+
+
+
+    {{ content }}
+
+      <footer class="footer footer--04">
+        <div class="footer__main_box--04">
+          <div class="container footer__container"><a href="/" class="footer__logo_box footer__logo_box--04"><img src="/assets/img/etc/blockcerts.png" class="footer__logo"></a>
+            <ul class="footer__nav footer__nav--04">
+              <li class="footer__nav__item footer__nav__item--04"><a href="/" class="footer__nav__link footer__nav__link--04">Home</a></li>
+              <li class="footer__nav__item footer__nav__item--04"><a href="/guide/" class="footer__nav__link footer__nav__link--04">Guide</a></li>
+              <li class="footer__nav__item footer__nav__item--04"><a href="/about.html" class="footer__nav__link footer__nav__link--04">About</a></li>
+              <li class="footer__nav__item footer__nav__item--04"><a href="https://github.com/blockchain-certificates" class="footer__nav__link footer__nav__link--04">Github</a></li>
+            </ul>
+            <ul class="social footer__social--04 footer__social_box">
+              <li class="social__item social__item--left_margin"><a href="https://twitter.com/Blockcerts" title="Say hello in Twitter!" class="social__link social__link--twitter"></a></li>
+              <li class="social__item social__item--left_margin"><a href="https://www.facebook.com/blockcerts/" title="Say hello in Facebook!" class="social__link social__link--facebook"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__description_box--04">
+          <div class="container footer__container"><span class="footer__description footer__description--04">The Open Standard for Blockchain Certificates</span><span class="footer__copyright footer__copyright--04"><a href="https://opensource.org/licenses/MIT">The MIT License (MIT)</a></span></div>
+        </div>
+      </footer>
+
+
+
+    </main>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1694379-18', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+  <div class="js-overlay js-close-navigation js-close-menu overlay"></div>
+</html>
