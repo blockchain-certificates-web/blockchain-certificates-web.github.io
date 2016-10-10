@@ -4,11 +4,19 @@ layout: guide
 
 ## Schemas
 
-The Blockchain Certificate schema is an extension of [Open Badges](https://openbadgespec.org/). We are working closely with the Open Badges team to bring our schema up to the OBI v2 spec.
+Blockchain Certificate schemas extend those of [Open Badges](https://openbadgespec.org/). As with Open Badges, we've provided both a JSON-LD context and JSON schema. The purpose of the JSON-LD context is to map types to Internationalized Resource Identifiers (IRIs), providing semantic context for data. The JSON Schema is used for syntactic validation.
 
-[Blockchain Certificates JSON LD context](json-context.html) is anchored to the [Open Badges JSON LD Context](open-badges.html) and includes the blockchain transaction “receipt” based on the Chainpoint standard.
+We are working closely with the Open Badges team to bring our schemas up to the OBI v2 spec.
 
-### Example
+*   [Blockchain Certificates JSON LD Context](json-context.html) 
+*   [Blockchain Certificate JSON Schema](json-schema.html) (components below)
+    *   [Certificate Document](certificate-document.html)
+        *   [Assertion](assertion-schema.html)
+        *   [Certificate](certificate-schema.html)
+            *   [Issuer](issuer.html)
+    *   [Blockchain Receipt](receipt.html)
+
+## Example
 
     {
       "@context": "https://w3id.org/blockcerts/v1",
@@ -79,16 +87,7 @@ The Blockchain Certificate schema is an extension of [Open Badges](https://openb
       }
     }
 
-### Additional examples
 
-*   [Blockchain Certificates JSON LD context](json-context.html)
-*   [Blockchain Certificate JSON Schema](json-schema.html)
-    *   [Certificate Document](certificate-document.html)
-        *   [Assertion](assertion-schema.html)
-        *   [Certificate](certificate-schema.html)
-            *   [Issuer](issuer.html)
-    *   [Blockchain Receipt](receipt.html)
-
-### Source
+## Source
 
 All schema source files are located in [the cert-schema repo](https://github.com/blockchain-certificates/cert-schema/).
