@@ -8,7 +8,7 @@ While you can issue one certificate with one Bitcoin transaction, it is far more
 
 The issuer builds a Merkle tree of certificate hashes and registers the Merkle root as the OP_RETURN field in the Bitcoin transaction.
 
-Verification of certificates issued as a batch changes the validation process because the recipient must prove their certificate’s location in the tree. The Chainpoint JSON LD schema is currently being used for Merkle receipts. [See the chainpoint whitepaper.](https://github.com/chainpoint/whitepaper/blob/master/chainpoint_white_paper.pdf)
+Verification of certificates issued as a batch changes the validation process because the recipient must prove their certificate’s location in the tree. The Chainpoint JSON LD schema is currently being used for [Merkle receipts](https://github.com/chainpoint/whitepaper/raw/master/chainpoint_white_paper.pdf).
 
 A batch-issued certificate is verified by the Merkle proof/receipt, which consists of:
 
@@ -18,9 +18,9 @@ A batch-issued certificate is verified by the Merkle proof/receipt, which consis
 
 How a batch is defined can vary, but it should be defined such that it changes infrequently. For example, “2016 MIT grads” would be preferred over “MIT grads” (the latter would have to be updated every year). The size of the batch is limited by the 100KB max transaction size imposed by the Bitcoin network. This will amount to a max of around 2,000 recipients per certificate batch.
 
-### Alternate transaction structure
+### Transaction structure
 
-Include each recipient’s Bitcoin address and revocation address in the outputs.
+Each recipient’s Bitcoin address and revocation address are included in the transaction outputs.
 
 *   Revocation is the same, but the recipient’s revocation address (owned by the issuer) would need to be included in the certificate.
 *   Issuer needs to track the revocation private/public key per recipient.

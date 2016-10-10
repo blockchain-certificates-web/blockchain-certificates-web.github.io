@@ -41,7 +41,10 @@ Additional restrictions:
 
 `issuedOn` (DateTime, required)
 
-Date the the certificate JSON was created. This uses the [Open Badges DateTime type](date-time.html).
+Date the certificate JSON was created. This uses the Open Badges DateTime type, defined as one of:
+
+* ISO 8601 date format string yyyy-MM-dd'T'HH:mm:ss.SSS, where the time component is optional
+* 10-digit UNIX timestamp, epoch time
 
 `evidence` (string)
 
