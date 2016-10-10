@@ -15,11 +15,11 @@ These instructions will require a python interpreter and the Python [python-bitc
 
 ### 1\. Get the certificate and blockchain transaction.
 
-#### a\. First download a copy of a Blockchain Certificate. 
+a\. First download a copy of a Blockchain Certificate. 
 
 These steps use this [sample Blockchain Certificate](http://www.blockcerts.org/mockissuer/examples/609c2989-275f-4f4c-ab02-b245cfb09017.json).
 
-#### b\. Next, find the blockchain transaction id in the certificate.
+b\. Next, find the blockchain transaction id in the certificate.
 
 This information is stored in the certificate under the `receipt` field: `anchors`[0].`sourceId`. In the sample certificate, that value is `8623beadbc7877a9e20fb7f83eda6c1a1fc350171f0714ff6c6c4054018eb54d`.
 
@@ -48,7 +48,7 @@ This information is stored in the certificate under the `receipt` field: `anchor
 }
 ```
 
-#### c\. Download the blockchain transaction record.
+c\. Download the blockchain transaction record.
 
 The blockchain transaction can be obtained from a service like [blockchain.info](http://blockchain.info/). The general query format is: http://blockchain.info/tx/<transaction_id>
 
@@ -75,7 +75,8 @@ Using the transaction id from the previous step, we download http://blockchain.i
     with open(<INSERT_PATH_TO_LOCAL_CERTIFICATE_FILE>) as cert_file:
         certificate_json = json.load(cert_file)
         
-    normalized = jsonld.normalize(certificate_json['document'], {'algorithm': 'URDNA2015', 'format': 'application/nquads'})
+    normalized = jsonld.normalize(certificate_json['document'], 
+        {'algorithm': 'URDNA2015', 'format': 'application/nquads'})
     content_bytes = normalized.encode('utf-8')
     local_hash = hashlib.sha256(content_bytes).hexdigest()
     expected_certificate_hash = state.receipt['targetHash']
