@@ -17,7 +17,7 @@ These instructions will require a python interpreter and the Python [python-bitc
 
 a\. First download a copy of a Blockchain Certificate. 
 
-These steps use this [sample Blockchain Certificate](http://www.blockcerts.org/mockissuer/examples/609c2989-275f-4f4c-ab02-b245cfb09017.json).
+The steps below use this [sample Blockchain Certificate](http://www.blockcerts.org/mockissuer/examples/609c2989-275f-4f4c-ab02-b245cfb09017.json).
 
 b\. Next, find the blockchain transaction id in the certificate.
 
@@ -50,9 +50,9 @@ This information is stored in the certificate under the `receipt` field: `anchor
 
 c\. Download the blockchain transaction record.
 
-The blockchain transaction can be obtained from a service like [blockchain.info](http://blockchain.info/). The general query format is: http://blockchain.info/tx/<transaction_id>
+The blockchain transaction can be obtained from a service like [blockchain.info](http://blockchain.info/). The general query format is: http://blockchain.info/rawtx/<transaction_id>
 
-Using the transaction id from the previous step, we download http://blockchain.info/tx/8623beadbc7877a9e20fb7f83eda6c1a1fc350171f0714ff6c6c4054018eb54d
+Using the transaction id from the previous step, we download [http://blockchain.info/rawtx/8623beadbc7877a9e20fb7f83eda6c1a1fc350171f0714ff6c6c4054018eb54d](http://blockchain.info/rawtx/8623beadbc7877a9e20fb7f83eda6c1a1fc350171f0714ff6c6c4054018eb54d)
 
 ### 2\. Validate the receipt in the certificate.
 
@@ -98,7 +98,8 @@ Using the transaction id from the previous step, we download http://blockchain.i
             if tx_out.get("addr") == None:
                 opreturn_tx = tx_out
         op_field = opreturn_tx["script"].decode("hex")
-        hash_from_chain = binascii.hexlify(op_field)
+        op_return = op_field[2:]
+        hash_from_chain = binascii.hexlify(op_return)
 
     if merkle_root == hash_from_chain:
         valid_merkle_root = True
