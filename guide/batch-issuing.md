@@ -25,7 +25,7 @@ This receipt contains:
 *   The Bitcoin transaction ID storing the Merkle root
 *   The expected Merkle root on the blockchain
 *   The expected hash for recipient `i`'s certificate
-*   The Merkle path from recipient `i`'s certificate to the Merkle root, i.e. the path highlighted in orange above. h_i -> … -> root
+*   The Merkle path from recipient `i`'s certificate to the Merkle root, i.e. the path highlighted in orange above. `h_i -> … -> Merkle root`
 
 The [verification process](verification-process.html) performs computations to check that:
 
