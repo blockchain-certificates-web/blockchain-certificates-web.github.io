@@ -22,14 +22,16 @@ The Blockchain Certificate given to recipient `i` contains a [Chainpoint V2-form
 
 This receipt contains:
 
-- The Bitcoin transaction ID storing the Merkle root
-- The Merkle path from recipient `i`'s certificate to the Merkle root, i.e. the path highlighted in orange above. h_i -> … -> root
+*   The Bitcoin transaction ID storing the Merkle root
+*   The expected Merkle root on the blockchain
+*   The expected hash for recipient `i`'s certificate
+*   The Merkle path from recipient `i`'s certificate to the Merkle root, i.e. the path highlighted in orange above. h_i -> … -> root
 
 The [verification process](verification-process.html) performs computations to check that:
 
-- the hash of certificate `i` matches the value in the receipt
-- the Merkle path is valid
-- the Merkle root stored on the blockchain matches the value in the receipt
+*   The hash of certificate `i` matches the value in the receipt
+*   The Merkle path is valid
+*   The Merkle root stored on the blockchain matches the value in the receipt
 
 These steps establish that the certificate has not been tampered with since it was issued.
 
