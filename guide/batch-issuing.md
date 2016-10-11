@@ -39,16 +39,16 @@ These steps establish that the certificate has not been tampered with since it w
 
 The `document` field of a Blockchain Certificate contains the certificate that the issuer created. This is the value we want to hash to compare against the receipt. Because there are no guarantees about ordering or formatting of JSON, we first normalize the `document` value of the certificate against our JSON LD schema. This allows us to obtain a deterministic hash across platforms.
 
-The detailed steps are described in [verification process](verification-process.html).
+The detailed steps are described in the [verification process](verification-process.html).
 
 
 ### What should be in a batch?
 
-How a batch is defined can vary, but it should be defined such that it changes infrequently. For example, “2016 MIT grads” would be preferred over “MIT grads” (the latter would have to be updated every year). The size of the batch is limited by the 100KB max transaction size imposed by the Bitcoin network. This will amount to a max of around 2,000 recipients per certificate batch.
+How a batch is defined can vary, but it should be defined such that it changes infrequently. For example, “2016 MIT grads” would be preferred over “MIT grads” (the latter would have to be updated every year). The size of the batch is limited by the 100KB maximum transaction size imposed by the Bitcoin network. This will amount to a maximum of around 2,000 recipients per certificate batch.
 
 ### Transaction structure
 
-Each recipient’s Bitcoin address and revocation address are included in the transaction outputs. This means that the Issuer needs to create and track the revocation private/public key per recipient. The verification process checks whether the recipient-specific revocation address in a certificate is spent. If so, then the certificate is invalid.
+Each recipient’s Bitcoin address and revocation address are included in the transaction outputs. This means that the issuer needs to create and track the revocation private/public key per recipient. The verification process checks whether the recipient-specific revocation address in a certificate is spent. If so, then the certificate is invalid.
 
 <img src="/assets/img/pictures/tx_out.png" width="350">
 
