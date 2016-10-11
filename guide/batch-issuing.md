@@ -37,7 +37,7 @@ These steps establish that the certificate has not been tampered with since it w
 
 ### Hashing a certificate
 
-The `document` field of a Blockchain Certificate contains the certificate that the issuer created. This is the value we want to hash to compare against the receipt. Because there are no guarantees about ordering or formatting of JSON, we first normalize the `document` value of the certificate against our JSON LD schema. This allows us to obtain a deterministic hash across platforms.
+The `document` field of a Blockchain Certificate contains the certificate that the issuer created. This is the value needed to hash for comparison against the receipt. Because there are no guarantees about ordering or formatting of JSON, first normalize the `document` value of the certificate against the JSON LD schema. This allows us to obtain a deterministic hash across platforms.
 
 The detailed steps are described in the [verification process](verification-process.html).
 
