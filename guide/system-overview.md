@@ -4,41 +4,54 @@ layout: guide
 
 ## System Overview
 
-### Certificate issuing
+### Issuing Components
 
-The cert-issuer component is responsible for issuing certificates on the blockchain. The current version uses the Bitcoin blockchain.
+The following diagram shows the components a certificate issuer uses to:
 
-![](/assets/img/pictures/system-overview.png)
+*   create certificates for a roster of recipients
+*   cryptographically sign the certificates
+*   issue the certificates on the Bitcoin blockchain
 
-Two tasks are performed by the certificate issuer:
+![](/assets/img/pictures/issuer-dataflow.png)
 
-1.  Open badge signature
-2.  Issue on blockchain
+**cert-tools**
 
-Because the open badge signature is independent from issuing the certificate as a transaction on the blockchain, that signature will likely be pulled out as a separate component in the future.
+Cert-tools allows issuers to create Blockchain Certificate compliant certificate templates, and populate certificates for a (csv-formatted) recipient roster. More information is available at
+[creating certificates](creating-certificates.html)
 
-The input is an unsigned certificate; see the [schema description](schemas.html).
+**cert-signer**
 
-The signing step signs the recipient UID field in the unsigned certificate and places the signature in the signature section of the certificate. The signed certificate is retained as output, since the hash of this document is what is stored on the blockchain.
+The signing step signs the recipient UID field in the unsigned certificate and places the signature in the signature section of the certificate. The signed certificate is retained as output, since the hash of this document is input to the Merkle Tree, the root of which is stored on the blockchain.
 
-The next step creates a Bitcoin transaction with the signed certificate hash and outputs to the recipient and the revocation address.
+The cert-signer utility is located in the cert-issuer library. 
 
-The cert-issuer’s output is the signed certificate and the Bitcoin transaction ID. These two suffice to validate the certificate.
+**cert-issuer**
 
-### Certificate viewing, storage, and validation
+The cert-issuer component is responsible for issuing certificates on the Bitcoin blockchain.
 
-An additional level of convenience can be achieved through the use of a web app for storing, looking up, and performing validation of the certificates issued. This is technically optional. With the signed certificate and the Bitcoin transaction ID, the recipient could share their certificate with any third party, and that third party could independently validate the certificate.
+### Certificate Distribution and Ecosystem
 
-![](/assets/img/pictures/system-overview2.png)
+![](/assets/img/pictures/cert-dataflow.png)
 
-Lookup and storage requirements will vary according to the sensitivity of the data. In this digital certificate scenario, recipients preferred the convenience of having a verification button on the certificate for low-stakes situations. The outputs of the signed certificate and transaction ID suffice to validate the certificate. The means of validating the certificate are open.
+Once the Blockchain Certificates have been issued, the issuer will distribute them. They will add them a certificate store, which is generally but not required to be owned by the issuer. This allows anyone with the certificate URL to view and verify the certificate. The cert-verify component is separate from the viewer -- this allows any party to serve as a certificate verifier without needing to store the data. 
 
-### Verification
+The issuer should notify the recipients to let them know a certificate is available. This allows the recipients to import their certificate into their cert-wallet mobile app. The issuer may also email the certificate, and this can later be imported into a wallet, emailed to a 3rd party, and independently verified. [These steps show how you would independently verify a certificate](verification-process.html)
 
-Verification is clearly a core consideration, but it is described separately because the technique of validating a certificate can be achieved in a variety of ways.
+**cert-wallet**
 
-[These steps show how you would independently verify a certificate](verification-process.html). Note that these steps could have been performed without involving the issuer’s viewer page in two different ways:
+The cert-wallet mobile app allows recipients to request and import Blockchain Certificates. This app allows the recipient to connect with issuers, import Blockchain Certificates, and share and verify them.
 
-*   The recipient directly provides the signed certificate and transaction ID.
-*   The issuer and revocation keys are available in the bitcoin transaction. The “from” address is the issuer, and the revocation address is the output that is not the recipient address. There may also be a change output going back to the issuer.
+**cert-viewer**
+
+The cert-viewer Flask web app allows certificates to be looked up by URL. This allows the recipient to share their URL to 3rd parties for viewing and verifying.
+
+**cert-verifier**
+
+Cert-verifier performs the [verification steps described here](verification-process.html) to verify a Blockchain Certificate.
+
+Cert-viewer uses cert-verifier as a library, but cert-verifier could be stood up as an independent service to allow anyone to upload and verify a Blockchain Certificate.
+
+**cert-store**
+
+Cert-store is simply a UID to certificate lookup store. While it is MongoDB in the open source project, it can be any blob store that allows efficient access. This is used as a backing store for cert-viewer and certificate wallets importing into the app.
 
