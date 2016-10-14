@@ -33,13 +33,13 @@ The cert-issuer component is responsible for issuing certificates on the Bitcoin
 
 ![](/assets/img/pictures/cert-dataflow.png)
 
-Once the Blockchain Certificates have been issued, the issuer will distribute them. They will add them a certificate store, which is generally but not required to be owned by the issuer. This allows anyone with the certificate URL to view and verify the certificate. The cert-verify component is separate from the viewer -- this allows any party to serve as a certificate verifier without needing to store the data. 
+Once the Blockchain Certificates have been issued, the issuer will distribute them. They will add them to a certificate store, which is generally owned by the issuer, but not required. This allows anyone with the certificate URL to view and verify the certificate. The cert-verify component is separate from the viewer -- this allows any party to serve as a certificate verifier without needing to store the data. 
 
 The issuer should notify the recipients to let them know a certificate is available. This allows the recipients to import their certificate into their cert-wallet mobile app. The issuer may also email the certificate, and this can later be imported into a wallet, emailed to a 3rd party, and independently verified. [These steps show how you would independently verify a certificate](verification-process.html)
 
 **cert-wallet**
 
-The cert-wallet mobile app allows recipients to request and import Blockchain Certificates. This app allows the recipient to connect with issuers, import Blockchain Certificates, and share and verify them.
+The cert-wallet mobile app allows recipients to request and import Blockchain Certificates. This app allows the recipient to connect with issuers, import Blockchain Certificates into the mobile app where they can be viewed, verified, and shared.
 
 **cert-viewer**
 
@@ -53,5 +53,5 @@ Cert-viewer uses cert-verifier as a library, but cert-verifier could be stood up
 
 **cert-store**
 
-Cert-store is simply a UID to certificate lookup store. While it is MongoDB in the open source project, it can be any blob store that allows efficient access. This is used as a backing store for cert-viewer and certificate wallets importing into the app.
+Cert-store is simply a UID to a certificate lookup store. While it is MongoDB in the open source project, it can be any blob store that allows efficient access. This is used as a backing store for cert-viewer and certificate wallets importing into the app.
 
