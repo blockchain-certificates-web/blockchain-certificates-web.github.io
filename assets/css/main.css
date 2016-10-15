@@ -11799,6 +11799,11 @@ input.cover__form__item--13 {
 
 .guide-content img {
   max-width: 100%;
-  max-width: 720px;
   margin: 2em 0;
+}
+
+.guide-content p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
 }
