@@ -15,6 +15,7 @@ We are working closely with the Open Badges team to bring our schemas up to the 
         *   [Certificate](certificate-schema.html)
             *   [Issuer](issuer.html)
     *   [Blockchain Receipt](receipt.html)
+*   [Issuer Identity JSON Schema](issuer-id.html) 
 
 ## Example
 
