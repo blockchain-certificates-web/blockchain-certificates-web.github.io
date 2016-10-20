@@ -1,6 +1,9 @@
 ---
 layout: guide
+guide_back: true
 ---
+
+## Issuer Identification Schema
 
 The schema defines the following properties:
 
