@@ -22,7 +22,7 @@ Our [Bitcoind instructions](https://github.com/blockchain-certificates/cert-issu
 
 Issuing live certificates requires a small amount of Bitcoin -- for 1 certificate, it is roughly 10 cents in USD; a batch of 100 certificates is under $3 USD. 
 
-If this is your first time using Bitcoin, start by reading the ["Getting started with Bitcoin"](https://bitcoin.org/en/getting-started) guide, specifically the first section “How to use Bitcoin” for an overview of working with Bitcoin, choosing a wallet, obtaining your first Bitcoins, and securing your money.
+If this is your first time using Bitcoin, start by reading the ["Getting started with Bitcoin"](https://bitcoin.org/en/getting-started) guide, specifically the first section "How to use Bitcoin" for an overview of working with Bitcoin, choosing a wallet, obtaining your first Bitcoins, and securing your money.
 
 The Blockchain Certificates issuing tool uses configurable connectors for interacting with your wallet. Currently only 2 live wallet connectors are provided, but the extensible framework makes it easy to add new ones.
 
@@ -30,7 +30,7 @@ The Blockchain Certificates issuing tool uses configurable connectors for intera
 
 Running a full Bitcoin node provides the most control and removes dependencies on 3rd party wallets. If you’re considering this route, [read the hardware and security considerations here](https://bitcoin.org/en/full-node).
 
-Note that this uses the same Bitcoin daemon mentioned in ‘Testnet’ -- just with different configuration options.
+Note that this uses the same Bitcoin daemon mentioned in 'Testnet' -- just with different configuration options.
 
 Our [Bitcoind instructions](https://github.com/blockchain-certificates/cert-issuer/blob/master/docs/bitcoind.md) describe how to install a Bitcoin node. 
 

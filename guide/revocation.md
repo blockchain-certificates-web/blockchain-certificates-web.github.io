@@ -35,27 +35,27 @@ This batch contained 2 certificates. The following table lists these outputs and
   </thead>
   <tbody>
     <tr>
-      <td>R1 public address</td>
+      <td>Recipient 1 public address</td>
       <td>1AAG..</td>
-      <td>R1 revokes own certificate</td>
+      <td>Recipient 1 revokes own certificate</td>
       <td>1</td>
     </tr>
     <tr>
-      <td>R1 revocation address</td>
+      <td>Recipient 1 revocation address</td>
       <td>1K4P…</td>
-      <td>Issuer revokes R1’s certificate</td>
+      <td>Issuer revokes Recipient 1's certificate</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>R2 public address</td>
+      <td>Recipient 2 public address</td>
       <td>18AaF…</td>
-      <td>R2 revokes own certificate</td>
+      <td>Recipient 2 revokes own certificate</td>
       <td>1</td>
     </tr>
     <tr>
-      <td>R2 revocation address</td>
+      <td>Recipient 2 revocation address</td>
       <td>16wy…</td>
-      <td>Issuer revokes R2’s certificate</td>
+      <td>Issuer revokes Recipient 2's certificate</td>
       <td>2</td>
     </tr>
     <tr>
