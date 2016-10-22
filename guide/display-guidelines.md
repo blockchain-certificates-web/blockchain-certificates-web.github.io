@@ -3,6 +3,7 @@ layout: guide
 ---
 
 ## Blockchain Certificate Display Guidelines
+
 ### General Principles
 A Blockchain Certificate represents a remarkable achievement on behalf of the recipient. In order to honor that accomplishment, it's important that the display of the certificate be consistent across the various platforms and environments that it might be displayed in.
 
