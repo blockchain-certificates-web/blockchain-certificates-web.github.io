@@ -16,15 +16,15 @@ We recommend that you issue your first test certificates in regtest mode. Our ["
 
 Testnet mode also does not spend real Bitcoins, but it is a closer simulation to issuing on the Bitcoin blockchain. Both testnet and regtest are enabled by setting configuration options on the bitcoin daemon. (For regtest, this detail was handled in the Docker configuration.)
 
-Our [Bitcoind instructions](https://github.com/blockchain-certificates/cert-issuer/blob/master/docs/bitcoind.md) describe how to install a Bitcoin node and configure it to use testnet. 
+[Bitcoind instructions](https://github.com/blockchain-certificates/cert-issuer/blob/master/docs/bitcoind.md) describe how to install a Bitcoin node and configure it to use testnet. 
 
 ### Live Issuing
 
 Issuing live certificates requires a small amount of Bitcoin -- for 1 certificate, it is roughly 10 cents in USD; a batch of 100 certificates is under $3 USD. 
 
-If this is your first time using Bitcoin, start by reading the ["Getting started with Bitcoin"](https://bitcoin.org/en/getting-started) guide, specifically the first section "How to use Bitcoin" for an overview of working with Bitcoin, choosing a wallet, obtaining your first Bitcoins, and securing your money.
+If this is your first time using Bitcoin, start by reading ["Getting started with Bitcoin"](https://bitcoin.org/en/getting-started). Specifically, the first section "How to use Bitcoin" is an overview of working with Bitcoin, choosing a wallet, obtaining your first Bitcoins, and securing your money.
 
-The Blockchain Certificates issuing tool uses configurable connectors for interacting with your wallet. Currently only 2 live wallet connectors are provided, but the extensible framework makes it easy to add new ones.
+The Blockcerts issuing tool uses configurable connectors for interacting with your wallet. Currently only 2 live wallet connectors are provided, but the extensible framework makes it easy to add new ones.
 
 **Bitcoind**
 
@@ -32,7 +32,7 @@ Running a full Bitcoin node provides the most control and removes dependencies o
 
 Note that this uses the same Bitcoin daemon mentioned in 'Testnet' -- just with different configuration options.
 
-Our [Bitcoind instructions](https://github.com/blockchain-certificates/cert-issuer/blob/master/docs/bitcoind.md) describe how to install a Bitcoin node. 
+[Bitcoind instructions](https://github.com/blockchain-certificates/cert-issuer/blob/master/docs/bitcoind.md) describe how to install a Bitcoin node. 
 
 **Blockchain.info**
 
