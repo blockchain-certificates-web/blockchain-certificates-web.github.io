@@ -9,7 +9,7 @@ The complete certificate document, including the assertion, certificate, and iss
 
 The schema defines the following properties:
 
-`@context` (JsonLdContext)
+### `@context` (JsonLdContext)
 
 A link to a valid JSON-LD context file, that maps term names to contexts. Blockchain Certificate contexts may also define JSON-schema to validate Blockchain Certificates against. In a Blockchain Certificate Object, this will almost always be a string:uri to a single context file, but might rarely be an array of links or context objects instead. This schema also allows direct mapping of terms to IRIs by using an object as an option within an array.
 
@@ -18,7 +18,7 @@ This property must be one of the following types:
 *   `string`
 *   `array`
 
-`type` (JsonLdType, required)
+### `type` (JsonLdType, required)
 
 A type or an array of types that the Blockchain Certificate object represents. The first or only item should be ‘CertificateDocument’, and any others should each be an IRI (usually a URL) corresponding to a definition of the type itself. In almost all cases, there will be only one type: ‘CertificateDocument’
 
@@ -27,15 +27,15 @@ This property must be one of the following types:
 *   `string`
 *   `array`
 
-`certificate` (Certificate, required)
+### `certificate` (Certificate, required)
 
 [Certificate](certificate-schema.html)
 
-`assertion` (Assertion, required)
+### `assertion` (Assertion, required)
 
 [Assertion](assertion-schema.html)
 
-`verify` (VerificationObject, required)
+### `verify` (VerificationObject, required)
 
 V1.2 notice: the Blockchain Certificates VerificationObject will change in the next schema version to be consistent with OBI VerificationObjects. This work is in progress.
 
@@ -55,11 +55,11 @@ This element must be one of the following enum values:
 *   `signed`
 *   `ECDSA(secp256k1)`
 
-`signer` (string, required)
+`signer` (string)
 
-URI where issuer’s public key is presented. Default is https://[domain]/keys/[org-abbr]-certs-public-key.asc
+URI where issuer’s public key is presented. Default is https://[domain]/keys/[org-abbr]-certs-public-key.asc. V1.2 change: this field is optional
 
-`recipient` (Recipient, required)
+### `recipient` (Recipient, required)
 
 Properties of the `Recipient` object:
 

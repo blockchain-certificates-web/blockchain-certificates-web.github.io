@@ -68,7 +68,7 @@ Additional restrictions:
 
 ### `anchors` (array, required)
 
-how the proof is anchored to the blockchain
+How the proof is anchored to the blockchain.
 
 The object is an array with all elements of the type `object`.
 
@@ -76,7 +76,7 @@ The array object has the following properties:
 
 `type` (string)
 
-type of anchor, e.g. BTCOpReturn. Currently the only supported value is BTCOpReturn.
+Type of anchor, e.g. BTCOpReturn. Currently the only supported value is BTCOpReturn.
 
 Additional restrictions:
 
