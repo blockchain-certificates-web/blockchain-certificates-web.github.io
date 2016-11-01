@@ -43,7 +43,7 @@ Additional restrictions:
 
 Date the certificate JSON was created. This uses the Open Badges DateTime type, defined as one of:
 
-* ISO 8601 date format string yyyy-MM-dd'T'HH:mm:ss.SSS, where the time component is optional
+* ISO 8601 date format string yyyy-MM-dd'T'HH:mm:ss.SSS, where the time component is optional and time zone is optional
 * 10-digit UNIX timestamp, epoch time
 
 ### `evidence` (string)
@@ -53,6 +53,13 @@ URL of the work that the recipient did to earn the achievement. This can be a pa
 ### `expires` (DateTime)
 
 If the achievement has some notion of expiry, this indicates a date when a badge should no longer be considered valid.
+
+This uses the Open Badges DateTime type, defined as one of:
+
+* ISO 8601 date format string yyyy-MM-dd'T'HH:mm:ss.SSS, where the time component is optional and time zone is optional
+* 10-digit UNIX timestamp, epoch time
+
+If the ISO 8601 format is used and no time zone is provided, the certificate verifiers will assume UTC.
 
 ### `image:signature` (object)
 
