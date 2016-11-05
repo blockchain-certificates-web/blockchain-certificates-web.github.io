@@ -6,9 +6,11 @@ layout: guide
 
 ### Does this project prove the identity of an individual or issuer?
 
-The Blockchain Certificates project is not attempting to solve identity. In other words, this solution does not certify the mapping of public keys to individuals or organizations. Further, there is no registration process in this system, so any issuer may issue certificates. A recipient may provide any Bitcoin address. The system makes no attempt to verify their identity. However, it is in the issuer’s and recipient’s interest to provide public addresses they own, because this is the only way either can demonstrate ownership of or revoke certificates.
+Blockcerts has a claims-orientation to identity. This means that identity is always self-curated by the individual through the claims about themselves that they disclose.  All claims have to be assessed in some manner. Those claims that are blockchain verifiable are guaranteed to represent what was originally issued. So, Blockcerts is not attempting to prove identity directly. In other words, this solution does not certify the mapping of public keys to individuals or organizations. Further, there is no registration process in this system, so any issuer may issue certificates and recipients may provide any Bitcoin address. However, it is in the issuer’s and recipient’s interest to provide public addresses they own, because this is the only way either can demonstrate ownership of or revoke certificates.
 
-### Why is identity out of scope?
+
+
+### Why is identity separate from claims?
 
 The primary reason is that separation of identity is desirable from an architectural layering perspective. For a certification system, it’s reasonable that adopters will want to establish identity in different ways, and we want to give them this flexibility. At the same time, our design doesn’t preclude identity association. Since the Bitcoin addresses can be any address, recipients and issuers can choose ones associated with a curated profile (e.g. Blockstack profiles).
 
