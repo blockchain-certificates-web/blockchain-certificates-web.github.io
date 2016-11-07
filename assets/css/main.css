@@ -5636,6 +5636,7 @@ textarea:focus {
     clear: both; }
   @media (max-width: 992px) {
     .menu__list {
+      border-bottom: none;
       display: block; } }
 
 .menu__item {
@@ -6064,6 +6065,8 @@ textarea:focus {
   margin: 0 20px 0 0; }
   .header__menu_item:last-child {
     margin-right: 0; }
+  .header__menu_item iframe {
+    margin-bottom: -5px; }
 
 .header__menu_link {
   font-weight: 700;
