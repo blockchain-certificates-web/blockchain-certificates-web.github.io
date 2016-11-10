@@ -13,7 +13,7 @@ An issuer should provide permanent URLs for certain content referenced in blockc
 
 Failing to make content available at the expected URLs reduces the value of (and confidence in) an issuer's certificates. The issuer is not required to host this data, but is responsible for ensuring its availability at the expected URL.
 
-The issuer must also decide which URL endpoint to host the service, as this will allow recipients (wallet-holders) to submit an introduction. 
+The default deployment in cert-viewer exposes these endpoints, but the issuer may decide to host these outside of the cert-viewer, depending on the issuer's deployment requirements.
 
 ### Hosting Issuer Identity
 
