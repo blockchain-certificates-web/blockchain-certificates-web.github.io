@@ -34,6 +34,6 @@ Note: This should only be used for low-risk validations. In-browser validatoin i
 And here's what that looks like, with the same demo certificate from above:
 
 <validate-certificate>
-  <blockchain-certificate href="/path/to/certificate.json">
+  <blockchain-certificate href="/assets/js/mit_certificate.json">
   </blockchain-certificate>
 </validate-certificate>
