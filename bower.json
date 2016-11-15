@@ -22,6 +22,7 @@
     "tests"
   ],
   "dependencies": {
-    "blockchain-certificate": "^0.6.0"
+    "blockchain-certificate": "^0.6.0",
+    "iron-ajax": "^1.4.3"
   }
 }
