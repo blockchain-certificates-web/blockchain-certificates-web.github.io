@@ -1,0 +1,29 @@
+{
+  "name": "blockchain-certificate",
+  "description": "Displays a rendered Blockchain Certificate",
+  "main": "blockchain-certificate.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "js-sha256": "^0.3.2",
+    "jsonld": "^0.4.11",
+    "js-sha3": "^0.5.5"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "homepage": "https://github.com/blockchain-certificates/cert-web-component",
+  "version": "0.6.0",
+  "_release": "0.6.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.6.0",
+    "commit": "e98b3dddea31aba3245da532a617f3d9b0a1a55a"
+  },
+  "_source": "https://github.com/blockchain-certificates/cert-web-component.git",
+  "_target": "^0.6.0",
+  "_originalSource": "blockchain-certificate",
+  "_direct": true
+}
