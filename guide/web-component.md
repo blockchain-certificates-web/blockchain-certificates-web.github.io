@@ -1,9 +1,12 @@
 ---
 layout: guide
 ---
-
+// Not about web components,
 ## Using Web Components
-[Web components](http://webcomponents.org) are a standard means of defining new elements for use in any web site. The Blockchain Certificates community provides a handful of web components to help make the standard display of a Blockchain Certificate as easy to adopt as possible.
+[Web components](http://webcomponents.org) are a standard means of defining new elements for use in any web site. Blockcerts provides a handful of web components to help make the standard display of a Blockchain Certificate as easy to adopt as possible.
+
+
+// List what the things are
 
 ### Installing the web component
 The easiest way to install the [standard web components](https://github.com/blockchain-certificates/cert-web-component) is to use bower. In your project, simply run:
@@ -70,6 +73,7 @@ Once that's done, you'll see the same rendered certificate with an associated Va
   </blockchain-certificate>
 </validate-certificate>
 
+// Move this to the start of the validation section.
 #### A word of caution
 The validate-certificate component is only intended to be used in low-risk validation scenarios. It is strongly encouraged that anyone without an established, trusted relationship to the certificate's recipient use an independent verifier installed from a trusted source in order to properly validate the certificate. This prevents someone from writing a fake validator that simply looks like this component, but doesn't do proper validation.
 
