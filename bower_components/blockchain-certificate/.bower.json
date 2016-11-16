@@ -15,14 +15,15 @@
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
   "homepage": "https://github.com/blockchain-certificates/cert-web-component",
-  "version": "0.6.1",
-  "_release": "0.6.1",
+  "version": "0.7.0",
+  "_release": "0.7.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.6.1",
-    "commit": "27a2b65c173b7c01c777659ea704d4ad13710aa1"
+    "tag": "v0.7.0",
+    "commit": "33e98d5c51ad1c44b4b685c1924d7048ba9673fa"
   },
   "_source": "https://github.com/blockchain-certificates/cert-web-component.git",
-  "_target": "^0.6.0",
-  "_originalSource": "blockchain-certificate"
+  "_target": "^0.7.0",
+  "_originalSource": "blockchain-certificate",
+  "_direct": true
 }

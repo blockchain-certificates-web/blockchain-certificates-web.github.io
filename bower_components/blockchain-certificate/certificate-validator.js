@@ -40,7 +40,9 @@ class CertificateValidator {
     this.statusCallback(Status.computingLocalHash)
 
     if (this._validationState.certificateVersion === "1.1") {
-      this._validationState.localHash = sha256(this._toUTF8Data(this.certificateString));
+      // When getting the file over HTTP, we've seen an extra newline be appended. This removes that.
+      let correctedData = this.certificateString.slice(0, -1);
+      this._validationState.localHash = sha256(correctedData);
       this._fetchRemoteHash();
     } else {
       jsonld.normalize(this._validationState.certificate.document, {
@@ -51,7 +53,7 @@ class CertificateValidator {
           this._failed(`Failed JSON-LD normalization with error: ${err}`);
           return;
         } else {
-          this._validationState.localHash = sha256(normalized);
+          this._validationState.localHash = sha256(this._toUTF8Data(normalized));
           this._fetchRemoteHash();
         }
       });
@@ -184,8 +186,9 @@ class CertificateValidator {
   _checkIssuerSignature() {
     this.statusCallback(Status.checkingIssuerSignature)
 
-    let issuer = this._validationState.certificate.issuer || this._validationState.certificate.document.certificate.issuer
-    let issuerURL = issuer.id
+    let certificate = this._validationState.certificate.certificate || this._validationState.certificate.document.certificate;
+    let issuer = certificate && certificate.issuer;
+    let issuerURL = issuer.id;
     let request = new XMLHttpRequest();
     request.addEventListener('load', (event) => {
       if (event.target.status !== 200) {
@@ -250,8 +253,8 @@ class CertificateValidator {
   // Helper functions
   _toUTF8Data(string) {
     var utf8 = [];
-    for (var i=0; i < str.length; i++) {
-        var charcode = str.charCodeAt(i);
+    for (var i=0; i < string.length; i++) {
+        var charcode = string.charCodeAt(i);
         if (charcode < 0x80) utf8.push(charcode);
         else if (charcode < 0x800) {
             utf8.push(0xc0 | (charcode >> 6),
@@ -269,7 +272,7 @@ class CertificateValidator {
             // subtracting 0x10000 and splitting the
             // 20 bits of 0x0-0xFFFFF into two halves
             charcode = 0x10000 + (((charcode & 0x3ff)<<10)
-                      | (str.charCodeAt(i) & 0x3ff));
+                      | (string.charCodeAt(i) & 0x3ff));
             utf8.push(0xf0 | (charcode >>18),
                       0x80 | ((charcode>>12) & 0x3f),
                       0x80 | ((charcode>>6) & 0x3f),
@@ -285,5 +288,17 @@ class CertificateValidator {
       outArray.push(parseInt(hexString.substring(i, i + byteSize), 16));
     }
     return outArray
+  }
+  _hexFromByteArray(byteArray) {
+    let out = ""
+    for (let i = 0; i < byteArray.length; ++i) {
+      let value = byteArray[i]
+      if (value < 16) {
+        out += "0" + value.toString(16)
+      } else {
+        out += value.toString(16)
+      }
+    }
+    return out
   }
 }
