@@ -37,18 +37,19 @@
     <!-- Step 3: Use those elements in the body of your HTML. (See below, on web-component.html) -->
 
     <script>
-      var style = "font-weight: bold; font-family: monospace; color: #33b17c" // background-color: #082550;
-      var logo = "▓▓▓▓░░▓░░▓▓▓▓\n"
-               + "░░░░░░░░░░░░░\n"
-               + "▓░░▓▓▓▓▓▓▓░░▓       ___ _    ___   ___ _  __           _      \n"
-               + "░░░░░░░░░░░░░      | _ ) |  / _ \\ / __| |/ /__ ___ _ _| |_ ___\n"
-               + "▓▓░░▓░░▓▓▓▓▓▓      | _ \\ |_| (_) | (__| ' </ _/ -_) '_|  _(_-<\n"
-               + "░░░░░░░░░░░░░      |___/____\\___/ \\___|_|\\_\\__\\___|_|  \\__/__/\n"
-               + "▓▓▓▓▓▓▓▓▓▓░░▓\n"
-               + "░░░░░░░░░░░░░\n"
-               + "▓▓▓▓▓▓▓░░▓░░▓\n"
+      var on = "font-weight: bold; font-family: monospace; color: #33b17c;"
+      var off = "font-weight: bold; font-family: monospace; color: #082650;"
+      var logo = "%c▓▓▓▓%c░░%c▓%c░░%c▓▓▓▓\n"
+               + "%c░░░░░░░░░░░░░\n"
+               + "%c▓%c░░%c▓▓▓▓▓▓▓%c░░%c▓"+"%c       ___ _    ___   ___ _  __           _      \n"
+               + "%c░░░░░░░░░░░░░" +       "%c      | _ ) |  / _ \\ / __| |/ /__ ___ _ _| |_ ___\n"
+               + "%c▓▓%c░░%c▓%c░░%c▓▓▓▓▓▓"+"%c      | _ \\ |_| (_) | (__| ' </ _/ -_) '_|  _(_-<\n"
+               + "%c░░░░░░░░░░░░░"+        "%c      |___/____\\___/ \\___|_|\\_\\__\\___|_|  \\__/__/\n"
+               + "%c▓▓▓▓▓▓▓▓▓▓%c░░%c▓\n"
+               + "%c░░░░░░░░░░░░░\n"
+               + "%c▓▓▓▓▓▓▓%c░░%c▓%c░░%c▓\n"
 
-      console.log("%c" + logo, style);
+      console.log(logo, on, off, on, off, on, off, on, off, on, off, on, off, off, off, on, off, on, off, on, off, off, off, on, off, on, off, on, off, on, off, on);
     </script>
   </head>
   <body>
