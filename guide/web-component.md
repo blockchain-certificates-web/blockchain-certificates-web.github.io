@@ -24,9 +24,11 @@ Once you've got the web components as part of your project, there's just a few s
 Let's look at an example.
 
 Step 1: Include the web components polyfill for older browsers.
+
 ```
 <script src="/components/webcomponentsjs/webcomponents-lite.min.js"></script>
 ```
+
 Step 2: Import the `blockchain-certificate` web component.
 
 ```
@@ -34,6 +36,7 @@ Step 2: Import the `blockchain-certificate` web component.
 ```
 
 Step 3: Use the `<blockchain-certificate>` element in the body of your page.
+
 ```
 <blockchain-certificate href="/path/to/certificate.json">
 </blockchain-certificate>
