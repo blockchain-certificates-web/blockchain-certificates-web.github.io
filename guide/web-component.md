@@ -7,6 +7,7 @@ layout: guide
 
 ### Installing the web component
 The easiest way to install the [standard web components](https://github.com/blockchain-certificates/cert-web-component) is to use bower. In your project, simply run:
+
 ```
 bower install blockchain-certificate --save
 ```
@@ -73,5 +74,6 @@ Once that's done, you'll see the same rendered certificate with an associated Va
 The validate-certificate component is only intended to be used in low-risk validation scenarios. It is strongly encouraged that anyone without an established, trusted relationship to the certificate's recipient use an independent verifier installed from a trusted source in order to properly validate the certificate. This prevents someone from writing a fake validator that simply looks like this component, but doesn't do proper validation.
 
 For such scenarios, we highly recommend one of the open-source peer-reviewed validators:
+
 * [cert-verifier](https://github.com/blockchain-certificates/cert-verifier) for command-line validation
 * [cert-wallet](https://github.com/blockchain-certificates/cert-wallet) for iPhone & iPod Touch
