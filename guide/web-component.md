@@ -59,7 +59,7 @@ Finally, wrap any `<blockchain-certificate>` elements in a `<validate-certificat
 </validate-certificate>
 ```
 
-Once that's done, you'll see the same rendered certificate with an associated Validate button. This will perform all of the necessary steps to validate the certificate in the browser. It will look like this:
+Once that's done, you'll see the same rendered certificate with an associated Validate button. This will perform all of the necessary steps to validate the certificate in the browser. This certificate validates at transaction ID `48f64ff1517554dac3496e9da0a28ca0ae492682b0898e38a4e17e7f90ee1295`:
 
 <validate-certificate>
   <blockchain-certificate href="/assets/js/mit_certificate.json">
