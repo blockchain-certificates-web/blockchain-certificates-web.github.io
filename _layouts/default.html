@@ -20,8 +20,40 @@
     <script src="/assets/js/main.js" defer></script>
 
     <title>{% if page.title %}{{ page.title }} - {% endif %}Blockcerts : The Open Standard for Blockchain Certificates</title>
-  </head>
 
+    <!--
+    Thanks for checking out the source. If you're looking to host rendered
+    Blockchain Certificates on your own site, here's all you need to do.
+    -->
+    <!-- Step 1: Include the web components polyfill for older browsers. -->
+    <script src="/components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+    <!-- Step 2: Import whichever web components you'd like to use. -->
+    <!-- This is for <blockchain-certificate> -->
+    <link rel="import" href="/components/blockchain-certificate/blockchain-certificate.html">
+    <!-- This is for <validate-certificate> -->
+    <link rel="import" href="/components/blockchain-certificate/validate-certificate.html">
+
+    <!-- Step 3: Use those elements in the body of your HTML. (See below, on web-component.html) -->
+
+    <script>
+      var on = "font-weight: bold; font-family: monospace; color: #33b17c;"
+      var off = "font-weight: bold; font-family: monospace; color: #082650;"
+      var text = "font-weight: normal, font-family: sans-serif; color: inherit;"
+      var logo = "%c▓▓▓▓%c░░%c▓%c░░%c▓▓▓▓\n"
+               + "%c░░░░░░░░░░░░░\n"
+               + "%c▓%c░░%c▓▓▓▓▓▓▓%c░░%c▓"+"%c       ___ _    ___   ___ _  __           _      \n"
+               + "%c░░░░░░░░░░░░░" +       "%c      | _ ) |  / _ \\ / __| |/ /__ ___ _ _| |_ ___\n"
+               + "%c▓▓%c░░%c▓%c░░%c▓▓▓▓▓▓"+"%c      | _ \\ |_| (_) | (__| ' </ _/ -_) '_|  _(_-<\n"
+               + "%c░░░░░░░░░░░░░"+        "%c      |___/____\\___/ \\___|_|\\_\\__\\___|_|  \\__/__/\n"
+               + "%c▓▓▓▓▓▓▓▓▓▓%c░░%c▓\n"
+               + "%c░░░░░░░░░░░░░\n"
+               + "%c▓▓▓▓▓▓▓%c░░%c▓%c░░%c▓\n"
+      logo += "\n%cThanks for checking out the code! There's plenty more to see at http://github.com/blockchain-certificates. We'd love to have you contribute! ❤️"
+
+      console.log(logo, on, off, on, off, on, off, on, off, on, off, on, off, off, off, on, off, on, off, on, off, off, off, on, off, on, off, on, off, on, off, on, text);
+    </script>
+  </head>
   <body>
     <main class="page_wrapper">
       <nav data-menu-index="01" class="menu menu--01 js-menu">

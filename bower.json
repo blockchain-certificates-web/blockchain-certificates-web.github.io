@@ -1,0 +1,28 @@
+{
+  "name": "blockchain-certificates.github.io",
+  "homepage": "https://github.com/blockchain-certificates/blockchain-certificates.github.io",
+  "authors": [
+    "Chris Downie <cdownie@gmail.com>"
+  ],
+  "description": "Documentation for the Blockchain Certificates open standard",
+  "main": "",
+  "keywords": [
+    "blockchain",
+    "bitcoin",
+    "certificate",
+    "blockcert"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "blockchain-certificate": "^0.6.0",
+    "iron-ajax": "^1.4.3"
+  }
+}
