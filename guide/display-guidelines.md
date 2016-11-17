@@ -7,8 +7,8 @@ layout: guide
 ### General Principles
 A Blockchain Certificate represents a remarkable achievement on behalf of the recipient. In order to honor that accomplishment, it's important that the display of the certificate be consistent across the various platforms and environments that it might be displayed in.
 
-### Reuse standard open-source displays
-By far, the easiest way to display a certificate in your application is to use one of the existing displays provided by the open source community. This will ensure a consistent experience for your users across any Blockchain Certificate application, with minimal effort on your part.
+### Standard Open-Source Displays
+The fastest way to display a certificate in your application is to use one of the existing displays provided by the open source community. This will ensure a consistent experience for your users across any Blockchain Certificate application with minimal effort on your part.
 
 Here's a list of supported displays:
 
@@ -60,7 +60,6 @@ Once properly installed, you should see something like this:
 -->
 
 ### The `<validate-certificate>` web component
-**Caution:** The validate-certificate component is only intended to be used in low-risk validation scenarios. It is strongly encouraged that anyone without an established, trusted relationship to the certificate's recipient use an independent verifier installed from a trusted source in order to properly validate the certificate. This prevents someone from writing a fake validator that simply looks like this component, but doesn't do proper validation.
 
 The `<validate-certificate>` web component allows for in-browser validation of any hosted certificates. Using this component is easy. After installing or hosting the [blockchain-certificate repo](https://github.com/blockchain-certificates/cert-web-component), import the `validate-certificate` web component:
 
@@ -87,8 +86,10 @@ This certificate validates at transaction ID `48f64ff1517554dac3496e9da0a28ca0ae
   </blockchain-certificate>
 </validate-certificate>
 -->
+**Caution:** The validate-certificate component is only intended to be used in low-risk validation scenarios. It is strongly encouraged that anyone without an established, trusted relationship to the certificate's recipient use an independent verifier installed from a trusted source in order to properly validate the certificate. This prevents someone from writing a fake validator that simply looks like this component, but doesn't do proper validation.
 
-### Building your own display
+
+### Building Your Own Display
 If there isn't an existing framework you can use in your environment, follow the guidelines below. Once complete, we'd encourage you to open-source your implementation so others can benefit from your work.
 
 **Rendering a Certificate**
