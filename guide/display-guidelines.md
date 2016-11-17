@@ -53,9 +53,11 @@ Step 3: Use the `<blockchain-certificate>` element in the body of your page.
 </blockchain-certificate>
 ```
 
+<!---
 Once properly installed, you should see something like this:
 
 <blockchain-certificate href="/assets/js/mit_certificate.json"></blockchain-certificate>
+-->
 
 ### The `<validate-certificate>` web component
 **Caution:** The validate-certificate component is only intended to be used in low-risk validation scenarios. It is strongly encouraged that anyone without an established, trusted relationship to the certificate's recipient use an independent verifier installed from a trusted source in order to properly validate the certificate. This prevents someone from writing a fake validator that simply looks like this component, but doesn't do proper validation.
@@ -75,12 +77,16 @@ Finally, wrap any `<blockchain-certificate>` elements in a `<validate-certificat
 </validate-certificate>
 ```
 
-Once that's done, you'll see the same rendered certificate with an associated Validate button. This will perform all of the necessary steps to validate the certificate in the browser. This certificate validates at transaction ID `48f64ff1517554dac3496e9da0a28ca0ae492682b0898e38a4e17e7f90ee1295`:
+Once that's done, you'll see the same rendered certificate with an associated Validate button. This will perform all of the necessary steps to validate the certificate in the browser.
+
+<!---
+This certificate validates at transaction ID `48f64ff1517554dac3496e9da0a28ca0ae492682b0898e38a4e17e7f90ee1295`:
 
 <validate-certificate>
   <blockchain-certificate href="/assets/js/mit_certificate.json">
   </blockchain-certificate>
 </validate-certificate>
+-->
 
 ### Building your own display
 If there isn't an existing framework you can use in your environment, follow the guidelines below. Once complete, we'd encourage you to open-source your implementation so others can benefit from your work.
