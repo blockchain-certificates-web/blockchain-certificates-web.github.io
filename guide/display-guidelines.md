@@ -16,7 +16,7 @@ Here's a list of supported displays:
 * The `<validate-certificate>` web component for in-browser validation of a certificate.
 * The [RenderedCertificateView](https://github.com/blockchain-certificates/cert-wallet/tree/master/RenderedCertificateView) for iOS applications.
 
-### The `<blockchain-certifiate>` web component
+### The `<blockchain-certificate>` web component
 
 The easiest way to install the [standard web components](https://github.com/blockchain-certificates/cert-web-component) is to use bower. In your project, simply run:
 
@@ -24,7 +24,7 @@ The easiest way to install the [standard web components](https://github.com/bloc
 bower install blockchain-certificate --save
 ```
 
-Alternatively, you can clone [the blockchain-certifiate](https://github.com/blockchain-certificates/cert-web-component) repo and host it independently of your project by running `polymer serve` in a server environment, like [heroku](https://heroku.com). Note that this approach works best when you can run it on a subdomain, otherwise you'll have to set up Cross-Origin Resource Sharing in order for it to work correctly.
+Alternatively, you can clone [the blockchain-certificate](https://github.com/blockchain-certificates/cert-web-component) repo and host it independently of your project by running `polymer serve` in a server environment, like [heroku](https://heroku.com). Note that this approach works best when you can run it on a subdomain, otherwise you'll have to set up Cross-Origin Resource Sharing in order for it to work correctly.
 
 Once you've got the web components as part of your project, there's just a few simple steps to using them. These are also present in the project's [README file](https://github.com/blockchain-certificates/cert-web-component#using-blockchain-certificate).
 
