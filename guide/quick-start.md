@@ -4,9 +4,11 @@ layout: guide
 
 ## Quick Start
 
+### Viewing and verifying certificates locally
+
 The easiest way for developers to get familiar with Blockchain Certificates is to clone the [cert-viewer](https://github.com/blockchain-certificates/cert-viewer) repo and perform the "quick start" installation steps with Docker. After this, you will be able to view and verify sample certificates locally.
 
-## Issuing certificates end-to-end
+### Issuing certificates end-to-end
 
 You can create, issue, and view your own certificates in test modes, which doesn't require spending Bitcoin. We highly recommend trying this process in test mode before issuing certificates on the live Bitcoin blockchain.
 
