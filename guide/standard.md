@@ -23,15 +23,15 @@ The Blockchain Certificates specification consists of:
 Reference implementations for the Blockchain Certificates specification include:
 
 *   Creating a blockcerts-schema-compliant certificate:
-    *   Creating an unsigned certificate [[cert-tools]](https://github.com/blockchain-certificates/cert-tools)
-    *   Signing and issuing a blockcerts schema-compliant certificate [[cert-issuer]](https://github.com/blockchain-certificates/cert-issuer)
+    *    Creating an unsigned certificate [[cert-tools]](https://github.com/blockchain-certificates/cert-tools)
+    *    Signing and issuing a blockcerts schema-compliant certificate [[cert-issuer]](https://github.com/blockchain-certificates/cert-issuer)
 *   Verification
-    *   Python library [[cert-verifier]](https://github.com/blockchain-certificates/cert-verifier)
-    *   Javascript library [[cert-web-component]](https://github.com/blockchain-certificates/cert-web-component)
+    *    Python library [[cert-verifier]](https://github.com/blockchain-certificates/cert-verifier)
+    *    Javascript library [[cert-web-component]](https://github.com/blockchain-certificates/cert-web-component)
 *   Display 
-    *   Python library [[cert-viewer]](https://github.com/blockchain-certificates/cert-viewer)
-    *   Mobile; iOS [[cert-wallet]](https://github.com/blockchain-certificates/cert-wallet)
-    *   Javascript, web component [[cert-web-component]](https://github.com/blockchain-certificates/cert-web-component)
+    *    Python library [[cert-viewer]](https://github.com/blockchain-certificates/cert-viewer)
+    *    Mobile; iOS [[cert-wallet]](https://github.com/blockchain-certificates/cert-wallet)
+    *    Javascript, web component [[cert-web-component]](https://github.com/blockchain-certificates/cert-web-component)
 
 ## Implementation options
 
