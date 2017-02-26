@@ -17,7 +17,7 @@ We are working closely with the Open Badges team to bring our schemas up to the 
     *   [Blockchain Receipt](receipt.html)
 *   [Issuer Identity JSON Schema](issuer-id.html) 
 
-## Example
+### Example
 
     {
       "@context": "https://w3id.org/blockcerts/v1",
@@ -89,6 +89,6 @@ We are working closely with the Open Badges team to bring our schemas up to the 
     }
 
 
-## Source
+### Source
 
 All schema source files are located in [the cert-schema repo](https://github.com/blockchain-certificates/cert-schema/).
