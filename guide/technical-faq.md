@@ -6,13 +6,15 @@ layout: guide
 
 ### Why use a blockchain instead of a PKI infrastructure?
 
-A blockchain offers more than encryption. It is a distributed network that enables exchanging things of value peer-to-peer. This network can’t be easily gamed or taken down, so it offers a convenient and long-lasting solution for individuals to hold and share their official records.
-
-We decided to use a blockchain because of three core principles of our project:
+The decision to use a blockchain was driven by three core principles of our project:
 
 1.  Anyone may issue and receive certificates.
 2.  Identity is intended as a separate layer.
-3.  Optimizing for simple primitives that enable significantly more efficient proofs of a claim, without reliance on certificate authorities.
+3.  Optimizing for simple primitives that enable proofs of a claim, without reliance on certificate authorities.
+
+A blockchain offers more than encryption. It is a distributed network that enables exchanging things of value peer-to-peer.  This network can’t be easily gamed or taken down, so it offers a convenient and long-lasting solution for individuals to hold and share their official records. The blockchain also provides an independent and permanent timestamp, which is stored separately from the certificate. Verifying a credential requires checking that it originated from a particular Issuer while the embedded issuing key was valid. This requires knowledge of the timestamp beyond anything written into the credential itself.
+
+
 
 ### What exactly is in the Bitcoin transaction?
 
