@@ -2,18 +2,19 @@
 layout: guide
 ---
 
-## Bitcoin FAQ
+## Blockchain FAQ
 
 ### Why use a blockchain instead of a PKI infrastructure?
 
-The decision to use a blockchain was driven by three core principles of our project:
+In Blockcerts, the issuer uses their digital signature to provide a credential to a recipient, identified by a recipient-owned public key, and issued on the blockchain. The recipient's credential contains the Merkle proof linking the credential with a specific blockchain transaction.
 
-1.  Anyone may issue and receive certificates.
-2.  Identity is intended as a separate layer.
-3.  Optimizing for simple primitives that enable proofs of a claim, without reliance on certificate authorities.
+This is used to establish integrity of the credential; i.e. that it hasn't been tampered with. Additionally, the recipient-owned public key embedded in the credentials allows the recipient to prove ownership.
 
-A blockchain offers more than encryption. It is a distributed network that enables exchanging things of value peer-to-peer.  This network can’t be easily gamed or taken down, so it offers a convenient and long-lasting solution for individuals to hold and share their official records. The blockchain also provides an independent and permanent timestamp, which is stored separately from the certificate. Verifying a credential requires checking that it originated from a particular Issuer while the embedded issuing key was valid. This requires knowledge of the timestamp beyond anything written into the credential itself.
+To establish authenticity, one must establish that the issuer owned the issuing key at the time the credential was issued. This is why a reliable timestamp is needed. 
 
+This could be done through use of a timestamping authority (TSA) -- more commonly used in a PKI solution -- but that places a dependency on a trusted third party. 
+
+In contrast, blockchain provides permanent, trusted timestamping by design. It requires massive computational effort -- rewriting the entire blockchain -- to tamper with the timestamps. Read more on [blockcerts wiki](https://github.com/blockchain-certificates/cert-schema/wiki/Why-the-blockchain)
 
 
 ### What exactly is in the Bitcoin transaction?
