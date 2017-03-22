@@ -89,7 +89,4 @@ This certificate validates at transaction ID `48f64ff1517554dac3496e9da0a28ca0ae
 **Caution:** The validate-certificate component is only intended to be used in low-risk validation scenarios. It is strongly encouraged that anyone without an established, trusted relationship to the certificate's recipient use an independent verifier installed from a trusted source in order to properly validate the certificate. This prevents someone from writing a fake validator that simply looks like this component, but doesn't do proper validation.
 
 
-### Building Your Own Display
-
-If there isn't an existing framework you can use in your environment, follow the guidelines below. Once complete, we'd encourage you to open-source your implementation so others can benefit from your work.
 
