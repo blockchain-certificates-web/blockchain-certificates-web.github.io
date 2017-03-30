@@ -6,13 +6,9 @@ layout: guide
 
 ### Why use a blockchain instead of a PKI infrastructure?
 
-In Blockcerts, the issuer uses their digital signature to provide a credential to a recipient, identified by a recipient-owned public key, and issued on the blockchain. The recipient's credential contains the Merkle proof linking the credential with a specific blockchain transaction.
+In Blockcerts, the issuer uses their digital signature to provide a credential to a recipient, identified by a recipient-owned public key, and issued on the blockchain. The recipient's credential contains the Merkle proof linking the credential with a specific blockchain transaction. This is used to establish integrity of the credential; i.e. that it hasn't been tampered with. Additionally, the recipient-owned public key embedded in the credentials allows the recipient to prove ownership.
 
-This is used to establish integrity of the credential; i.e. that it hasn't been tampered with. Additionally, the recipient-owned public key embedded in the credentials allows the recipient to prove ownership.
-
-To establish authenticity, one must establish that the issuer owned the issuing key at the time the credential was issued. This is why a reliable timestamp is needed. 
-
-This could be done through use of a timestamping authority (TSA) -- more commonly used in a PKI solution -- but that places a dependency on a trusted third party. 
+To establish authenticity, one must establish that the issuer owned the issuing key at the time the credential was issued. This is why a reliable timestamp is needed. This could be done through use of a timestamping authority (TSA) -- more commonly used in a PKI solution -- but that places a dependency on a trusted third party. 
 
 In contrast, blockchain provides permanent, trusted timestamping by design. It requires massive computational effort -- rewriting the entire blockchain -- to tamper with the timestamps. Read more on [blockcerts wiki](https://github.com/blockchain-certificates/cert-schema/wiki/Why-the-blockchain)
 
