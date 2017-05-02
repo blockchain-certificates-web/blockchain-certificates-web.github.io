@@ -6,88 +6,98 @@ layout: guide
 
 Blockchain Certificate schemas extend those of [Open Badges](https://openbadgespec.org/). As with Open Badges, we've provided both a JSON-LD context and JSON schema. The purpose of the JSON-LD context is to map types to Internationalized Resource Identifiers (IRIs), providing semantic context for data. The JSON Schema is used for syntactic validation.
 
-We are working closely with the Open Badges team to bring our schemas up to the OBI v2 spec.
+*   [Blockchain Certificate (Assertion) Schema](schema.html) (components below)
+    *   [Issuer Profile Schema](issuer_schema.html)
+    *   [OBI Extension: Merkle Proof Schema](merkleProofSignatureExtension_schema.html)    
+    *   [OBI Extension: Recipient Profile Schema](recipientProfileExtension_schema.html)
+    *   [OBI Extension: SignatureLine Schema](recipientProfileExtension_schema.html)  
 
-*   [Blockchain Certificates JSON LD Context](json-context.html) 
-*   [Blockchain Certificate JSON Schema](json-schema.html) (components below)
-    *   [Certificate Document](certificate-document.html)
-        *   [Assertion](assertion-schema.html)
-        *   [Certificate](certificate-schema.html)
-            *   [Issuer](issuer.html)
-    *   [Blockchain Receipt](receipt.html)
-*   [Issuer Identity JSON Schema](issuer-id.html) 
+[See V1.2 Schema](v1_x_schema.html)
+
 
 ### Example
 
-    {
-      "@context": "https://w3id.org/blockcerts/v1",
-      "type": "BlockchainCertificate",
-      "document": {
-        "type": "CertificateDocument",
-        "assertion": {
-          "type": "Assertion",
-          "evidence": "",
-          "id": "http://www.theissuer.edu/fb9e6259-f3ee-438a-b98f-a24f54187af8",
-          "image:signature": "data:image/png;base64,",
-          "issuedOn": "2016-05-26T12:00:00Z",
-          "uid": "fb9e6259-f3ee-438a-b98f-a24f54187af8"
-        },
-        "certificate": {
-          "type": "Certificate",
-          "description": "Certificate description",
-          "id": "https://www.theissuer.edu/criteria/2016/05/certificate-type.json",
-          "image": "data:image/png;base64,",
-          "issuer": {
-            "type": "Issuer",
-            "email": "issuer@theissuer.edu",
-            "id": "https://www.theissuer.edu/issuer/the-issuer.json",
-            "image": "data:image/png;base64,",
-            "name": "Issuing Institution",
-            "url": "http://www.theissuer.edu"
-          },
-          "subtitle": "2016",
-          "name": "Certificate name"
-        },
-        "recipient": {
-          "familyName": "RecipientLastName",
-          "givenName": "RecipientFirstName",
-          "hashed": false,
-          "identity": "recipient@domain.com",
-          "publicKey": "1GCrFRozNVWCqTreV7ZoXudiotknoJeXaz",
-          "type": "email"
-        },
-        "signature": "IAhahreb77hgM9khBcWCSfwq0Qal/bzU9AzBSUMEDErTdExBRHsBH2dDmBa1NvR38wVGn70SPEglI0VIvUFc2AI=",
-        "verify": {
-          "attribute-signed": "uid",
-          "signer": "https://www.theissuer.edu/keys/signing-public-key.asc",
-          "type": "ECDSA(secp256k1)"
-        }
-      },
-      "receipt": {
-        "@context": "https://w3id.org/chainpoint/v2",
-        "type": "ChainpointSHA256v2",
-        "targetHash": "3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d",
-        "merkleRoot": "d71f8983ad4ee170f8129f1ebcdd7440be7798d8e1c80420bf11f1eced610dba",
-        "proof": [
-          {
-            "left": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb"
-          },
-          {
-            "right": "bffe0b34dba16bc6fac17c08bac55d676cded5a4ade41fe2c9924a5dde8f3e5b"
-          },
-          {
-            "right": "3f79bb7b435b05321651daefd374cdc681dc06faa65e374e38337b88ca046dea"
-          }
+```json
+{
+  "@context": [
+    "https://openbadgespec.org/v2/context.json",
+    "http://www.blockcerts.org/blockcerts_v2_alpha/context_bc.json"
+  ],
+  "type": "Assertion",
+  "issuedOn": "2017-05-01",
+  "id": "urn:uuid:7e1722d1-b8bd-465a-895e-410d0558f91f",
+  "badge": {
+    "description": "This is the display description of the certificate.",
+    "type": "BadgeClass",
+    "id": "urn:uuid:5106bba8-2c1a-457f-9c17-ce8831aa9d80",
+    "image": "data:image/png;base64,...",
+    "issuer": {
+      "type": "Profile",
+      "id": "https://www.blockcerts.org/blockcerts_v2_alpha/samples/issuer_testnet.json",
+      "image": "data:image/png;base64,...",
+      "revocationList": "https://www.blockcerts.org/blockcerts_v2_alpha/samples/revocation_list.json",
+      "url": "https://www.blockcerts.org",
+      "name": "Issuer Institution Name",
+      "email": "contact@issuer.org"
+    },
+    "name": "This is the certificate title",
+    "signatureLines": [
+      {
+        "jobTitle": "CEO",
+        "type": [
+          "SignatureLine",
+          "Extension"
         ],
-        "anchors": [
-          {
-            "type": "BTCOpReturn",
-            "sourceId": "b84a92f28cc9dbdc4cd51834f6595cf97f018b925167c299097754780d7dea09"
-          }
-        ]
+        "image": "data:image/png;base64...",
+        "name": "Big Boss"
       }
+    ],
+    "criteria": {
+      "narrative": "Recipient must do work that makes them worthy of this badge"
     }
+  },
+  "recipient": {
+    "type": "email",
+    "recipientProfile": {
+      "type": [
+        "RecipientProfile",
+        "Extension"
+      ],
+      "name": "Arya Stark",
+      "publicKey": "ecdsa-koblitz-pubkey:mtr98kany9G1XYNU74pRnfBQmaCg2FZLmc"
+    },
+    "identity": "aryaxyz@starkxyz.com",
+    "hashed": false
+  },
+  "verification": {
+    "type": [
+      "MerkleProofVerification2017",
+      "Extension"
+    ],
+    "creator": "ecdsa-koblitz-pubkey:msBCHdwaQ7N2ypBYupkp6uNxtr9Pg76imj"
+  },
+  "signature": {
+    "type": [
+      "MerkleProof2017",
+      "Extension"
+    ],
+    "targetHash": "335f8b300b6972112d970a92e22ae7ad010e6efb79d2600c48685d4ac40516e1",
+    "proof": [
+      {
+        "right": "4298534bd9ac0eeb59ccf767b2da67e4203abc66b9b7b4df398cdce50c4460b2"
+      }
+    ],
+    "anchors": [
+      {
+        "type": "BTCOpReturn",
+        "sourceId": "08e205566662b97f149ad677649bbb94ebc2f46c0ac72bc7c9b57d2d207015f4"
+      }
+    ],
+    "merkleRoot": "bb1093d7d20afd94d64e0284697b9ae46da767db336cf3c9bb6d00daf3ac3ce0"
+  }
+}
 
+```
 
 ### Source
 

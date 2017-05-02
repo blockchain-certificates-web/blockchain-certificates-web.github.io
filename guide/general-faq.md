@@ -24,7 +24,27 @@ Certificates are immutable and cannot be updated. We recommend defining batches 
 
 ### How are certificates revoked?
 
-Even though certificates can be issued to a cohort of people, the issuer can still revoke from a single recipient by spending the revocation address that they generated for a particular recipient. This revocation address is listed in the certificate and is part of the hashed certificate payload on the blockchain. The [verification process](verification-process.html) checks if the output was spent and will display it as revoked in that case.
+Even though certificates  can be issued to a cohort of people, the issuer can still revoke from a single recipient. The Blockcerts standard supports a range of revocation techniques. Currently, the primary factor influencing the choice of revocation technique is the particular schema used. 
+
+The Open Badges specification allows a [HTTP URI revocation list](https://openbadgespec.org/#RevocationList). Each `id` field in the `revokedAssertions` array should match the `assertion.id` field in the certificate to revoke. 
+
+For example, a hosted certificate entry in the `revokedAssertions` array would look like:
+
+```
+{
+  "id": "https://example.org/assertions/71c6cc1e-a8b9-401c-8280-a0063bf67bfd",
+  "revocationReason": "Violation of policy"
+}
+```
+
+And a non-hosted certificate entry:
+
+```
+{
+  "id": "urn:uuid:71c6cc1e-a8b9-401c-8280-a0063bf67bfd",
+  "revocationReason": "Violation of policy"
+}
+```
 
 ### Can blockchain certificates allow for selective disclosure of information?
 

@@ -7452,7 +7452,6 @@ input.call_to_action__form__item--08 {
       .features--06:before {
         content: "";
         position: absolute;
-        height: 100%;
         width: 100%;
         top: 0;
         right: 0;
@@ -8435,7 +8434,7 @@ input.call_to_action__form__item--08 {
   .guide-content{text-align: left;}
   .guide-sidebar h6{text-align: left;}
   .guide-image{width: 100%; max-width: 720px; margin: 2em 0;}
-  .guide-content section h3{margin-bottom: 10px; border-bottom: 1px solid #f1f1f1;padding-bottom: 10px;}
+  .guide-content section h3{margin-bottom: 6px; margin-top: 6px;}
   pre.highlight{background-color: #f7f8f9;padding: 1em 1.5em; border: 1px solid #f1f1f1;}
   .about--03 h3{font-size: 19px; color: #062450; margin-top: 40px;line-height: 1.4;}
   .about--03 h6{color: #062450; text-transform: uppercase; font-size: 13px; font-weight: 700;margin-bottom: 20px;}
@@ -11795,9 +11794,17 @@ input.cover__form__item--13 {
 
 .guide-content h2 {
   font-weight: 700;
+  margin-top: 25px;
   margin-bottom: 25px;
   font-size: 38px;
   color: #062450;
+  border-bottom: 1px solid #f1f1f1
+}
+
+.guide-content h4 {
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  font-size: 90%;
 }
 
 .guide-content img {

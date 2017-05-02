@@ -4,171 +4,187 @@ layout: guide
 
 ## Verification Process
 
-The [cert-verifier repo](https://github.com/blockchain-certificates/cert-verifier) provides a library for verifying Blockchain Certificates. However, anyone should be able to verify independently, whether manually or by writing their own library or service. These steps walk you through the certificate verification steps, using our sample certificates as an example.
+The [cert-verifier repo](https://github.com/blockchain-certificates/cert-verifier) provides a library for verifying Blockchain Certificates. However, anyone should be able to verify independently, whether manually or by writing their own library or service. These steps walk you through the certificate verification steps.
 
-These instructions will require a python interpreter and the Python [python-bitcoinlib](https://github.com/petertodd/python-bitcoinlib). These can be installed with:
+## Inputs
 
-    pip install python-bitcoinlib
-    pip install pyld
-    pip install merkle-proofs
+### Blockchain Certificate
 
+The Blockchain Certificate contains:
+ - the content to be verified
+ - the location of additional inputs needed for verification (described in next inputs)
 
-### 1\. Get the certificate and blockchain transaction.
+### Blockchain Transaction
 
-a\. First download a copy of a Blockchain Certificate.
+A Blockchain Certificate must have a `certificate.signature.anchors` field, which must contain at least one anchor to a blockchain transaction. 
 
-The steps below use this [sample Blockchain Certificate](http://www.blockcerts.org/mockissuer/examples/609c2989-275f-4f4c-ab02-b245cfb09017.json).
+The `anchors` entry below says that the transaction was performed on the Bitcoin blockchain, and the field needed to verify  integrity of the certificate is `OP_RETURN` (because `type` is `BTCOpReturn`). This also says the transaction id is `8623beadbc7877a9e20fb7f83eda6c1a1fc350171f0714ff6c6c4054018eb54d` (via the `sourceId`) field.
+ 
+```
+"type": "BTCOpReturn",
+"sourceId": "8623beadbc7877a9e20fb7f83eda6c1a1fc350171f0714ff6c6c4054018eb54d"
+```
 
-b\. Next, find the blockchain transaction id in the certificate.
+Supplied with the blockchain identifier and transaction id, the transaction can be obtained from a service like [blockchain.info](http://blockchain.info/). The general query format is: 
 
-This information is stored in the certificate under the `receipt` field: `anchors`[0].`sourceId`. In the sample certificate, that value is `8623beadbc7877a9e20fb7f83eda6c1a1fc350171f0714ff6c6c4054018eb54d`.
+```
+http://blockchain.info/rawtx/<transaction_id>
+```
+
+So in this example we would download [http://blockchain.info/rawtx/8623beadbc7877a9e20fb7f83eda6c1a1fc350171f0714ff6c6c4054018eb54d](http://blockchain.info/rawtx/8623beadbc7877a9e20fb7f83eda6c1a1fc350171f0714ff6c6c4054018eb54d)
+
+### Issuer identity
+
+The `badge.issuer.id` field in the Blockchain Certificate says where to find the issuer's current information about which keys are valid. Currently, this is a HTTP URI (although the schema allows for other implementations), which (when dereferenced) contains an array of public keys claimed by the issuer.
 
 ```
 {
-    "receipt":
+  ...
+  "publicKeys": [
     {
-        "@context": "https://w3id.org/chainpoint/v2",
-        "merkleRoot": "68f3ede17fdb67ffd4a5164b5687a71f9fbb68da803b803935720f2aa38f7728",
-        "targetHash": "c9ead76a54426b4ce4899bb921e48f5b55ea7592e5cee4460c86ebf4698ac3a6",
-        "proof":
-        [
-            {
-                "right": "7fef060cb17614fdfddd8c558e102fbb96433f5281e96c80f805459773e51163"
-            }
-        ],
-        "type": "ChainpointSHA256v2",
-        "anchors":
-        [
-            {
-                "sourceId": "8623beadbc7877a9e20fb7f83eda6c1a1fc350171f0714ff6c6c4054018eb54d",
-                "type": "BTCOpReturn"
-            }
-        ]
+      "created": "2012-01-03T14:34:57+0000",
+      "revoked": "2012-05-01T18:11:19+0000",
+      "publicKey": "ecdsa-koblitz-pubkey:16wyA4kLFiaQSEE9xZEFTEMXTzWsGf4Zki"
+    },
+    {
+      "created": "2016-01-03T14:34:57+0000",
+      "publicKey": "ecdsa-koblitz-pubkey:1Q3P94rdNyftFBEKiN1fxmt2HnQgSCB619"
     }
+  ],
+  ...
 }
 ```
 
-c\. Download the blockchain transaction record.
+This information is required to cross check the public keys claimed by the issuer with the information from the blockchain transaction.
 
-The blockchain transaction can be obtained from a service like [blockchain.info](http://blockchain.info/). The general query format is: http://blockchain.info/rawtx/<transaction_id>
+### Issuer revocation information
 
-Using the transaction id from the previous step, we download [http://blockchain.info/rawtx/8623beadbc7877a9e20fb7f83eda6c1a1fc350171f0714ff6c6c4054018eb54d](http://blockchain.info/rawtx/8623beadbc7877a9e20fb7f83eda6c1a1fc350171f0714ff6c6c4054018eb54d)
+The `badge.issuer.revocationList` field in the Blockchain Certificate says where to obtain the issuer's list of revoked certificates (a.k.a. assertions). Open Badges-compliant Blockcerts use an HTTP URI, per the Open Badges specification. When dereferenced, this URI provides an array of revoked assertions. For example:
 
-### 2\. Validate the receipt in the certificate.
+```
+{
+  ...
+  "revokedAssertions": [
+    {
+      "id": "urn:uuid:93019408-acd8-4420-be5e-0400d643954a",
+      "revocationReason": "Honor code violation"
+    },
+    {  
+      "id": "urn:uuid:8e0b8a28-beff-43de-a72c-820bc360db3d",
+      "revocationReason": "Issued in error."
+    }
+  ]
+}
+```
 
-    from merkleproof import utils
+The Blockcerts schema allows other implementations of revocation, depending on the implementations allowed by the blockchain, and domain/issuer appropriateness. 
 
-    with open(<INSERT_PATH_TO_LOCAL_CERTIFICATE_FILE>) as cert_file:
-        certificate_json = json.load(cert_file)
-        is_valid_receipt = utils.validate_receipt(certificate_json['receipt'])
+## Check certificate integrity
 
-    print "Valid Merkle receipt:"
-    print is_valid_receipt
-
-
-### 3\. Compare the hash of the local certificate with the value in the receipt.
-
-    import hashlib
-    from pyld import jsonld
-
-    valid_cert_hash = False
-    with open(<INSERT_PATH_TO_LOCAL_CERTIFICATE_FILE>) as cert_file:
-        certificate_json = json.load(cert_file)
-
-    normalized = jsonld.normalize(certificate_json['document'],
-        {'algorithm': 'URDNA2015', 'format': 'application/nquads'})
-    content_bytes = normalized.encode('utf-8')
-    local_hash = hashlib.sha256(content_bytes).hexdigest()
-    expected_certificate_hash = state.receipt['targetHash']
-    if local_hash == expected_certificate_hash:
-        valid_cert_hash = True
-
-    print "Valid certificate hash:"
-    print valid_cert_hash
-
-### 4\. Compare the merkleRoot value in the certificate with the value on the Bitcoin blockchain.
-
-    valid_merkle_root = False
-    merkle_root = certificate_json['receipt']['merkleRoot']
-
-    with open(<INSERT_PATH_TO_BLOCKCHAIN_TRANSACTION_FILE>) as trx_file:
-        blockchain_data = json.load(trx_file)
-        transaction_outs = blockchain_data["out"]
-        for tx_out in transaction_outs:
-            if tx_out.get("addr") == None:
-                opreturn_tx = tx_out
-        op_field = opreturn_tx["script"].decode("hex")
-        op_return = op_field[2:]
-        hash_from_chain = binascii.hexlify(op_return)
-
-    if merkle_root == hash_from_chain:
-        valid_merkle_root = True
-
-    print "Valid Merkle Root:"
-        print valid_merkle_root
+Checking the certificate integrity ensures that the certificate has not been tampered with. This consists of 3 steps
 
 
-### 5\. Check that the certificate was authored by the issuer.
+1\. Validate the Merkle proof in the certificate.
 
-To check that the certificate was authored by issuer, verify that the signature in the local certificate file was signed with the issuer's key.
+Blockcerts uses the Verifiable Claims MerkleProof2017 signature format, which is based on Chainpoint 2.0. Per the (pending) specification, these Merkle proofs may be verified by sending the object in the `signature` field to any Chainpoint 2.0-compatible verifier, after replacing the `MerkleProof2017` type with the Chainpoint type `ChainpointSHA256v2`.
 
-The public key from the sample certificate can be found at [http://www.blockcerts.org/mockissuer/issuer/got_public_key_live.asc](http://www.blockcerts.org/mockissuer/issuer/got_public_key_live.asc) under the 'issuerKeys' field. This needs to be copy/pasted into the code.
+2\. Compare the hash of the local certificate with the value in the receipt.
 
-    import json
-    import binascii
-    import hashlib
-    from bitcoin.signmessage import BitcoinMessage, VerifyMessage, SignMessage
+Blockcerts uses JSON-LD canonicalization to ensure a consistent order of the JSON input. This ensures a consistent hash for verifiers. Per the JSON-LD signature specification, this works as follows:
 
-    valid_author = False
+*    Remove the `signature` portion from the Blockchain Certificate is removed
+*    JSON-LD canonicalize the result
+     *   With settings: `{'algorithm': 'URDNA2015', 'format': 'application/nquads'}`
+*    SHA-256 the result  
 
-    ml_pubkey = <INSERT_ISSUER_KEY_HERE>
+The resulting value should match the value in `signature.targetHash`
 
-    uid = BitcoinMessage(certificate_json["assertion"]["uid"])
-    if coin_data.get("signature", None):
-        signed_uid = coin_data["signature"]
-        valid_author = VerifyMessage(ml_pubkey, uid, signed_uid)
+Note that Blockcerts performs an additional test during JSON-LD canonicalization to detect unmapped fields via a fallback `@vocab` entry, and detecting if any fields were unmapped.
 
-    print "Valid author:"
-    print valid_author
+3\. Compare the merkleRoot value in the certificate with the value in the blockchain transaction.
 
+The transaction information in the "Blockchain Transaction" input step obtains the blockchain record of the content. This step compares the value in the transaction with the value in the certificate. 
 
-### 6\. Check that the certificate has not been revoked
+The transaction details at https://blockchain.info/rawtx/8623beadbc7877a9e20fb7f83eda6c1a1fc350171f0714ff6c6c4054018eb54d has entries in the `out` array. The entry with the `OP_RETURN` value has a `script` starting with `6a20`. Specifically:
 
-Check that the BTC transferred to the relevant revocation addresses has not been spent. The issuer may revoke the recipient's specific certificate or the whole batch. The recipient's specific revocation address is given in the certificate. The batch revocation key from the sample certificate can be found at [http://www.blockcerts.org/mockissuer/issuer/got_public_key_live.asc](http://www.blockcerts.org/mockissuer/issuer/got_public_key_live.asc) under the 'revocationKeys' field. This needs to be copy/pasted into the code.
+```
+{
+    ...
+    "value":0,
+    "script":"6a2068f3ede17fdb67ffd4a5164b5687a71f9fbb68da803b803935720f2aa38f7728"
+}
+```
 
+The `OP_RETURN` value in this example is `68f3ede17fdb67ffd4a5164b5687a71f9fbb68da803b803935720f2aa38f7728`, or the value in `script` without the `6a20` prefix.
 
-    not_revoked = False
+This value should match that provided in the Blockchain Certificate `signature.merkleRoot` field.
 
-    revocation_address = <INSERT_REVOCATION_ADDRESS_HERE>
+## Check certificate authenticity
 
-    recipient_revoke_key = None
-    batch_not_revoked = False
-    recip_not_revoked = False
+This step verifies that the certificate was authored by the issuer. This is verified by ensuring the signing key for the blockchain transaction is indeed claimed by the issuer, and the key was valid at the time the transaction was issued.
 
-    if 'revocationKey' in state.certificate_json['recipient']:
-        recipient_revoke_key = state.certificate_json['recipient']['revocationKey']
+This uses the timestamp and input address from the blockchain transaction details obtained in "TBD", and the issuer identification provided in "Issuer Identity". 
 
-    transaction_outs = blockchain_data["out"]
-    for tx_out in transaction_outs:
-        batch_not_revoked = tx_out.get("addr", None) == revocation_address and tx_out.get("spent", None) == False
-        break
-
-    if recipient_revoke_key:
-        for tx_out in transaction_outs:
-            recip_not_revoked = tx_out.get("addr", None) == recipient_revoke_key and tx_out.get("spent", None) == False
-            break
-
-    not_revoked = batch_not_revoked and recip_not_revoked
-    print "Not revoked:"
-    print not_revoked
+From blockchain transaction information, obtain the timestamp and input address. This will vary depending on which service you use. For Blockchain.info, we need the `addr` field from the `inputs` array and the `time` field. 
 
 
-### 7\. Check that all the above steps are valid. If so, the certificate is verified.
+```
+"inputs":[
+  {
+     "prev_out":{
+        ...
+        "addr":"1Q3P94rdNyftFBEKiN1fxmt2HnQgSCB619",
+        ...
+      }
+  }
+]
+...
+"time":1475524375,
+```
 
-    valid_cert = False
+This is a Unix epoch time format, and a tool like https://www.epochconverter.com/ can convert it to a human readable format. This example yields `03 Oct 2016 19:52:55 GMT`. 
 
-    if is_valid_receipt and valid_cert_hash and valid_merkle_root and not_revoked:
-        valid_cert = True
+This public key is valid:
 
-    print "Valid certificate:"
-    print valid_cert
+- The issuer claims the public key `1Q3P94rdNyftFBEKiN1fxmt2HnQgSCB619` is valid starting `03 Jan 2016 14:34:57 GMT`
+- The transaction occurred `03 Oct 2016 19:52:55 GMT`, which is after the `created` date, and the key had not expired or been revoked when the transaction occurred.
+
+```
+{
+  ...
+  "publicKeys": [
+    {
+      "created": "2012-01-03T14:34:57+0000",
+      "revoked": "2012-05-01T18:11:19+0000",
+      "publicKey": "ecdsa-koblitz-pubkey:16wyA4kLFiaQSEE9xZEFTEMXTzWsGf4Zki"
+    },
+    {
+      "created": "2016-01-03T14:34:57+0000",
+      "publicKey": "ecdsa-koblitz-pubkey:1Q3P94rdNyftFBEKiN1fxmt2HnQgSCB619",
+      "expires": "2017-01-03T14:34:57+0000",
+    }
+  ],
+  ...
+}
+```
+
+This rules out exceptional (and possibly fraudulent) cases, such as:
+- the public key is not claimed by the issuer
+- the transaction was issued after the public key was revoked or expires
+
+A critical distinction in this example is that the transaction is considered valid even though the key expired. This is ok -- all that matters is that the transaction was performed when the key was active. 
+ 
+A key expiration is different from a certificate expiration; expiring keys is a good security practice for issuers. The next step will check certificate expiration.
+
+
+## Check not revoked by issuer
+
+The input obtained from "Issuer revocation information" contains the list of revoked certificates (or "assertions"). 
+
+For Open Badges-compliant Blockcerts, a certificate is considered revoked if any `id` entry in the `revokedAssertions` array contains the id of the certificate. The certificate id is available in the (`id`) field of the Blockchain Certificate.
+
+If the certificate has been revoked, the (optional) `revocationReason` may provide more information about why the certificate was revoked.
+
+## Check certificate has not expired
+
+The certificate may contain an expiration date (an ISO-8601 date). If present, verification must compare this value, available in the `expires` field, against the current time.

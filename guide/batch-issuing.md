@@ -35,7 +35,7 @@ These steps establish that the certificate has not been tampered with since it w
 
 ### Hashing a certificate
 
-The `document` field of a Blockchain Certificate contains the certificate that the issuer created. This is the value needed to hash for comparison against the receipt. Because there are no guarantees about ordering or formatting of JSON, first normalize the `document` value of the certificate against the JSON LD schema. This allows us to obtain a deterministic hash across platforms.
+The Blockchain Certificate JSON contents without the `signature` node is the certificate that the issuer created. This is the value needed to hash for comparison against the receipt. Because there are no guarantees about ordering or formatting of JSON, first canonicalize the certificate (without the `signature`) against the JSON LD schema. This allows us to obtain a deterministic hash across platforms.
 
 The detailed steps are described in the [verification process](verification-process.html).
 
@@ -46,8 +46,20 @@ How a batch is defined can vary, but it should be defined such that it changes i
 
 ### Transaction structure
 
-Each recipient’s Bitcoin address and revocation address are included in the transaction outputs. This means that the issuer needs to create and track the revocation private/public key per recipient. The verification process checks whether the recipient-specific revocation address in a certificate is spent. If so, then the certificate is invalid.
+
+One Bitcoin transaction is performed for every batch of certificates. There is no limit to the number of certificates that may be included in a batch, so typically batches are defined in logical groups such as "Graduates of Fall 2017 Robotics Class".
 
 <img src="/assets/img/pictures/tx_out.png" width="350">
 
+The transaction structure is the following:
+
+*   Input:
+    *    Minimal amount of bitcoin (currently ~$.80 USD) from Issuer's Bitcoin address
+*   Outputs:
+    *   OP_RETURN field, storing a hash of the batch of certificates
+    *   Optional: change to an issuer address
+
+The OP_RETURN output is used to prove the validity of the certificate batch. This output stores data, which is the hash of the Merkle root of the certificate batch. At any time, we can look up this value on the blockchain to help confirm a claim.
+
+The Issuer Bitcoin address and timestamp from the transaction are also critical for the verification process. These are used to check the authenticity of the claim, as described in [verification process](verification-process.html).
 
