@@ -109,7 +109,7 @@
           ]
         },
         "recipientProfile": {
-          "$ref": "http://www.blockcerts.org/blockcerts_v2_alpha/obi/recipientProfileExtension/schema.json"
+          "$ref": "https://w3id.org/blockcerts/schema/2.0-alpha/recipientSchema.json"
         }
       },
       "required": [
@@ -211,10 +211,10 @@
       "uniqueItems": true
     },
     "SignatureLine": {
-      "$ref": "http://www.blockcerts.org/blockcerts_v2_alpha/obi/signatureLineExtension/schema.json#"
+      "$ref": "https://w3id.org/blockcerts/schema/2.0-alpha/signatureLineSchema.json"
     },
     "MerkleProof2017": {
-      "$ref": "http://www.blockcerts.org/blockcerts_v2_alpha/obi/merkleProofSignatureExtension/schema.json#"
+      "$ref": "https://w3id.org/blockcerts/schema/2.0-alpha/merkleProof2017Schema.json"
     },
     "BadgeClass": {
       "description": "From https://w3id.org/openbadges#BadgeClass",
@@ -284,7 +284,7 @@
       ]
     },
     "Profile": {
-      "$ref": "http://www.blockcerts.org/blockcerts_v2_alpha/obi/issuer_schema.json#profile"
+      "$ref": "https://w3id.org/blockcerts/schema/2.0-alpha/issuerSchema.json#profile"
     }
   },
   "properties": {

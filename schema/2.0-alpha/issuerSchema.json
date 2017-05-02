@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "$id": "http://www.blockcerts.org/blockcerts_v2_alpha/obi/issuer_schema.json",
+  "$id": "https://w3id.org/blockcerts/schema/2.0-alpha/issuerSchema.json",
   "title": "IssuerProfile schema",
   "description": "Blockcerts 2.0 Issuer Identification (Profile) schema. Extends https://w3id.org/openbadges#Profile, a type that is embedded in an Open Badge and/or hosted at an issuer URI. Blockcerts specializes the Issuer Profile type into 2 schemas: the core that is embedded in the certificate (which matches the Open Badges Profile type), and one that is to be hosted at an issuer URI, to support blockchain verification of claims. This schema describes the latter. The issuer-hosted Profile is used in the Blockcerts verification process to look up the current list of public keys claimed by the issuer. This also defines an `introductionURL` which may be used by recipients (or software agents) to submit an introduction to the issuer. ",
   "type": "object",
