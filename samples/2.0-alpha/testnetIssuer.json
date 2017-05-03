@@ -19,5 +19,5 @@
   ],
   "revocationList": "https://w3id.org/blockcerts/samples/2.0-alpha/revocationList.json",
   "type": "Profile",
-  "email": "somecontact@issuer.org"
+  "email": "contact@issuer.org"
 }
