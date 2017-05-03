@@ -9,12 +9,8 @@
       "revocationReason": "Honor code violation"
     },
     {
-      "id": "urn:uuid:8e0b8a28-beff-43de-a72c-820bc360db3d",
+      "id": "urn:uuid:87237a8d-1fe2-4707-a716-e70f3db778c7",
       "revocationReason": "Issued in error."
-    },
-    {
-      "id": "urn:uuid:d8accdd2-e8d9-4825-8d7c-2d7865bc756d",
-      "revocationReason": "Honor code violation"
     }
   ]
 }
