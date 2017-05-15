@@ -6,6 +6,8 @@ guide_back: true
 
 An extension that allows an issuer to issue an Open Badge on the blockchain and provide proof of inclusion in a blockchain transaction. This uses the Chainpoint v2.0 specification: [https://chainpoint.org/](https://chainpoint.org/)
 
+This signature scheme is used along with the OBI verification extension type `MerkleProofVerification2017`.
+
 The schema defines the following properties:
 
 ### `type` (JsonLdType, required)
