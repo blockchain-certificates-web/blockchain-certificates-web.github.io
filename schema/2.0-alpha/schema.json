@@ -321,8 +321,15 @@
           "description": "Defined by `email` property of https://w3id.org/openbadges#Profile"
         },
         "revocationList": {
-          "type": "string",
-          "format": "uri",
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ],
           "description": "Defined by `revocationList` property of https://w3id.org/openbadges#Profile. If embedded in a Blockcert and the issuer-hosted Profile, the value in the Blockcert should take preference."
         }
       },
