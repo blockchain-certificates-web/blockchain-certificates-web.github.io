@@ -4,7 +4,7 @@ layout: guide
 
 ## How Issuing works
 
-While it is possible to issue one certificate with one Bitcoin transaction, it is far more efficient to use one Bitcoin transaction to issue a batch of certificates. Blockchain Certificates can be issued as a batch with a limit of roughly 2,000, as determined by the Bitcoin transaction size limit.
+While it is possible to issue one certificate with one Bitcoin transaction, it is far more efficient to use one Bitcoin transaction to issue a batch of certificates. 
 
 The issuer builds a Merkle tree of certificate hashes and registers the Merkle root as the OP_RETURN field in the Bitcoin transaction. 
 
