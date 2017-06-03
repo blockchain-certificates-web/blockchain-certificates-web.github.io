@@ -7,7 +7,7 @@ layout: guide
 Blockchain Certificate schemas extend those of [Open Badges](https://openbadgespec.org/). As with Open Badges, we've provided both a JSON-LD context and JSON schema. The purpose of the JSON-LD context is to map types to Internationalized Resource Identifiers (IRIs), providing semantic context for data. The JSON Schema is used for syntactic validation.
 
 *   [Blockchain Certificate (Assertion) Schema](schema-2.html) (components below)
-    *   [Issuer Profile Schema](issuer_schema.html)
+    *   [Issuer Profile Schema](issuer_schema-2.html)
     *   [OBI Extension: Merkle Proof Schema](merkleProofSignatureExtension_schema.html)    
     *   [OBI Extension: Recipient Profile Schema](recipientProfileExtension_schema.html)
     *   [OBI Extension: SignatureLine Schema](recipientProfileExtension_schema.html)  
@@ -76,7 +76,7 @@ The following is a Blockchain Certificate issued on the testnet Bitcoin network.
       "MerkleProofVerification2017",
       "Extension"
     ],
-    "creator/publicKey?": "ecdsa-koblitz-pubkey:msBCHdwaQ7N2ypBYupkp6uNxtr9Pg76imj"
+    "publicKey": "ecdsa-koblitz-pubkey:msBCHdwaQ7N2ypBYupkp6uNxtr9Pg76imj"
   },
   "signature": {
     "type": [
