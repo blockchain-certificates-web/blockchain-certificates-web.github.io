@@ -82,7 +82,7 @@
         }
       },
       "required": [
-        "publicKey",
+        "id",
         "created"
       ]
     },
