@@ -19,11 +19,6 @@ The following diagram shows the components a certificate issuer uses to:
 Cert-tools allows issuers to create Blockchain Certificate compliant certificate templates, and populate certificates for a (csv-formatted) recipient roster. More information is available at
 [creating certificates](creating-certificates.html)
 
-**cert-signer**
-
-The signing step signs the recipient UID field in the unsigned certificate and places the signature in the signature section of the certificate. The signed certificate is retained as output, since the hash of this document is input to the Merkle Tree, the root of which is stored on the blockchain.
-
-The cert-signer utility is located in the cert-issuer library. 
 
 **cert-issuer**
 
