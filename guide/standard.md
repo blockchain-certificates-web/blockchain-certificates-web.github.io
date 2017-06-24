@@ -2,37 +2,29 @@
 layout: guide
 ---
 
-## Blockcerts Standard
+## Standards Alignment
 
-Blockchain Certificates open source falls into 3 categories: 
+The Blockcerts community is aligned with (and contributing to) the following standards:
 
-*   specifications, i.e. the definitions behind the Blockchain Certificates standard
-*   reference implementations
-*   implementation options
+* Open Badges
+* W3C Verifiable Claims
+* W3C Linked Data Signatures
+* W3C / Rebooting Web of Trust Decentralized Identifiers
 
-### Specifications
+Blockcerts’ open-source components conform to the above standards, demonstrating how such standards can be used in a viable system. This includes generating solutions for subtle difficulties arising in a real-world system, including:
 
-The Blockchain Certificates specification consists of:
+* revocation of certificates
+* identity of participants in a decentralized, self-sovereign mode
+* other lifecycle concerns, including key management
 
-*   The Blockchain Certificates schema, which describe the structure and content of a Blockchain Certificate [[Guide]](schemas.html)  [[Schema Repo]](https://github.com/blockchain-certificates/cert-schema)
-*   Verification procedure -- how to independently verify a Blockchain Certificate [[Guide]](verification-process.html)
-*   Issuer identification, which is used by the verification process to confirm signing keys [[Schema Repo]](https://github.com/blockchain-certificates/cert-schema)
+### Design Principles
 
-### Reference Implementations
-
-Reference implementations for the Blockchain Certificates specification include:
-
-*   Creating a blockcerts-schema-compliant certificate:
-    *    Creating an unsigned certificate [[cert-tools]](https://github.com/blockchain-certificates/cert-tools)
-    *    Signing and issuing a blockcerts schema-compliant certificate [[cert-issuer]](https://github.com/blockchain-certificates/cert-issuer)
-*   Verification
-    *    Python library [[cert-verifier]](https://github.com/blockchain-certificates/cert-verifier)
-    *    Javascript library [[cert-web-component]](https://github.com/blockchain-certificates/cert-web-component)
-*   Display 
-    *    Python library [[cert-viewer]](https://github.com/blockchain-certificates/cert-viewer)
-    *    Mobile; iOS [[cert-wallet]](https://github.com/blockchain-certificates/cert-wallet)
-    *    Javascript, web component [[cert-web-component]](https://github.com/blockchain-certificates/cert-web-component)
-
-### Implementation options
-
-Some of the Blockchain Certificates open source code are not part of the standard, but are implementation choices ranging from best practices (based on our experiences) to choices of convenience. These primarily have been created to support end-to-end workflows in live Blockchain Certificates deployments. Read more about implementation choices in supporting an end-to-end workflow [here](workflow.md).
+*   Open source
+*   Reliance on open standards
+*   Open participation
+*   Recipient control
+*   Simplicity
+*   Minimize resource requirements (computation, cost, etc.)
+*   Solution must be viable without any proprietary product
+*   Blockchain-agnostic in the long term
+*   Maximize confidence in the end product

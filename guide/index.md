@@ -4,21 +4,13 @@ layout: guide
 
 ## Introduction
 
-These open-source repos form a working standard for blockchain certificates that may be utilized by other research projects and commercial developers. It contains components for creating, issuing, viewing, and verifying certificates using the Bitcoin blockchain. These components form all the parts needed for a complete ecosystem.
+Blockcerts is an open initiative for building apps that issue and verify blockchain-based certificates for academic credentials, professional certifications, workforce development, and civic records. 
 
-Please note that this standard is not attempting to solve identity. In other words, this solution does not certify the mapping of public keys to individuals or organizations. However, this ecosystem does form the basis for making strong proof of claims.
+Blockcerts consists of open-source libraries, tools, and apps enabling a decentralized, standards-based, recipient-centric ecosystem, enabling trustless verification through blockchain technologies. 
 
-### Design Principles
+Blockcerts uses and encourages consolidation on open standards. Blockcerts is committed to self-sovereign identity of all participants, and enabling recipient control of their claims through easy-to-use tools such as the certificate wallet. Blockcerts is also committed to availability of credentials, without single points of failure.
 
-*   Open source
-*   Reliance on open standards
-*   Open participation
-*   Recipient control
-*   Simplicity
-*   Minimize resource requirements (computation, cost, etc.)
-*   Solution must be viable without any proprietary product
-*   Blockchain-agnostic in the long term
-*   Maximize confidence in the end product
+These open-source repos may be utilized by other research projects and commercial developers. It contains components for creating, issuing, viewing, and verifying certificates on the blockchain. These components form all the parts needed for a complete ecosystem.
 
 ### Example Deployments
 
@@ -29,4 +21,4 @@ The following examples illustrate issuer-hosted certificates, so the verificatio
 *   MIT's Global Entrepreneurship Bootcamp issued digital certificates to the students who attended their workshop in Seoul, South Korea in March 2016\. [Check out the certificates here.](http://certificates-bootcamp.mit.edu/)
 *   The Laboratorio para la Ciudad issued digital certificates to participants of a week-long workshop in Mexico City in September 2015\. [Check out the certificates here.](http://certs.labcd.mx/)
 
-Have you made a project using the Blockcerts architecture? Please let us know: info@blockcerts.org
+Have you made a project using the Blockcerts architecture? Please let us know: [info@blockcerts.org](mailto:info@blockcerts.org)
