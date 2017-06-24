@@ -11,7 +11,7 @@ Please note that this standard is not attempting to solve identity. In other wor
 ### Design Principles
 
 *   Open source
-*   Open standards
+*   Reliance on open standards
 *   Open participation
 *   Recipient control
 *   Simplicity
