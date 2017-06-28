@@ -6,10 +6,10 @@ layout: guide
 
 ![](/assets/img/pictures/blockcerts-app.png)
 
-The open-source Blockcerts wallet is available for iOS and Android:
+The open-source Blockcerts wallet is available for iOS and Android: 
 
-Get the [iOS Blockcerts wallet](https://itunes.apple.com/us/app/blockcerts-wallet/id1146921514?mt=8)
-Get the [Android Blockcerts wallet](https://play.google.com/store/apps/details?id=com.learningmachine.android.app&hl=en)
+* Get the [iOS Blockcerts wallet](https://itunes.apple.com/us/app/blockcerts-wallet/id1146921514?mt=8)
+* Get the [Android Blockcerts wallet](https://play.google.com/store/apps/details?id=com.learningmachine.android.app&hl=en)
     
 
 ### Contribute to the open source Blockcerts wallet
