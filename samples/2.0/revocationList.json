@@ -1,8 +1,8 @@
 {
   "@context": "https://w3id.org/openbadges/v2",
-  "id": "https://w3id.org/blockcerts/samples/2.0-alpha/revocationList.json",
+  "id": "https://w3id.org/blockcerts/samples/2.0/revocationList.json",
   "type": "RevocationList",
-  "issuer": "https://w3id.org/blockcerts/samples/2.0-alpha/issuerTestnet.json",
+  "issuer": "https://w3id.org/blockcerts/samples/2.0/issuerTestnet.json",
   "revokedAssertions": [
     {
       "id": "urn:uuid:93019408-acd8-4420-be5e-0400d643954a",
