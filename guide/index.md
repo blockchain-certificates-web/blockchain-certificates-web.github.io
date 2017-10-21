@@ -14,4 +14,4 @@ These open-source repos may be utilized by other research projects and commercia
 
 ### Community Forum
 
-To get involved with the community as a developer, or simply a supporter, join the public community forum. The Blockcerts forum is the place to get started, whether it be asking technical questions, posing topics for discussion, or simply sharing news. [View the Blockcerts Forum.](http://community.blockcerts.org/)
+To get involved with the community as a developer, or simply a supporter, join the public community forum. The Blockcerts forum is the place to get started, whether it be asking technical questions, posing topics for discussion, or simply sharing news. [Join the Community.](http://community.blockcerts.org/)
