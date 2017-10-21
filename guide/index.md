@@ -12,13 +12,6 @@ Blockcerts uses and encourages consolidation on open standards. Blockcerts is co
 
 These open-source repos may be utilized by other research projects and commercial developers. It contains components for creating, issuing, viewing, and verifying certificates on the blockchain. These components form all the parts needed for a complete ecosystem.
 
-### Example Deployments
+### Community Forum
 
-The following examples illustrate issuer-hosted certificates, so the verification button appears beneath the certificate. While consumers would ideally employ their own verifier, issuers may self-host certificates with a verification button included. Below are four examples below:
-
-*   The Media Lab issued digital certificates to Media Lab alumni who attended the Lab's 30th anniversary in October 2015\. [Check out the certificates here.](https://coins.media.mit.edu/)
-*   Learning Machine issued HR certificates to all of its employees. Check out an example certificate [here](https://hr.learningmachine.com/13dfa9c6-ced9-4693-875a-ed131d51e502).
-*   MIT's Global Entrepreneurship Bootcamp issued digital certificates to the students who attended their workshop in Seoul, South Korea in March 2016\. [Check out the certificates here.](http://certificates-bootcamp.mit.edu/)
-*   The Laboratorio para la Ciudad issued digital certificates to participants of a week-long workshop in Mexico City in September 2015\. [Check out the certificates here.](http://certs.labcd.mx/)
-
-Have you made a project using the Blockcerts architecture? Please let us know: [info@blockcerts.org](mailto:info@blockcerts.org)
+To get involved with the community as a developer, or simply a supporter, join the public community forum. The Blockcerts forum is the place to get started, whether it be asking technical questions, posing topics for discussion, or simply sharing news. [View the Blockcerts Forum.](http://community.blockcerts.org/)
