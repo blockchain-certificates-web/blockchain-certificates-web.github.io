@@ -420,7 +420,7 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.4;
   color: inherit; }
 
 h1 {
@@ -2989,14 +2989,13 @@ input[type="button"].btn-block {
   background-color: rgba(255, 255, 255, 0.075); }
 
 .card {
-  position: relative;
+  /* position: relative;
   display: block;
   margin-bottom: 0.75rem;
   background-color: #fff;
-  border: 1px solid #e5e5e5;
   -webkit-border-radius: 0.25rem;
   -moz-border-radius: 0.25rem;
-  border-radius: 0.25rem; }
+  border-radius: 0.25rem; */}
 
 .card-block {
   padding: 1.25rem; }
@@ -3054,8 +3053,8 @@ input[type="button"].btn-block {
   border-color: #5cb85c; }
 
 .card-info {
-  background-color: #5bc0de;
-  border-color: #5bc0de; }
+  /* background-color: #5bc0de;
+  border-color: #5bc0de; */}
 
 .card-warning {
   background-color: #f0ad4e;
@@ -5160,6 +5159,9 @@ textarea:focus {
     text-decoration: none; }
   .button--gray {
     background-color: #f6f6f6; }
+  .button--green {
+      background-color: #2AB27B;color: #fff; }
+  .button--green:hover {color: #fff;}
   .button--black {
     background-color: #242526;
     color: white; }
@@ -5179,6 +5181,12 @@ textarea:focus {
       color: white; }
     .button--blue:hover {
       background-color: rgba(27, 139, 249, 0.8); }
+  .button--border-green {
+    border: 1px solid #2AB27B;
+    color: #2AB27B; }
+    .button--border-green:hover {
+      background-color: #2AB27B;
+      color: white; }
   .button--border-black {
     border: 1px solid #242526;
     color: #242526; }
@@ -5980,7 +5988,8 @@ textarea:focus {
   z-index: 10;
   left: 0;
   right: 0;
-  top: 49px; }
+  padding-top: 49px;
+  padding-bottom: 32px; }
   @media (max-width: 500px) {
     .header {
       top: 20px; } }
@@ -6242,7 +6251,7 @@ textarea:focus {
       opacity: 0; }
     .header__cart_button:hover:after {
       opacity: 1; }
-
+.verifier{margin: 0 auto;padding: 240px 0;text-align: center;max-width: 720px;}
 @media (max-width: 992px) {
   .header__item--desktop {
     display: none; } }
@@ -7303,8 +7312,8 @@ input.call_to_action__form__item--08 {
   background-color: transparent; }
 
 .features--03 {
-  padding-top: 130px;
-  padding-bottom: 120px; }
+  padding-top: 110px;
+  padding-bottom: 110px; }
   @media (max-width: 500px) {
     .features--03 {
       padding: 50px 0; } }
@@ -7403,8 +7412,9 @@ input.call_to_action__form__item--08 {
       width: 100%; } }
 
 .features--05 {
-  padding-top: 60px;
-  padding-bottom: 25px;}
+  background-color: #f7f8f9;
+  padding-top: 100px;
+  padding-bottom: 50px;}
   @media (max-width: 500px) {
     .features--05 {
       padding-top: 50px; } }
@@ -7415,7 +7425,7 @@ input.call_to_action__form__item--08 {
 .features__title--05 {
   font-weight: 700;
   margin-bottom: 25px;
-  font-size: 38px;
+  /*font-size: 38px;*/
   color: #062451; }
   .wf-montserrat-n7-active .features__title--05 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
@@ -7856,6 +7866,7 @@ input.call_to_action__form__item--08 {
 .testimonials {
   position: relative;
   margin: auto;
+  background-color: #f7f8f9;
   padding: 70px 0;
   text-align: center; }
   @media (max-width: 500px) {
@@ -7890,7 +7901,7 @@ input.call_to_action__form__item--08 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .testimonials__item_text {
-  font-weight: 700;
+  font-weight: 700;s
   position: relative;
   display: block;
   max-width: 400px;
@@ -8044,7 +8055,7 @@ input.call_to_action__form__item--08 {
   max-width: 808px; }
 
 .testimonials__item_text--06 {
-  max-width: 100%;
+  max-width: 720px;
   font-family: georgia, sans-serif;
   font-weight: 500;
 }
@@ -8066,7 +8077,8 @@ input.call_to_action__form__item--08 {
 .about__title {
   font-weight: 700;
   margin-bottom: 25px;
-  font-size: 38px;color: #062450; }
+  /*font-size: 38px;*/
+  color: #062450; }
   .wf-montserrat-n7-active .about__title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 500px) {
@@ -8470,7 +8482,6 @@ input.call_to_action__form__item--08 {
     margin: auto; } }
 
 .about--04 {
-  background-color: #f7f8f9;
   padding-top: 100px;padding-bottom: 100px;}
   @media (max-width: 500px) {
     .about--04 {
