@@ -79,8 +79,7 @@
       </nav>
 
     {% if page.home %}
-      <!-- <div style="background-image: url('/assets/img/bg/bg--network.jpg'); min-height: 100vh;" class="cover cover--09 js-cover"> -->
-      <div style="background-color: #f7f8f9;">
+      <div style="background-image: url('/assets/img/bg/bg--network.jpg');" class="">
     {% else %}
       <div class="inner-page" style="min-height: 125px; background-color: #062451">
     {% endif %}
@@ -106,28 +105,15 @@
 
         {% if page.home %}
 
-
-        <div class="container cover__container--16 cover__content_box--16" style="min-height: 75vh;">
+        <div class="container cover__container--16 cover__content_box--16">
           <div class="cover__pic_box--16"></div>
+            
             <div class="verifier">
                 <verify-certificate standalone shadow></verify-certificate>
             </div>
-        </div>
 
-        <!-- <div class="container cover__container--16 cover__content_box--16" style="color: #000">
-          <div class="cover__pic_box--16"></div>
-          <div class="cover__text_box--16">
-            
-            <h2 class="cover__title--16"><span class="cover__title_text--16">The Open Initiative <br/>for Blockchain Certificates</span></h2>
-
-            <div class="cover__description_box--16">
-              <span class="cover__description_text--16">Build apps that issue and verify blockchain-based certificates for academic credentials, professional certifications, workforce development, and civic records.</span>
-            </div>
-
-            <a href="/guide/" class="button button--border-white">Learn More</a>
-            <a href="http://community.blockcerts.org/" class="button button--border-white" target="_blank">Join Community</a>
           </div>
-        </div> -->
+        </div>
 
         {% endif %}
 

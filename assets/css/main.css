@@ -6251,7 +6251,52 @@ textarea:focus {
       opacity: 0; }
     .header__cart_button:hover:after {
       opacity: 1; }
-.verifier{margin: 0 auto;padding: 240px 0;text-align: center;max-width: 720px;}
+
+.verifier{margin: 0 auto;padding: 240px 0;text-align: center;max-width: 720px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+verify-certificate[shadow]{box-shadow: none;}
+
+.verifier .verify-certificate .standalone.verify-certificate{
+  padding: 30px;
+  background-color: rgba(6, 36, 81, 0.8);
+  color: #f9f9fc;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-transition: border-color .5s ease-out;
+  transition: border-color .5s ease-out;
+  -o-transition: border-color .5s ease-out;
+  transition: border-color .5s ease-out;
+  border-radius: 4px;
+}
+section.standalone.fill-certificate.drag-on.style-scope.verify-certificate{
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  -webkit-transition: border-color .5s ease-out;
+  transition: border-color .5s ease-out;
+  -o-transition: border-color .5s ease-out;
+  transition: border-color .5s ease-out;
+}
+
+.verifier .verify-certificate .standalone.verify-certificate input{
+  border-radius: 4px;
+  border: 1px solid transparent;
+  color: #062451 !important;
+  font-size: 15px;
+}
+
+.verifier .verify-certificate .standalone.verify-certificate span.strong.verify-certificate{
+  color: #f9f9fc;
+}
+
+section.standalone.show-certificate.style-scope.verify-certificate{
+  background-color: #f9f9fc;
+  color: rgba(110, 126, 142, 1);
+  -webkit-transition: background-color .25s ease-out;
+  -moz-transition: background-color .25s ease-out;
+  -o-transition: background-color .25s ease-out;
+  transition: background-color .25s ease-out;
+}
+
 @media (max-width: 992px) {
   .header__item--desktop {
     display: none; } }
