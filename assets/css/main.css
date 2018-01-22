@@ -6026,7 +6026,7 @@ textarea:focus {
 
 .header__logo_box {
   display: inline-block;
-  width: 150px;
+  width: 200px;
   height: 42px; }
 
 .header__logo_img {
@@ -6254,15 +6254,17 @@ textarea:focus {
 
 .verifier{margin: 0 auto;padding: 240px 0;text-align: center;max-width: 720px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
 }
 
 verify-certificate[shadow]{box-shadow: none;}
 
 .verifier .verify-certificate .standalone.verify-certificate{
-  padding: 30px;
-  background-color: rgba(6, 36, 81, 0.8);
+  padding: 28px 40px;
+  margin-top: 30px;
+  background-color: rgba(2, 17, 42, 0.3);
   color: #f9f9fc;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   -webkit-transition: border-color .5s ease-out;
   transition: border-color .5s ease-out;
   -o-transition: border-color .5s ease-out;
@@ -9703,7 +9705,7 @@ input.call_to_action__form__item--08 {
 
 .footer__main_box--04 {
   position: relative;
-  background-color: #062451;
+  background-color: #02112a;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
   @media (max-width: 992px) {
     .footer__main_box--04 {
@@ -9760,7 +9762,7 @@ input.call_to_action__form__item--08 {
 
 .footer__description_box--04 {
   padding: 40px 0 45px;
-  background-color: #062451; }
+  background-color: #02112a; }
 
 .footer__description--04 {
   display: inline-block;
