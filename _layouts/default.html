@@ -26,13 +26,13 @@
     Blockchain Certificates on your own site, here's all you need to do.
     -->
     <!-- Step 1: Include the web components polyfill for older browsers. -->
-    <script src="/components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <!-- <script src="/components/webcomponentsjs/webcomponents-lite.min.js"></script> -->
 
     <!-- Step 2: Import whichever web components you'd like to use. -->
     <!-- This is for <blockchain-certificate> -->
-    <link rel="import" href="/components/blockchain-certificate/blockchain-certificate.html">
+    <!-- <link rel="import" href="/components/blockchain-certificate/blockchain-certificate.html"> -->
     <!-- This is for <validate-certificate> -->
-    <link rel="import" href="/components/blockchain-certificate/validate-certificate.html">
+    <!-- <link rel="import" href="/components/blockchain-certificate/validate-certificate.html"> -->
 
     <!-- Step 3: Use those elements in the body of your HTML. (See below, on web-component.html) -->
 
@@ -53,6 +53,10 @@
 
       console.log(logo, on, off, on, off, on, off, on, off, on, off, on, off, off, off, on, off, on, off, on, off, off, off, on, off, on, off, on, off, on, off, on, text);
     </script>
+
+    <script src="https://blockcertscomponent.learningmachine.com/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="https://blockcertscomponent.learningmachine.com/verify-certificate.html">
+
   </head>
   <body>
     <main class="page_wrapper">
@@ -75,12 +79,12 @@
       </nav>
 
     {% if page.home %}
-      <div style="background-image: url('/assets/img/bg/bg--network.jpg'); min-height: 100vh;" class="cover cover--09 js-cover">
+      <div style="background-image: url('/assets/img/bg/bg--network-2.jpg');" class="">
     {% else %}
-      <div class="inner-page" style="min-height: 125px; background-color: #062451">
+      <div class="inner-page" style="min-height: 125px; background-color: #031532">
     {% endif %}
 
-        <nav class="header header--01">
+        <nav class="header header--01" style="background-color: #031532;">
           <div class="container header__container">
             <div class="header__left_box"><a href="/" title="Home" class="header__logo_box"><img src="/assets/img/etc/blockcerts.png" alt="Learning Machine" class="header__logo_img"></a></div>
 
@@ -103,15 +107,13 @@
 
         <div class="container cover__container--16 cover__content_box--16">
           <div class="cover__pic_box--16"></div>
-          <div class="cover__text_box--16">
-            <h2 class="cover__title--16"><span class="cover__title_text--16">The Open Initiative <br/>for Blockchain Certificates</span></h2>
 
-            <div class="cover__description_box--16">
-              <span class="cover__description_text--16">Build apps that issue and verify blockchain-based certificates for academic credentials, professional certifications, workforce development, and civic records.</span>
+                    
+            <div class="verifier">
+              <h2>Blockcert Verification</h2>    
+                <verify-certificate standalone shadow></verify-certificate>
             </div>
 
-            <a href="/guide/" class="button button--border-white">Learn More</a>
-            <a href="http://community.blockcerts.org/" class="button button--border-white" target="_blank">Join Community</a>
           </div>
         </div>
 
