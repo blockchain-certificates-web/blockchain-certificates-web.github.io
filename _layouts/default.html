@@ -17,8 +17,8 @@
 
     <link rel='shortcut icon' href='/assets/img/icons/favicon.ico' type='image/x-icon' />
     <link rel="stylesheet" href="/assets/css/main.css">
-    <script src="/assets/js/main.js" defer></script>
 
+    
     <title>{% if page.title %}{{ page.title }} - {% endif %}Blockcerts : The Open Initiative for Blockchain Certificates</title>
 
     <!--
@@ -55,9 +55,12 @@
     </script>
 
     <script src="https://blockcertscomponent.learningmachine.com/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="https://blockcertscomponent.learningmachine.com/verify-certificate.html">
+    <link rel="import" href="https://blockcertscomponent.learningmachine.com/credential-verifier.html">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet">
 
   </head>
+
   <body>
     <main class="page_wrapper">
       <nav data-menu-index="01" class="menu menu--01 js-menu">
@@ -69,6 +72,7 @@
               <li class="menu__item"><a href="/guide/" class="menu__link">Guide</a></li>
               <li class="menu__item"><a href="/about.html" class="menu__link">About</a></li>
               <li class="menu__item"><a href="https://github.com/blockchain-certificates" class="menu__link">Github</a></li>
+              <li class="header__menu_item"><a data-fancybox data-animation-duration="700" class="header__menu_link header__menu_link--button header__menu_link--white" data-src="#animatedModal" href="javascript:;">Get the App</a></li>
             </ul>
             <ul class="social">
               <li class="social__item social__item--left_margin"><a href="https://twitter.com/Blockcerts" title="Say hello in Twitter!" class="social__link social__link--twitter"></a></li>
@@ -79,14 +83,16 @@
       </nav>
 
     {% if page.home %}
-      <div style="background-image: url('/assets/img/bg/bg--network-2.jpg');" class="">
+      <div style="background-image: url('/assets/img/bg/blockchain2.png');" class="hero-cover">
+        
     {% else %}
       <div class="inner-page" style="min-height: 125px; background-color: #031532">
     {% endif %}
 
         <nav class="header header--01" style="background-color: #031532;">
           <div class="container header__container">
-            <div class="header__left_box"><a href="/" title="Home" class="header__logo_box"><img src="/assets/img/etc/blockcerts.png" alt="Learning Machine" class="header__logo_img"></a></div>
+
+            <div class="header__left_box"><a href="/" title="Home" class="header__logo_box"><img src="/assets/img/pictures/blockcerts.svg" alt="Learning Machine" class="header__logo_img"></a></div>
 
             <div class="header__right_box">
               <ul class="header__menu_list header__item--desktop">
@@ -94,6 +100,7 @@
                 <li class="header__menu_item"><a href="/guide/" class="header__menu_link header__menu_link--white">Guide</a></li>
                 <li class="header__menu_item"><a href="/about.html" class="header__menu_link header__menu_link--white">About</a></li>
                 <li class="header__menu_item"><a href="https://github.com/blockchain-certificates" class="header__menu_link header__menu_link--white"><img src="/assets/img/icons/github.png" class="cover__img--16" style="width: 18px; top: -2px; position: relative; margin-right: 2px;">&nbsp;Github</a></li>
+                <li class="header__menu_item"><a data-fancybox data-animation-duration="700" class="header__menu_link header__menu_link--button header__menu_link--white" data-src="#animatedModal" href="javascript:;">Get the App</a></li>
               </ul>
               <button type="button" data-menu-index="01" class="header__burger_button js-open-menu header__item--mobile"></button>
 
@@ -101,25 +108,42 @@
           </div>
         </nav>
 
+        <div style="display: none;" id="animatedModal" class="animated-modal">
+                <h2>Get the Free Blockcerts App</h2>
+                <p>
+                  <img src="/assets/img/pictures/blockcerts-mobile.jpg" style="width: 60%;">
+                  <div class="app-badges">
+              <a href="https://itunes.apple.com/us/app/blockcerts-wallet/id1146921514?mt=8" target="_blank" alt="Blockcerts App"><img src="/assets/img/pictures/apple.svg" style="height: 20%;"></a>
+              <a href="https://play.google.com/store/apps/details?id=com.learningmachine.android.app&hl=en" target="_blank" alt="Blockcerts App"><img src="/assets/img/pictures/google-play-badge.png" style="width: 153px;"></a>
+                  </div>
+                </p>
+        </div>
 
 
         {% if page.home %}
 
-        <div class="container cover__container--16 cover__content_box--16">
+
+        <div class="container cover__container--16 cover__content_box--16" style="position: relative;">
+
           <div class="cover__pic_box--16"></div>
 
                     
             <div class="verifier">
-              <h2>Blockcert Verification</h2>    
-                <verify-certificate standalone shadow></verify-certificate>
+              <h2 class="hero-title">Blockcerts Universal Verifier</h2>    
+                <credential-verifier></credential-verifier>
             </div>
 
           </div>
         </div>
 
+        <div class="triangles triangles--brand">
+          <span></span>
+          <span></span>
+        </div>
+
         {% endif %}
 
-      </div>
+      
     </div>
 
 
@@ -127,6 +151,7 @@
     {{ content }}
 
       <footer class="footer footer--04">
+
         <div class="footer__main_box--04">
           <div class="container footer__container"><a href="/" class="footer__logo_box footer__logo_box--04"><img src="/assets/img/etc/blockcerts.png" class="footer__logo"></a>
             <ul class="footer__nav footer__nav--04">
@@ -134,6 +159,7 @@
               <li class="footer__nav__item footer__nav__item--04"><a href="/guide/" class="footer__nav__link footer__nav__link--04">Guide</a></li>
               <li class="footer__nav__item footer__nav__item--04"><a href="/about.html" class="footer__nav__link footer__nav__link--04">About</a></li>
               <li class="footer__nav__item footer__nav__item--04"><a href="https://github.com/blockchain-certificates" class="footer__nav__link footer__nav__link--04">Github</a></li>
+              <li class="footer__nav__item footer__nav__item--04"><a data-fancybox data-animation-duration="700" class="header__menu_link" data-src="#animatedModal" href="javascript:;">Get the App</a></li>
             </ul>
             <ul class="social footer__social--04 footer__social_box">
               <li class="social__item social__item--left_margin"><a href="https://twitter.com/Blockcerts" title="Say hello in Twitter!" class="social__link social__link--twitter"></a></li>
@@ -145,6 +171,8 @@
         <div class="footer__description_box--04">
           <div class="container footer__container"><span class="footer__description footer__description--04">The Open Standard for Blockchain Certificates</span><span class="footer__copyright footer__copyright--04"><a href="https://opensource.org/licenses/MIT">The MIT License (MIT)</a></span></div>
         </div>
+
+
       </footer>
 
 
@@ -161,6 +189,18 @@
       ga('send', 'pageview');
 
     </script>
+    <script src="/assets/js/main.js" defer></script>
+
+
+
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+
   </body>
   <div class="js-overlay js-close-navigation js-close-menu overlay"></div>
 </html>
+
+
