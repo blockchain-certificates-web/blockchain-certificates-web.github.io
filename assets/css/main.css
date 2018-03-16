@@ -3541,7 +3541,7 @@ a.label:focus, a.label:hover {
   to {
     background-position: 0 0; } }
 
-.progress {
+/*.progress {
   display: block;
   width: 100%;
   height: 1rem;
@@ -3681,7 +3681,7 @@ a.label:focus, a.label:hover {
 
 @media screen and (min-width: 0\0) {
   .progress-danger .progress-bar {
-    background-color: #d9534f; } }
+    background-color: #d9534f; } }*/
 
 .media {
   margin-top: 15px; }
@@ -6253,8 +6253,12 @@ textarea:focus {
     .header__cart_button:hover:after {
       opacity: 1; }
 
-.verifier{margin: 0 auto;padding: 220px 0;max-width: 740px;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+
+
+.verifier{
+  margin: 0 auto;
+  padding: 220px 0;
+  max-width: 740px;
   color: #fff;
 }
   .verifier h2{
@@ -6263,7 +6267,10 @@ textarea:focus {
     color: initial;
   }
 
-  .verifier h2.hero-title{color: #fff;margin-bottom: 38px;}
+  .verifier h2.hero-title{
+    color: #fff;
+    margin-bottom: 38px;
+  }
 
 
 
