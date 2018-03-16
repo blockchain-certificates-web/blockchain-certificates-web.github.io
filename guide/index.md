@@ -13,7 +13,6 @@ Blockcerts uses and encourages consolidation on open standards. Blockcerts is co
 These open-source repos may be utilized by other research projects and commercial developers. It contains components for creating, issuing, viewing, and verifying certificates on the blockchain. These components form all the parts needed for a complete ecosystem.
 
 ### How it Works
-
 ![](/assets/img/pictures/howitworks.jpg)
 
 ### Community Forum
