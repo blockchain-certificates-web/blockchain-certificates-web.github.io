@@ -6257,10 +6257,15 @@ textarea:focus {
 
 .verifier{
   margin: 0 auto;
-  padding: 220px 0;
+  padding: 60px 0;
   max-width: 780px;
   color: #fff;
 }
+
+@media (min-width: 544px) {
+  .verifier{ padding: 220px 0;}
+}
+
   .verifier h2{
     text-align: center;
     margin-bottom: 32px;
@@ -6272,6 +6277,33 @@ textarea:focus {
     margin-bottom: 38px;
   }
 
+.main.fill-certificate.style-scope.credential-verifier{
+  background-color: rgba(3, 21, 50, 0.7);
+}
+
+footer.style-scope.credential-verifier, footer.style-scope.credential-verifier a, footer span.style-scope.credential-verifier{
+  background-color: rgba(3, 21, 50, 0.9);
+  color: #fff;
+}
+
+a.file-selector.style-scope.credential-verifier{
+color: #fff;
+}
+
+.main.show-certificate.style-scope.credential-verifier{
+  transition: background-color 0.5s ease;
+}
+
+.style-scope.credential-verifier{
+  color: rgba(3, 21, 50, 1);
+}
+button.style-scope.credential-verifier{
+  color: #fff;
+}
+
+tspan.style-scope.credential-verifier, rect#Rectangle.style-scope.credential-verifier{
+  fill: #fff;
+}
 
 
 
@@ -11902,7 +11934,24 @@ input.cover__form__item--13 {
 
 }
 
-.hero-cover{background-position: 0px 0px; background-color: #02112a;/*min-height: 100vh;*/}
+.hero-cover{
+  /*background-position: 0px 0px;*/
+background: rgba(3,21,50,1);
+background: -moz-linear-gradient(top, rgba(3,21,50,1) 0%, rgba(19,50,80,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(3,21,50,1)), color-stop(100%, rgba(19,50,80,1)));
+background: -webkit-linear-gradient(top, rgba(3,21,50,1) 0%, rgba(19,50,80,1) 100%);
+background: -o-linear-gradient(top, rgba(3,21,50,1) 0%, rgba(19,50,80,1) 100%);
+background: -ms-linear-gradient(top, rgba(3,21,50,1) 0%, rgba(19,50,80,1) 100%);
+background: linear-gradient(to bottom, rgba(3,21,50,1) 0%, rgba(19,50,80,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031532', endColorstr='#133250', GradientType=0 );
+  /*min-height: 100vh;*/
+}
+
+.hero-cover-img{
+  background-image: url('/assets/img/bg/blockchain2.png');
+  background-position: 0px -130px;
+}
+
 .hero-cover nav.header.header--01{
   background-color: transparent !important;
 }
@@ -11919,7 +11968,7 @@ width: 100%;
 }
 
 .triangles .triangles, .triangles--brand, .triangles .triangles, .triangles--footer{
-background: #02112a;
+background: #062451;
 opacity: .3;
 background: -webkit-gradient(left top, left bottom, color-stop(0, #031532), color-stop(100%, #4773a6));
 background: -o-linear-gradient(top, #031532 0, #3475A9 100%);
