@@ -4,8 +4,11 @@ layout: guide
 
 ## FAQ 
 
+### Which blockchain does Blockcerts use?
 
-### Is private information now available on the Bitcoin blockchain?
+Blockcerts was built as a technical standard to work across any blockchain. It started in 2016 with the Bitcoin blockchain and then soon expanded to Ethereum. Development work continues for making Blockcerts to work across public chains, and to be easily extended for private chains as well.
+
+### Is private information now available on the blockchain?
 
 The short answer is no. What is stored on the blockchain is a 1-way hash. This makes it useful only for verification; i.e. you can hash a certificate and compare to what is on the blockchain. And given what is on the blockchain, the original data cannot be feasibly recovered. This makes it easy for a recipient to reveal a certificate only to intended third parties.
 
