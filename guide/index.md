@@ -10,7 +10,7 @@ Blockcerts consists of open-source libraries, tools, and mobile apps enabling a 
 
 Blockcerts uses and encourages consolidation on open standards. Blockcerts is committed to self-sovereign identity of all participants, and enabling recipient control of their claims through easy-to-use tools such as the certificate wallet (mobile app). Blockcerts is also committed to availability of credentials, without single points of failure.
 
-These open-source repos may be utilized by other research projects and commercial developers. It contains components for creating, issuing, viewing, and verifying certificates on the blockchain. These components form all the parts needed for a complete ecosystem.
+These open-source repos may be utilized by other research projects and commercial developers. It contains components for creating, issuing, viewing, and verifying certificates across any blockchain. These components form all the parts needed for a complete ecosystem.
 
 ### How it Works
 ![](/assets/img/pictures/howitworks.jpg)
