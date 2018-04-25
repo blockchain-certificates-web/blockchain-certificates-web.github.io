@@ -7,7 +7,8 @@ layout: guide
 The Blockcerts community is currently working to provide:
 
 * Verifiable Claims compatible schemas
-* Issuing and verification across multiple blockchains, including more expressive models for revocation
+* Issuing and verification across additional blockchains, beyond Bitcoin and Ethereum
+* More expressive models for revocation
 * Enhanced integration with Decentralized Identifiers
 * Improving decentralization and longevity by removing dependencies on issuer-hosted data, where desired
 
@@ -18,9 +19,9 @@ Verifiable Claims is a lightweight format for expressing a cryptographically ver
  
 In use cases outside of badges, this also allows a simpler, more generic schema on which to build a claim.
 
-### Multiple Blockchains
+### Additional Blockchains
 
-Blockcerts will soon develop issuer and verifier support for more blockchains, with an initial focus on Ethereum.
+Blockcerts will soon develop issuer and verifier support for additional blockchains. Blockcerts initial focus was on Bitcoin and Ethereum, and continuing development will expand to more blockchains in the near future.
 
 ### Revocation
 
