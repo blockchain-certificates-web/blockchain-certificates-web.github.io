@@ -6277,6 +6277,10 @@ textarea:focus {
     margin-bottom: 38px;
   }
 
+.verifier credential-verifier {
+  background-color: transparent;
+}
+
 .main.fill-certificate.style-scope.credential-verifier{
   background-color: rgba(3, 21, 50, 0.7);
 }
@@ -6301,7 +6305,7 @@ button.style-scope.credential-verifier{
   color: #fff;
 }
 
-tspan.style-scope.credential-verifier, rect#Rectangle.style-scope.credential-verifier{
+tspan.style-scope.credential-verifier, rect#Rectangle.style-scope.credential-verifier, path.credential-verifier{
   fill: #fff;
 }
 
