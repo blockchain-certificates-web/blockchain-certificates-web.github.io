@@ -1,0 +1,7 @@
+{
+  "@context": "https://w3id.org/openbadges/v2",
+  "id": "https://w3id.org/blockcerts/samples/2.1/revocation-list-mainnet.json",
+  "type": "RevocationList",
+  "issuer": "https://w3id.org/blockcerts/samples/2.1/issuer-mainnet.json",
+  "revokedAssertions": []
+}
