@@ -5991,10 +5991,6 @@ textarea:focus {
   width: 100%; }
 
 .header {
-  position: absolute;
-  z-index: 10;
-  left: 0;
-  right: 0;
   padding-top: 40px;
   padding-bottom: 32px; }
   @media (max-width: 500px) {
@@ -6013,10 +6009,8 @@ textarea:focus {
     clear: both; }
 
 .header__left_box {
-  position: relative;
-  z-index: 10;
   float: left;
-  height: 100%; }
+}
 
 .header__center_box {
   position: absolute;
@@ -6268,20 +6262,16 @@ textarea:focus {
   color: #fff;
 }
 
-@media (min-width: 544px) {
-  .verifier{ padding: 220px 0;}
+.verifier h2{
+  text-align: center;
+  margin-bottom: 32px;
+  color: initial;
 }
 
-  .verifier h2{
-    text-align: center;
-    margin-bottom: 32px;
-    color: initial;
-  }
-
-  .verifier h2.hero-title{
-    color: #fff;
-    margin-bottom: 38px;
-  }
+.verifier h2.hero-title{
+  color: #fff;
+  margin-bottom: 38px;
+}
 
 .verifier credential-verifier {
   background-color: transparent;
@@ -11418,32 +11408,6 @@ input.cover__form__item--13 {
   position: relative;
   height: 100%; }
 
-.cover__pic_box--16 {
-  position: absolute;
-  height: 80%;
-  right: 15px;
-  top: 58%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%); }
-  @media (max-width: 992px) {
-    .cover__pic_box--16 {
-      top: 50%;
-      height: 500px;
-      right: 0; } }
-  @media (max-width: 500px) {
-    .cover__pic_box--16 {
-      -webkit-transform: none;
-      -moz-transform: none;
-      -ms-transform: none;
-      -o-transform: none;
-      transform: none;
-      position: static;
-      height: 100px;
-      margin-bottom: 40px; } }
-
 .cover__img--16 {
   height: 100%; }
 
@@ -11960,10 +11924,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031532', end
 .hero-cover-img{
   background-image: url('/assets/img/bg/blockchain2.png');
   background-position: 0px -130px;
-}
-
-.hero-cover nav.header.header--01{
-  background-color: transparent !important;
 }
 
 .triangles{
