@@ -90,7 +90,7 @@ The OP_RETURN output is used to prove the validity of the certificate batch. Thi
 
 ### What is an OP_RETURN code?
 
-Original attempts to store non-financial transactions on the Bitcoin blockchain resulted in bloat of the Bitcoin unspent transaction database (UTXO). The OP_RETURN code was introduced by the Bitcoin core developers to address ([but not necessarily endorse](https://en.bitcoin.it/wiki/OP_RETURN)) the increasing desire of people to store non-financial data. The code signifies that an output is provably unspendable, allowing transactions to be pruned from the UXTO database.
+Original attempts to store non-financial transactions on the Bitcoin blockchain resulted in bloat of the Bitcoin unspent transaction database (UTXO). The OP_RETURN code was introduced by the Bitcoin core developers to address ([but not necessarily endorse](https://en.bitcoin.it/wiki/OP_RETURN)) the increasing desire of people to store non-financial data. The code signifies that an output is provably unspendable, allowing transactions to be pruned from the UTXO database.
 
 ### What determines the cost?
 
