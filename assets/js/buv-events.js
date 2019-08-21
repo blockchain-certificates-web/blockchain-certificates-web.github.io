@@ -22,7 +22,6 @@ var Tracker = function () {
       var params = {
         key: this.assertionUID,
         action: action,
-        origin: this.origin,
         application: document.certificateTrackerOrigin,
         platform: 'blockcerts-verifier',
         userAgent: navigator.userAgent
