@@ -13,22 +13,23 @@ var Tracker = function () {
 
   _createClass(Tracker, [{
     key: 'track',
-    value: function track(action, socialNetwork) {
+    value: function track(action, detail) {
       if (!this.assertionUID || !action || action === '') {
         return;
       }
-
-      socialNetwork = socialNetwork || '';
 
       var xhr = new XMLHttpRequest();
       var params = {
         key: this.assertionUID,
         action: action,
-        metadata: {
-          application: socialNetwork,
-          platform: this.origin
-        }
+        application: document.certificateTrackerOrigin,
+        platform: 'blockcerts-verifier',
+        userAgent: navigator.userAgent
       };
+
+      if (detail.socialNetwork) {
+        params.sharedOn = detail.socialNetwork;
+      }
 
       xhr.addEventListener('load', function (event) {});
       xhr.addEventListener('error', function (event) {
@@ -64,23 +65,23 @@ function handleEvent (e) {
     return false;
   }
 
-  if (!window.certificateTracker) {
+  if (!document.certificateTracker) {
     var issuer = e.detail.certificateDefinition.issuer;
     var id = e.detail.certificateDefinition.id;
-    window.certificateTracker = new Tracker(issuer, _getDomainFromUrl(issuer.id, true), id, 'blockcerts.org');
+    document.certificateTracker = new Tracker(issuer, _getDomainFromUrl(issuer.id, true), id, document.certificateTrackerOrigin);
   }
 
   switch (e.type) {
     case 'certificate-load':
-      window.certificateTracker.track('viewed');
+      document.certificateTracker.track('viewed', e.detail);
       break;
 
     case 'certificate-verify':
-      window.certificateTracker.track('verified');
+      document.certificateTracker.track('verified', e.detail);
       break;
 
     case 'certificate-share':
-      window.certificateTracker.track('shared');
+      document.certificateTracker.track('shared', e.detail);
       break;
   }
 }
