@@ -18,7 +18,7 @@ The open-source Blockcerts wallet is available for iOS and Android:
     *    iOS [[cert-wallet]](https://github.com/blockchain-certificates/cert-wallet)
     *    Android [[wallet-android]](https://github.com/blockchain-certificates/wallet-android)
     
-### Recieving and Sharing
+### Receiving and Sharing
 
 Recipients import Blockcerts into their certificate wallet. Each Blockcert contains the issued certificate and the evidence required to verify, so the recipient has the complete record that they can share and backup.
 
