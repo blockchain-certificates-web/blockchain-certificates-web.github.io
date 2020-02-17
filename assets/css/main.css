@@ -11992,4 +11992,16 @@ background: linear-gradient(180deg, #3475A9, #031532);
   opacity: .4;
 }
 
+.announcement-banner {
+  text-align: center;
+  padding: 12px;
+  background-color: #f9f9f9;
+  font-size: 15px;
+}
 
+.announcement-banner_warning {
+  color: #f04a4ac4;
+  font-size: 26px;
+  font-style: initial;
+  vertical-align: middle;
+}
