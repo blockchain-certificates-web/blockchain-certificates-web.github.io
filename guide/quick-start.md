@@ -6,12 +6,13 @@ layout: guide
 
 ### Viewing and verifying certificates
 
-The easiest way for developers to get familiar with Blockchain Certificates is to clone the [cert-web-component](https://github.com/blockchain-certificates/cert-web-component) repo and perform the steps in the README to launch. After this, you will be able to view and verify sample certificates locally.
+The easiest way for developers to get familiar with Blockchain Certificates is to clone the [blockcerts-verifier](https://github.com/blockchain-certificates/blockcerts-verifier) repo and perform the steps in the README to launch. After this, you will be able to view and verify sample certificates locally.
 
-Other tools for viewing and verifying certificates include:
-*   [cert-verifier-js](https://github.com/blockchain-certificates/cert-verifier-js): Javascript library for Blockcerts verification that can be used in a Node.js app or a browser
-*   [cert-verifier](https://github.com/blockchain-certificates/cert-verifier): Python library for Blockcerts verification
-*   [cert-viewer](https://github.com/blockchain-certificates/cert-viewer): Python Flask app for viewing and verifying Blockcerts
+Developers wishing to create their own UI but leverage Blockcerts tooling for verification can use the [cert-verifier-js](https://github.com/blockchain-certificates/cert-verifier-js) project. This Javascript library for Blockcerts verification can be used in a Node.js app or a browser. We are currently using this library for [blockcerts-verifier](https://github.com/blockchain-certificates/blockcerts-verifier), the Blockcerts [iOS wallet](https://github.com/blockchain-certificates/wallet-iOS), and the [Android wallet](https://github.com/blockchain-certificates/wallet-android).
+
+If developing a separate library or those looking for more information about the verification process, that can be found [here](https://github.com/blockchain-certificates/cert-verifier-js/blob/master/docs/verification-process.md).
+
+Some examples of certificates can be found in the [cert-schema](https://github.com/blockchain-certificates/cert-schema/tree/master/examples) repo.
 
 
 ### Issuing certificates end-to-end
@@ -22,18 +23,21 @@ You can create, issue, and view your own certificates in test modes, which doesn
 
 The full process is:
 
-*   First you need certificates to sign and issue. You can either:
-    *    Use the sample unsigned certificate available in cert-issuer (skip to the next step if so)
-    *    Create your own unsigned certificates [cert-tools](https://github.com/blockchain-certificates/cert-tools) and copy these to the 'data/unsigned_certificates' input directory of cert-issuer
-*   Run the [cert-issuer](https://github.com/blockchain-certificates/cert-issuer) quick start steps
-*   Copy the blockchain certificates you issued out of the docker container to a local directory
-    ```
-    docker cp <docker-container-id>:/etc/cert-issuer/data/blockchain_certificates/<your-certificate-guid>.json <path_to_local_dir>
-    ```
-    
-*   View your certificates in a browser
-    *    Javascript web component [cert-web-component](https://github.com/blockchain-certificates/cert-web-component): copy your certificates into  `<cert-web-component-home>`
-    *    Python Flask app [cert-viewer](https://github.com/blockchain-certificates/cert-viewer): copy your certificates into `<cert-viewer-home>/cert_data`
+*   Create certificates with [cert-tools](https://github.com/blockchain-certificates/cert-tools) or skip this step to use the sample ones in [cert-issuer](https://github.com/blockchain-certificates/cert-issuer/tree/master/examples/data-testnet/unsigned_certificates).
+*   Copy the certificates and issue them with [cert-issuer](https://github.com/blockchain-certificates/cert-issuer). Follow the [quick-start-using-docker](https://github.com/blockchain-certificates/cert-issuer#quick-start-using-docker) guide to get started easily.
+*   Run the [blockcerts-verifier](https://github.com/blockchain-certificates/blockcerts-verifier) project to verify the certificates you just issued. You can drag and drop them directly onto the browser. 
+*   Import them into the [iOS wallet](https://github.com/blockchain-certificates/wallet-iOS) or the [Android wallet](https://github.com/blockchain-certificates/wallet-android) to verify them there as well.
 
 
-Each of our github repositories has detailed information; start with the README.md for each.
+## Repository Summary
+
+Below is a quick summary of the main Blockcerts repositories we have that are currently in use. Check out the README.md page for each of them to get a better understanding.
+
+
+*   [cert-schema](https://github.com/blockchain-certificates/cert-schema): The schemas and specifications for Blockcerts. Includes a python library for verifying schema & JSON-LD. 
+*   [cert-tools](https://github.com/blockchain-certificates/cert-tools): Python library for creating customizable Blockcerts for a list of recipients.
+*   [cert-issuer](https://github.com/blockchain-certificates/cert-issuer): Python library for issuing Blockcerts onto the Bitcoin or Ethereum blockchain.
+*   [cert-verifier-js](https://github.com/blockchain-certificates/cert-verifier-js): Javascript library for Blockcerts verification that can be used in a Node.js app or a browser.
+*   [blockcerts-verifier](https://github.com/blockchain-certificates/blockcerts-verifier): A standalone universal viewer & verifier for Blockcerts credentials.
+*   [wallet-iOS](https://github.com/blockchain-certificates/wallet-iOS): iOS wallet for adding Blockcerts issuers, maintaining keys, and holding Blockcerts.
+*   [wallet-android](https://github.com/blockchain-certificates/wallet-android): Android wallet for adding Blockcerts issuers, maintaining keys, and holding Blockcerts.
