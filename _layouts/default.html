@@ -58,6 +58,19 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet">
 
+    <script>
+      const explorerAPI = {
+        serviceName: 'etherscan',
+        key: 'FJ3CZWH8PQBV8W5U6JR8TMKAYDHBKQ3B1D',
+        keyPropertyName: 'apikey'
+      };
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const verifierElement = document.querySelectorAll('blockcerts-verifier')[0];
+        verifierElement.explorerAPIs = [explorerAPI];
+      });
+    </script>
+
   </head>
 
   <body>
