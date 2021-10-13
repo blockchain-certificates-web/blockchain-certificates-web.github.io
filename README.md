@@ -1,3 +1,10 @@
+# Updating blockcerts verifier
+
+1. Run `npm install @blockcerts/blockcerts-verifier@latest`
+2. Run `git clean -df`
+3. Commit
+4. Push
+
 # Testing changes locally
 You can [follow this guide](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/) for the full instructions. Below is an abbreviated version.
 
