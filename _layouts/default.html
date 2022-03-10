@@ -7,6 +7,15 @@
     <meta name="description" content="Build apps that issue and verify blockchain-based credentials for academic credentials, professional certifications, workforce development, and civic records.">
     <meta name="author" content="Blockcerts">
     <meta charset="utf-8">
+    <meta http-equiv="X-Content-Type-Options" content="'nosniff' always">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        font-src 'self';
+        frame-src 'self';
+        img-src 'self';
+        script-src 'self' https://cdnjs.cloudflare.com/ajax/libs https://www.google-analytics.com/ 'unsafe-inline' ;
+        style-src 'self' https://cdnjs.cloudflare.com/ajax/libs https://fonts.googleapis.com/ 'unsafe-inline' ;
+    ">
     <meta property="og:title" content="Blockchain Credentials" />
     <meta property="og:description" content="Build apps that issue and verify blockchain-based credentials for academic credentials, professional certifications, workforce development, and civic records." />
     <meta property="og:url" content="http://blockcerts.org/" />
@@ -17,7 +26,7 @@
     <link rel='shortcut icon' href='/assets/img/icons/favicon.ico' type='image/x-icon' />
     <link rel="stylesheet" href="/assets/css/main.css">
 
-    
+
     <title>{% if page.title %}{{ page.title }} - {% endif %}Blockcerts : The Open Standard for Blockchain Credentials</title>
 
     <!--
@@ -96,8 +105,8 @@
       </nav>
 
     {% if page.home %}
-      <div class="hero-cover"> 
-        
+      <div class="hero-cover">
+
     {% else %}
       <div class="inner-page" style="min-height: 125px; background-color: #031532">
     {% endif %}
@@ -139,7 +148,7 @@
         <div class="container cover__container--16 cover__content_box--16 hero-cover-img" style="position: relative;">
 
             <div class="verifier">
-              <h2 class="hero-title">Blockcerts Universal Verifier</h2>    
+              <h2 class="hero-title">Blockcerts Universal Verifier</h2>
                 <blockcerts-verifier display-mode="fullscreen" theme="dark" clickable-urls="true"></blockcerts-verifier>
             </div>
 
@@ -152,8 +161,6 @@
         </div>
 
         {% endif %}
-
-      
     </div>
 
 
@@ -204,12 +211,8 @@
     <script src="/assets/js/buv-events.js"></script>
     <script src="/assets/js/main.js" defer></script>
 
-
-
-<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
 
   </body>
