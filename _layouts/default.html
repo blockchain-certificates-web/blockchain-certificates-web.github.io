@@ -10,11 +10,11 @@
     <meta http-equiv="X-Content-Type-Options" content="'nosniff' always">
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
-        font-src 'self';
+        font-src 'self' https://fonts.gstatic.com;
         frame-src 'self';
-        img-src 'self';
-        script-src 'self' https://cdnjs.cloudflare.com/ajax/libs https://www.google-analytics.com/ 'unsafe-inline' ;
-        style-src 'self' https://cdnjs.cloudflare.com/ajax/libs https://fonts.googleapis.com/ 'unsafe-inline' ;
+        img-src 'self' data:;
+        script-src 'self' https://cdnjs.cloudflare.com https://www.google-analytics.com/ code.jquery.com 'unsafe-inline' 'unsafe-eval';
+        style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com/ 'unsafe-inline' ;
     ">
     <meta property="og:title" content="Blockchain Credentials" />
     <meta property="og:description" content="Build apps that issue and verify blockchain-based credentials for academic credentials, professional certifications, workforce development, and civic records." />
@@ -211,6 +211,7 @@
     <script src="/assets/js/buv-events.js"></script>
     <script src="/assets/js/main.js" defer></script>
 
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
