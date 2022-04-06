@@ -4,8 +4,5 @@
     "@blockcerts/schemas": "^3.0.7",
     "@webcomponents/shadycss": "^1.11.0",
     "@webcomponents/webcomponentsjs": "^2.6.0"
-  },
-  "scripts": {
-    "postinstall": "cp -r node_modules/@blockcerts/schemas/schemas/ ./schema/"
   }
 }
