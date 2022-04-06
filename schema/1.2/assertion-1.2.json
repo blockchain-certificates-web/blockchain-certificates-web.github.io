@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Blockchain Certificates Assertion Schema, Version 1.2",
-  "id": "http://w3id.org/blockcerts/schema/1.2/assertion-1.2.json",
+  "id": "https://w3id.org/blockcerts/schema/1.2/assertion-1.2.json",
   "description": "Extends the Open Badges Assertion Schema for certificates on the blockchain",
   "type": "object",
   "definitions": {
@@ -92,7 +92,7 @@
                 "pattern": "data:image/png;base64,",
                 "description": "Data URI; a base-64 encoded png image of the certificate's image. https://en.wikipedia.org/wiki/Data_URI_scheme"
               },
-              "jobIitle": {
+              "jobTitle": {
                 "type": "string",
                 "description": "Title of the undersigned. http://schema.org/Person#jobTitle"
               }
@@ -110,5 +110,3 @@
   ],
   "additionalProperties": true
 }
-
-
