@@ -10,5 +10,6 @@ git status
 git add schema/*
 git status
 git commit -am "feat(Schemas): update schemas"
+git clean -df
 
 git push origin $WORK_BRANCH
