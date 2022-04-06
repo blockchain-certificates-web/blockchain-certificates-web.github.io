@@ -1,9 +1,18 @@
+# Note about NPM
+We rely on npm for the @blockcerts dependencies, but this is not a JS project. We use npm as a static provider for the latest versions of the dependencies, which will be consumed later on by the HTML.
+
 # Updating blockcerts verifier
 
-1. Run `npm install @blockcerts/blockcerts-verifier@latest`
-2. Run `git clean -df`
-3. Commit
-4. Push
+Run `. ./scripts/update_blockcerts_verifier.sh`
+
+This will commit and push the update automatically.
+
+# Updating blockcerts schemas
+
+Run `. ./scripts/update_blockcerts_schemas.sh`
+
+After installing the package, the script will copy the schemas to the expected directory.
+This will commit and push the update automatically.
 
 # Testing changes locally
 You can [follow this guide](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/) for the full instructions. Below is an abbreviated version.
