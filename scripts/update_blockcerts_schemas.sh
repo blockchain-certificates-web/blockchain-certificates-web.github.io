@@ -9,7 +9,7 @@ git checkout -b $WORK_BRANCH
 npm i @blockcerts/schemas@latest
 
 # post install hook, copy schemas to expected directory
-cp -r node_modules/@blockcerts/schemas/schemas/ ./schema/
+cp -r node_modules/@blockcerts/schemas/schemas/* ./schema/
 
 # add new files
 git status
