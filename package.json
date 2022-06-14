@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@blockcerts/blockcerts-verifier": "^1.46.0",
-    "@blockcerts/schemas": "^3.0.7",
+    "@blockcerts/schemas": "^3.1.0",
     "@webcomponents/shadycss": "^1.11.0",
     "@webcomponents/webcomponentsjs": "^2.6.0"
   }
