@@ -9,7 +9,7 @@ codekit-config.json
 npm-debug.log*
 
 conf.ini
-.DS_Store
+*.DS_Store
 *.pyc
 venv*/
 .idea/*
