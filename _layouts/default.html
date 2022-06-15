@@ -25,7 +25,7 @@
         prefetch-src 'none';
         upgrade-insecure-requests;
         script-src 'self' https://cdnjs.cloudflare.com https://www.google-analytics.com/ code.jquery.com 'unsafe-inline' 'unsafe-eval' 'report-sample';
-        style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com/ 'unsafe-inline' 'report-sample';
+        style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline' 'report-sample';
     ">
     <meta property="og:title" content="Blockchain Credentials" />
     <meta property="og:description" content="Build apps that issue and verify blockchain-based credentials for academic credentials, professional certifications, workforce development, and civic records." />
@@ -74,9 +74,7 @@
     </script>
     <script src="../node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="../node_modules/@blockcerts/blockcerts-verifier/dist/ie11.js"></script>
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet">
+    <script src="../node_modules/@blockcerts/blockcerts-verifier/dist/main.js"></script>
 
     <script>
       const explorerAPI = {

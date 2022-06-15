@@ -4,6 +4,37 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@font-face {
+  font-family: 'open_sansbold';
+  src: url('../fonts/opensans/opensans-bold-webfont.woff2') format('woff2'),
+  url('../fonts/opensans/opensans-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansbold_italic';
+  src: url('../fonts/opensans/opensans-bolditalic-webfont.woff2') format('woff2'),
+  url('../fonts/opensans/opensans-bolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansitalic';
+  src: url('../fonts/opensans/opensans-italic-webfont.woff2') format('woff2'),
+  url('../fonts/opensans/opensans-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('../fonts/opensans/opensans-regular-webfont.woff2') format('woff2'),
+  url('../fonts/opensans/opensans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -269,7 +300,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif!important;
+  font-family: 'open_sansregular',"Helvetica Neue", Helvetica, Arial, sans-serif!important;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
@@ -4087,7 +4118,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -4168,7 +4199,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5033,11 +5064,11 @@ html {
 
 body {
   height: 100%;
-  font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; ;
+  font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; ;
   color: #4E5B6F;
   font-weight: 400; }
   .wf-montserrat-n4-active body {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   body.state-fixed {
     overflow: hidden; }
 
@@ -5066,7 +5097,7 @@ textarea:focus {
   font-size: 11px;
   color: white; }
   .wf-montserrat-n4-active .input {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .input::-webkit-input-placeholder {
     font-weight: 400;
     font-size: 11px;
@@ -5074,7 +5105,7 @@ textarea:focus {
     -webkit-transition: opacity 0.3s ease, text-indent 0.3s ease;
     transition: opacity 0.3s ease, text-indent 0.3s ease; }
     .wf-montserrat-n4-active .input::-webkit-input-placeholder {
-      font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .input:-moz-placeholder {
     font-weight: 400;
     font-size: 11px;
@@ -5082,7 +5113,7 @@ textarea:focus {
     -moz-transition: opacity 0.3s ease, text-indent 0.3s ease;
     transition: opacity 0.3s ease, text-indent 0.3s ease; }
     .wf-montserrat-n4-active .input:-moz-placeholder {
-      font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .input::-moz-placeholder {
     font-weight: 400;
     font-size: 11px;
@@ -5090,14 +5121,14 @@ textarea:focus {
     -moz-transition: opacity 0.3s ease, text-indent 0.3s ease;
     transition: opacity 0.3s ease, text-indent 0.3s ease; }
     .wf-montserrat-n4-active .input::-moz-placeholder {
-      font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .input:-ms-input-placeholder {
     font-weight: 400;
     font-size: 11px;
     color: white;
     transition: opacity 0.3s ease, text-indent 0.3s ease; }
     .wf-montserrat-n4-active .input:-ms-input-placeholder {
-      font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .input:focus::-webkit-input-placeholder {
     text-indent: 3%;
     opacity: 0; }
@@ -5161,7 +5192,7 @@ textarea:focus {
   .button:hover {
     color: inherit; }
   .wf-montserrat-n7-active .button {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .button:hover, .button:focus, .button:active, .button:visited {
     text-decoration: none; }
   .button--gray {
@@ -5607,7 +5638,7 @@ textarea:focus {
   color: white;
   font-size: 16px; }
   .wf-montserrat-n4-active .menu__closer {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .menu__closer:before {
     content: "";
     position: absolute;
@@ -5631,7 +5662,7 @@ textarea:focus {
   text-transform: uppercase;
   font-size: 10px; }
   .wf-montserrat-n7-active .menu__title {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .menu__list {
   padding: 0;
@@ -5664,7 +5695,7 @@ textarea:focus {
   letter-spacing: 0.05em; }
   .wf-montserrat-n7-active .menu__link, .wf-montserrat-n7-active
   .menu__phone_link {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .menu__link, .menu__link:hover, .menu__link:focus,
   .menu__phone_link,
   .menu__phone_link:hover,
@@ -5693,7 +5724,7 @@ textarea:focus {
   line-height: 1.4;
   width: 80%; }
   .wf-montserrat-n4-active .menu__about_text {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .menu--02--desktop {
   position: fixed;
@@ -5867,7 +5898,7 @@ textarea:focus {
   text-transform: uppercase;
   letter-spacing: 0.25em; }
   .wf-montserrat-n7-active .menu__link--02--desktop {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .menu__link--02--desktop:hover, .menu__link--02--desktop:focus, .menu__link--02--desktop:active, .menu__link--02--desktop:visited {
     text-decoration: none;
     color: white; }
@@ -5912,7 +5943,7 @@ textarea:focus {
   font-size: 12px;
   color: white; }
   .wf-montserrat-n4-active .menu__footer_text--02--desktop {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 500px) {
     .menu__footer_text--02--desktop {
       font-size: 8px; } }
@@ -6041,7 +6072,7 @@ textarea:focus {
   color: white;
   font-size: 16px; }
   .wf-montserrat-n7-active .header__logo_text {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .header__logo_text:hover {
     color: white;
     text-decoration: none; }
@@ -6058,7 +6089,7 @@ textarea:focus {
   text-transform: uppercase;
   letter-spacing: 0.065em; }
   .wf-montserrat-n7-active .header__link {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .header__link:hover, .header__link:focus, .header__link:active, .header__link:visited {
     color: white;
     text-decoration: none; }
@@ -6088,7 +6119,7 @@ textarea:focus {
   .header__menu_link:hover {
     color: inherit; }
   .wf-montserrat-n7-active .header__menu_link {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .header__menu_link:before {
     content: "";
     position: absolute;
@@ -6119,7 +6150,7 @@ textarea:focus {
   font-size: 10px; }
   .wf-montserrat-n7-active .header__location_dropdown_opener, .wf-montserrat-n7-active
   .header__location_item_text {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .header__location_dropdown_opener {
   position: relative;
@@ -6468,7 +6499,7 @@ tspan.style-scope.credential-verifier, rect#Rectangle.style-scope.credential-ver
   font-weight: 600;
   font-style: italic; }
   .wf-playfairdisplay-i7-active .call_to_action__title_text__accent_word {
-    font-family: georgia, 'Open Sans', Helvetica, Arial, sans-serif; }
+    font-family: georgia, 'open_sansbold', Helvetica, Arial, sans-serif; }
 
 .call_to_action__link {
   font-weight: 400;
@@ -7534,7 +7565,7 @@ input.call_to_action__form__item--08 {
   margin-bottom: 20px;
   font-size: 36px; }
   .wf-montserrat-n7-active .features__item_title--04 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .features__item_text--04 {
   margin-left: 0;
@@ -8962,7 +8993,7 @@ input.call_to_action__form__item--08 {
   margin-bottom: 30px;
   font-size: 44px; }
   .wf-montserrat-n7-active .contents__title--02 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 500px) {
     .contents__title--02 {
       font-size: 34px; } }
@@ -8974,7 +9005,7 @@ input.call_to_action__form__item--08 {
   font-size: 16px;
   color: #333333; }
   .wf-montserrat-n3-active .contents__text--02 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .contents__buttons_box--02 {
   margin-bottom: 80px; }
@@ -9048,7 +9079,7 @@ input.call_to_action__form__item--08 {
   font-size: 10px;
   text-transform: uppercase; }
   .wf-montserrat-n7-active .contents__link--03 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .contents__link--03:hover {
     color: white;
     text-decoration: none; }
@@ -9064,7 +9095,7 @@ input.call_to_action__form__item--08 {
   color: white;
   font-size: 60px; }
   .wf-montserrat-n7-active .contents__title_text--03 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 1200px) {
     .contents__title_text--03 {
       font-size: 45px; } }
@@ -9132,7 +9163,7 @@ input.call_to_action__form__item--08 {
   text-transform: uppercase;
   letter-spacing: 0.085em; }
   .wf-montserrat-n7-active .contents__item_title--04 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .contents__item_text--04 {
   font-weight: 400;
@@ -9143,7 +9174,7 @@ input.call_to_action__form__item--08 {
   letter-spacing: 0.05em;
   color: #333333; }
   .wf-montserrat-n4-active .contents__item_text--04 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .contents__img_box--04 {
   display: inline-block;
@@ -9192,7 +9223,7 @@ input.call_to_action__form__item--08 {
   line-height: 1.3;
   font-size: 36px; }
   .wf-montserrat-n7-active .contents__title--05 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 500px) {
     .contents__title--05 {
       font-size: 22px; } }
@@ -9205,7 +9236,7 @@ input.call_to_action__form__item--08 {
   color: rgba(255, 255, 255, 0.8);
   font-size: 13px; }
   .wf-montserrat-n3-active .contents__text--05 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 
 .works {
@@ -9249,7 +9280,7 @@ input.call_to_action__form__item--08 {
   line-height: 1.3;
   color: #031532; }
   .wf-montserrat-n7-active .works__title {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 500px) {
     .works__title {
       font-size: 34px; } }
@@ -9262,7 +9293,7 @@ input.call_to_action__form__item--08 {
   font-size: 16px;
   color: #333333; }
   .wf-montserrat-n3-active .works__text {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .works__filter_tags {
   padding: 0;
@@ -9538,7 +9569,7 @@ input.call_to_action__form__item--08 {
   line-height: 1.6;
   letter-spacing: 0.05em; }
   .wf-montserrat-n3-active .footer__description {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .footer__copyright {
   font-weight: 300;
@@ -9547,7 +9578,7 @@ input.call_to_action__form__item--08 {
   text-transform: uppercase;
   letter-spacing: 0.05em; }
   .wf-montserrat-n3-active .footer__copyright {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .footer__logo_text {
   font-weight: 600;
@@ -9557,7 +9588,7 @@ input.call_to_action__form__item--08 {
   color: white;
   letter-spacing: 0.05em; }
   .wf-montserrat-n7-active .footer__logo_text {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .footer__logo_box {
   display: inline-block;
@@ -9589,7 +9620,7 @@ input.call_to_action__form__item--08 {
   font-size: 13px;
   letter-spacing: 0.05em; }
   .wf-montserrat-n7-active .footer__menu__link {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .footer__menu__link:hover, .footer__menu__link:focus, .footer__menu__link:active, .footer__menu__link:visited {
     color: white;
     text-decoration: none; }
@@ -9601,7 +9632,7 @@ input.call_to_action__form__item--08 {
   letter-spacing: 0.05em;
   text-transform: uppercase; }
   .wf-montserrat-n7-active .footer__menu__title {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .footer--01 {
   position: relative; }
@@ -9653,7 +9684,7 @@ input.call_to_action__form__item--08 {
   font-size: 11px;
   letter-spacing: 0.05em; }
   .wf-montserrat-n7-active .footer__nav__link--01 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .footer__nav__link--01:hover, .footer__nav__link--01:focus, .footer__nav__link--01:active, .footer__nav__link--01:visited {
     text-decoration: none; }
 
@@ -9713,7 +9744,7 @@ input.call_to_action__form__item--08 {
   font-size: 11px;
   letter-spacing: 0.05em; }
   .wf-montserrat-n7-active .footer__nav__link--02 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .footer__nav__link--02:hover, .footer__nav__link--02:focus, .footer__nav__link--02:active, .footer__nav__link--02:visited {
     text-decoration: none; }
 
@@ -9808,7 +9839,7 @@ input.call_to_action__form__item--08 {
   letter-spacing: 0.05em;
   color: white; }
   .wf-montserrat-n7-active .footer__nav__link--04 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .footer__nav__link--04:hover, .footer__nav__link--04:focus, .footer__nav__link--04:active, .footer__nav__link--04:visited {
     color: white;
     text-decoration: none; }
@@ -9897,7 +9928,7 @@ input.call_to_action__form__item--08 {
   font-size: 13px;
   letter-spacing: 0.05em; }
   .wf-montserrat-n3-active .footer__social_text--05 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 992px) {
     .footer__social_text--05 {
       display: none; } }
@@ -9970,7 +10001,7 @@ input.call_to_action__form__item--08 {
   font-size: 13px;
   letter-spacing: 0.06em; }
   .wf-montserrat-n3-active .footer__social_text--06 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .footer__description_box--06 {
   padding: 23px 0 25px; }
@@ -10000,7 +10031,7 @@ input.call_to_action__form__item--08 {
   letter-spacing: 0.085em;
   text-transform: uppercase; }
   .wf-montserrat-n7-active .footer__submenu__link--06 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .footer__submenu__link--06:hover, .footer__submenu__link--06:focus, .footer__submenu__link--06:active, .footer__submenu__link--06:visited {
     color: white;
     text-decoration: none; }
@@ -10073,7 +10104,7 @@ input.call_to_action__form__item--08 {
   letter-spacing: 0.05em;
   color: white; }
   .wf-montserrat-n7-active .footer__nav__link--07 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .footer__nav__link--07:hover, .footer__nav__link--07:focus, .footer__nav__link--07:active, .footer__nav__link--07:visited {
     color: white;
     text-decoration: none; }
@@ -10119,7 +10150,7 @@ input.call_to_action__form__item--08 {
   text-transform: uppercase;
   letter-spacing: 0.085em; }
   .wf-montserrat-n7-active .cover__feature_title {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .cover__feature_text {
   font-weight: 300;
@@ -10129,7 +10160,7 @@ input.call_to_action__form__item--08 {
   color: rgba(36, 37, 38, 0.7);
   line-height: 1.6; }
   .wf-montserrat-n3-active .cover__feature_text {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .cover__title_text__accent_word {
   font-weight: 600;
@@ -10307,7 +10338,7 @@ input.call_to_action__form__item--08 {
   font-size: 38px;
   color: #031532; }
   .wf-montserrat-n7-active .cover__title_text--01 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 500px) {
     .cover__title_text--01 {
       font-size: 29px; } }
@@ -10409,7 +10440,7 @@ input.call_to_action__form__item--08 {
   font-size: 10px;
   text-transform: uppercase; }
   .wf-montserrat-n7-active .cover__link--02 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .cover__link--02:hover {
     color: #031532;
     text-decoration: none; }
@@ -10425,7 +10456,7 @@ input.call_to_action__form__item--08 {
   color: #031532;
   font-size: 60px; }
   .wf-montserrat-n7-active .cover__title_text--02 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 1200px) {
     .cover__title_text--02 {
       font-size: 45px; } }
@@ -10482,7 +10513,7 @@ input.call_to_action__form__item--08 {
   color: white;
   letter-spacing: 0.06em; }
   .wf-montserrat-n7-active .cover__title_text--03 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 500px) {
     .cover__title_text--03 {
       font-size: 34px; }
@@ -10535,7 +10566,7 @@ input.call_to_action__form__item--08 {
   letter-spacing: 0.03em;
   color: white; }
   .wf-montserrat-n7-active .cover__title_text--04 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 992px) {
     .cover__title_text--04 {
       font-size: 40px; } }
@@ -10603,7 +10634,7 @@ input.call_to_action__form__item--08 {
   letter-spacing: 0.03em;
   color: white; }
   .wf-montserrat-n7-active .cover__title_text--05 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 1200px) {
     .cover__title_text--05 {
       font-size: 45px; } }
@@ -10720,7 +10751,7 @@ input.call_to_action__form__item--08 {
   color: white;
   font-size: 50px; }
   .wf-montserrat-n7-active .cover__title_text--06 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 1200px) {
     .cover__title_text--06 {
       font-size: 40px; } }
@@ -10768,7 +10799,7 @@ input.call_to_action__form__item--08 {
   letter-spacing: 0.06em;
   line-height: 1.4; }
   .wf-montserrat-n4-active .cover__description_text--07 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 992px) {
     .cover__description_text--07 br {
       display: none; } }
@@ -10811,7 +10842,7 @@ input.call_to_action__form__item--08 {
   font-size: 70px;
   color: white; }
   .wf-montserrat-n7-active .cover__title_text--08 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 1600px) {
     .cover__title_text--08 {
       font-size: 55px; } }
@@ -10922,7 +10953,7 @@ input.call_to_action__form__item--08 {
   font-size: 68px;
   color: white; }
   .wf-montserrat-n7-active .cover__title_text--09 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 1200px) {
     .cover__title_text--09 {
       font-size: 40px; } }
@@ -11074,7 +11105,7 @@ input.call_to_action__form__item--08 {
   font-size: 10px;
   text-transform: uppercase; }
   .wf-montserrat-n7-active .cover__link--11 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .cover__link--11:hover {
     color: white;
     text-decoration: none; }
@@ -11090,7 +11121,7 @@ input.call_to_action__form__item--08 {
   color: white;
   font-size: 60px; }
   .wf-montserrat-n7-active .cover__title_text--11 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 1200px) {
     .cover__title_text--11 {
       font-size: 45px; } }
@@ -11154,7 +11185,7 @@ input.call_to_action__form__item--08 {
   letter-spacing: 0.03em;
   color: white; }
   .wf-montserrat-n7-active .cover__title_text--12 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 1200px) {
     .cover__title_text--12 {
       font-size: 45px; } }
@@ -11215,7 +11246,7 @@ input.call_to_action__form__item--08 {
   letter-spacing: 0.03em;
   color: white; }
   .wf-montserrat-n7-active .cover__title_text--13 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 992px) {
     .cover__title_text--13 {
       font-size: 35px; } }
@@ -11324,7 +11355,7 @@ input.cover__form__item--13 {
   font-size: 68px;
   color: white; }
   .wf-montserrat-n7-active .cover__title_text--14 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 1200px) {
     .cover__title_text--14 {
       font-size: 40px; } }
@@ -11377,7 +11408,7 @@ input.cover__form__item--13 {
   letter-spacing: 0.06em;
   line-height: 1.4; }
   .wf-montserrat-n4-active .cover__description_text--15 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansregular', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 992px) {
     .cover__description_text--15 br {
       display: none; } }
@@ -11440,7 +11471,7 @@ input.cover__form__item--13 {
   font-size: 10px;
   text-transform: uppercase; }
   .wf-montserrat-n7-active .cover__link--16 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .cover__link--16:hover {
     color: white;
     text-decoration: none; }
@@ -11454,7 +11485,7 @@ input.cover__form__item--13 {
   font-size: 50px;
   line-height: 1.3em }
   .wf-montserrat-n7-active .cover__title_text--16 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 992px) {
     .cover__title_text--16 {
       font-size: 60px; } }
@@ -11536,7 +11567,7 @@ input.cover__form__item--13 {
   color: white;
   line-height: 1.3; }
   .wf-montserrat-n7-active .cover__title_text--17 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 1200px) {
     .cover__title_text--17 {
       font-size: 55px; } }
@@ -11632,7 +11663,7 @@ input.cover__form__item--13 {
   color: #031532;
   font-size: 42px; }
   .wf-montserrat-n7-active .cover__title_text--18 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 500px) {
     .cover__title_text--18 {
       font-size: 34px; } }
@@ -11657,7 +11688,7 @@ input.cover__form__item--13 {
   font-size: 10px;
   text-transform: uppercase; }
   .wf-montserrat-n7-active .cover__link--18 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .cover__link--18:hover {
     color: #031532;
     text-decoration: none; }
@@ -11710,7 +11741,7 @@ input.cover__form__item--13 {
   color: white;
   line-height: 1.3; }
   .wf-montserrat-n7-active .cover__title_text--19 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 500px) {
     .cover__title_text--19 {
       font-size: 34px; }
@@ -11777,7 +11808,7 @@ input.cover__form__item--13 {
   letter-spacing: 0.03em;
   color: white; }
   .wf-montserrat-n7-active .cover__title_text--20 {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   @media (max-width: 992px) {
     .cover__title_text--20 {
       font-size: 35px; } }
@@ -11873,7 +11904,7 @@ input.cover__form__item--13 {
   -o-transition: color 0.4s ease;
   transition: color 0.4s ease; }
   .wf-montserrat-n7-active .navigation_bar__link {
-    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'open_sansbold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .navigation_bar__link:hover, .navigation_bar__link:focus, .navigation_bar__link:active, .navigation_bar__link:visited {
     text-decoration: none;
     color: white; }
