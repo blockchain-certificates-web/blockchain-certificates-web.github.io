@@ -33,6 +33,17 @@
         "y": "steT4D8LrgwmqASd1EMy6ZyyAqsl-KvNlD7rBhX3za8",
         "kid": "_0qG5QVt8vd6pbVGs5ReFJA4-yvYNEi4Ov1HZHTsobM"
       }
+    },
+    {
+      "id": "secp256k1-verification-public-key",
+      "type": "JsonWebKey2020",
+      "controller": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json",
+      "publicKeyJwk": {
+        "kty": "EC",
+        "crv": "secp256k1",
+        "x": "BpBt2iJlQGm3QpG5r0mJNDxwXXFlRAWdZsHWWIK_HBY",
+        "y": "tlbW6AMB3MmRk1JbWNZhc77q8TnSxgJidpvyA0rH0BI"
+      }
     }
   ],
   "revocationList": "https://www.blockcerts.org/samples/3.0/revocation-list-blockcerts.json",
