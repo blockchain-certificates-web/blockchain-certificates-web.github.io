@@ -23,7 +23,7 @@
   ],
   "verificationMethod": [
     {
-      "id": "#key-1",
+      "id": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#key-1",
       "controller": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json",
       "type": "EcdsaSecp256k1VerificationKey2019",
       "publicKeyJwk": {
@@ -35,7 +35,7 @@
       }
     },
     {
-      "id": "#secp256k1-verification-public-key",
+      "id": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#secp256k1-verification-public-key",
       "type": "JsonWebKey2020",
       "controller": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json",
       "publicKeyJwk": {
