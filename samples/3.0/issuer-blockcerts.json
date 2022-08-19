@@ -35,7 +35,7 @@
       }
     },
     {
-      "id": "secp256k1-verification-public-key",
+      "id": "#secp256k1-verification-public-key",
       "type": "JsonWebKey2020",
       "controller": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json",
       "publicKeyJwk": {
