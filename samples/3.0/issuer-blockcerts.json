@@ -44,11 +44,23 @@
         "x": "BpBt2iJlQGm3QpG5r0mJNDxwXXFlRAWdZsHWWIK_HBY",
         "y": "tlbW6AMB3MmRk1JbWNZhc77q8TnSxgJidpvyA0rH0BI"
       }
+    },
+    {
+      "id": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#secp256k1-derived-public-key",
+      "controller": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "kty": "EC",
+        "crv": "secp256k1",
+        "x": "YHzDbKmTSWUisCw4AzY4hzOWDsjM-O8tyJTnFTSR79g",
+        "y": "bWCdCls4ukZq7KyWCTOJ8Sta_PJHvCdDIeiRaBD7e98"
+      }
     }
   ],
   "assertionMethod": [
     "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#key-1",
-    "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#secp256k1-verification-public-key"
+    "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#secp256k1-verification-public-key",
+    "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#secp256k1-derived-public-key"
   ],
   "revocationList": "https://www.blockcerts.org/samples/3.0/revocation-list-blockcerts.json",
   "email": "",
