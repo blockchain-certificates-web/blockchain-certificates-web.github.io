@@ -12,7 +12,7 @@
         default-src 'self';
         connect-src https:;
         font-src 'self' https://fonts.gstatic.com;
-        frame-src 'self' https://www.youtube.com;
+        frame-src 'self' https://www.youtube.com https://authn.io;
         img-src 'self' data: https:;
         object-src data:;
         form-action 'none';
@@ -75,6 +75,7 @@
     <script src="../node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/@blockcerts/blockcerts-verifier/dist/main.js"></script>
+    <script src="../node_modules/credential-handler-polyfill/dist/credential-handler-polyfill.min.js"></script>
 
     <script>
       const explorerAPI = {
@@ -83,9 +84,38 @@
         keyPropertyName: 'apikey'
       };
 
+      function getBVComponent () {
+        return document.querySelectorAll('blockcerts-verifier')[0];
+      }
+
+      function verifyCredential (credential) {
+        const verifier = getBVComponent();
+        verifier.src = credential;
+      }
+
       document.addEventListener('DOMContentLoaded', function () {
-        const verifierElement = document.querySelectorAll('blockcerts-verifier')[0];
+        const verifierElement = getBVComponent();
         verifierElement.explorerAPIs = [explorerAPI];
+
+        document
+          .getElementsByClassName('js-share-credential-btn')[0]
+          .addEventListener('click', async function () {
+            console.log('share credential');
+            const credentialQuery = {
+              web: {
+                VerifiableCredential: true,
+                BlockcertsCredential: true
+              }
+            };
+            const webCredential = await navigator.credentials.get(credentialQuery);
+            verifyCredential(webCredential.data);
+          });
+
+
+        credentialHandlerPolyfill
+                .loadOnce()
+                .then(console.log('CHAPI Polyfill loaded.'))
+                .catch(e => console.error('Error loading CHAPI polyfill:', e));
       });
     </script>
 
@@ -158,7 +188,15 @@
 
             <div class="verifier">
               <h2 class="hero-title">Blockcerts Universal Verifier</h2>
-                <blockcerts-verifier display-mode="fullscreen" theme="dark" clickable-urls="true"></blockcerts-verifier>
+              <blockcerts-verifier
+                      class="c-verifier"
+                      display-mode="fullscreen"
+                      theme="dark"
+                      clickable-urls="true"
+              ></blockcerts-verifier>
+              <p class="m-b-1">You may share your Blockcerts with CHAPI if you have a compatible wallet:</p>
+              <div class="alignc m-b-1"><button class="js-share-credential-btn button button--border-green">Share credential</button></div>
+              <p class="small">NOTA: the credential remains on the browser and is not stored anywhere.</p>
             </div>
 
           </div>
