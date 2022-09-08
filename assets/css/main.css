@@ -12036,3 +12036,8 @@ background: linear-gradient(180deg, #3475A9, #031532);
   font-style: initial;
   vertical-align: middle;
 }
+
+.c-verifier {
+  display: block;
+  margin-bottom: 15px;
+}

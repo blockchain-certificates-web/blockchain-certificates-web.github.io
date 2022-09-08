@@ -184,11 +184,15 @@
 
             <div class="verifier">
               <h2 class="hero-title">Blockcerts Universal Verifier</h2>
-              <blockcerts-verifier display-mode="fullscreen" theme="dark" clickable-urls="true"></blockcerts-verifier>
-              <p>You may share your Blockcerts with CHAPI if you have a compatible wallet:
-                <button class="js-share-credential-btn">Share credential</button>
-                <p>NOTA: the credential remains on the browser and is not stored anywhere.</p>
-              </p>
+              <blockcerts-verifier
+                      class="c-verifier"
+                      display-mode="fullscreen"
+                      theme="dark"
+                      clickable-urls="true"
+              ></blockcerts-verifier>
+              <p class="m-b-1">You may share your Blockcerts with CHAPI if you have a compatible wallet:</p>
+              <div class="alignc"><button class="js-share-credential-btn button button--border-green">Share credential</button></div>
+              <p class="small">NOTA: the credential remains on the browser and is not stored anywhere.</p>
             </div>
 
           </div>
