@@ -84,13 +84,17 @@
         keyPropertyName: 'apikey'
       };
 
+      function getBVComponent () {
+        return document.querySelectorAll('blockcerts-verifier')[0];
+      }
+
       function verifyCredential (credential) {
-        const verifier = document.getElementsByClassName('blockcerts-verifier')[0];
+        const verifier = getBVComponent();
         verifier.src = credential;
       }
 
       document.addEventListener('DOMContentLoaded', function () {
-        const verifierElement = document.querySelectorAll('blockcerts-verifier')[0];
+        const verifierElement = getBVComponent();
         verifierElement.explorerAPIs = [explorerAPI];
 
         document
