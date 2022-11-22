@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@blockcerts/blockcerts-verifier": "^1.51.3",
+    "@blockcerts/blockcerts-verifier": "^1.52.1",
     "@blockcerts/schemas": "^3.2.1",
     "@webcomponents/shadycss": "^1.11.0",
     "@webcomponents/webcomponentsjs": "^2.6.0",
