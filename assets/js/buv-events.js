@@ -46,8 +46,8 @@ var Tracker = function () {
 }();
 
 function _getChainCodeFromSigners (certificateDefinition) {
-  var signersWithChain = certificateDefinition.signers.find(signer => {
-    return signer && signer.chain && signer.chain.code;
+  var signersWithChain = certificateDefinition.verifier.proofVerifiers.find(proofVerifier => {
+    return proofVerifier && proofVerifier.chain && proofVerifier.chain.code;
   });
 
   return signersWithChain ? signersWithChain.chain.code : null;
