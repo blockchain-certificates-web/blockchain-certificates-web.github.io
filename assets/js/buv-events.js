@@ -45,6 +45,14 @@ var Tracker = function () {
   return Tracker;
 }();
 
+function _getChainCodeFromSigners (certificateDefinition) {
+  var signersWithChain = certificateDefinition.signers.find(signer => {
+    return signer && signer.chain && signer.chain.code;
+  });
+
+  return signersWithChain ? signersWithChain.chain.code : null;
+}
+
 function _getDomainFromUrl (url, keepProtocol) {
   keepProtocol = typeof keepProtocol === 'undefined' ? false : keepProtocol;
   var result = '';
@@ -58,8 +66,8 @@ function _getDomainFromUrl (url, keepProtocol) {
 }
 
 function handleEvent (e) {
-  var chainCode = e.detail.certificateDefinition.chain.code;
-  var reportEvents = chainCode !== 'mocknet' && chainCode !== 'regtest' && chainCode !== 'testnet';
+  var chainCode = _getChainCodeFromSigners(e.detail.certificateDefinition);
+  var reportEvents = chainCode !== null && chainCode !== 'mocknet' && chainCode !== 'regtest' && chainCode !== 'testnet';
 
   if (!reportEvents) {
     return false;
