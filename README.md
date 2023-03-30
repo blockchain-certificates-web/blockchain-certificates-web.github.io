@@ -1,3 +1,5 @@
+# Blockcerts.org
+
 # Note about NPM
 We rely on npm for the @blockcerts dependencies, but this is not a JS project. We use npm as a static provider for the latest versions of the dependencies, which will be consumed later on by the HTML.
 
