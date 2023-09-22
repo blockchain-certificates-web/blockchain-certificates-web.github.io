@@ -97,6 +97,14 @@
         const verifierElement = getBVComponent();
         verifierElement.explorerAPIs = [explorerAPI];
 
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const certUrl = urlParams.get('certUrl');
+
+        if (certUrl) {
+          verifierElement.setAttribute('src', certUrl);
+        }
+
         document
           .getElementsByClassName('js-share-credential-btn')[0]
           .addEventListener('click', async function () {
