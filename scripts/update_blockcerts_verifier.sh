@@ -11,6 +11,7 @@ npm i @blockcerts/blockcerts-verifier@latest
 # clean unwanted files. Note: we could also handle that with .gitignore
 echo 'Clean unwanted files'
 pwd
+git add node_modules/@blockcerts/blockcerts-verifier/dist/
 git clean -df
 
 # commit
