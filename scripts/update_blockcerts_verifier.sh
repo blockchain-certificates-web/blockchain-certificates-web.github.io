@@ -6,6 +6,7 @@ WORK_BRANCH=feat/update-buv
 git checkout -b $WORK_BRANCH
 
 # update blockcerts-verifier
+rm -rf node_modules/@blockcerts/blockcerts-verifier/dist/
 npm i @blockcerts/blockcerts-verifier@latest
 
 # clean unwanted files. Note: we could also handle that with .gitignore
