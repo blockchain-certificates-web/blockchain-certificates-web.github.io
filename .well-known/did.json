@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/multikey/v1"
+  ],
+  "id": "did:tdw:blockcerts.org:m5r5h4q0q07r46q0vpjaqwv804c6",
+  "controller": "did:tdw:blockcerts.org:m5r5h4q0q07r46q0vpjaqwv804c6",
+  "authentication": [
+    "did:tdw:blockcerts.org:m5r5h4q0q07r46q0vpjaqwv804c6#n8DG1gQW"
+  ],
+  "verificationMethod": [
+    {
+      "id": "did:tdw:blockcerts.org:m5r5h4q0q07r46q0vpjaqwv804c6#n8DG1gQW",
+      "controller": "did:tdw:blockcerts.org:m5r5h4q0q07r46q0vpjaqwv804c6",
+      "type": "Multikey",
+      "publicKeyMultibase": "zQ3shw8MAkueKou9VhRyX1v2hDQ2WENWVQNkg6ifhn8DG1gQW"
+    }
+  ]
+}
