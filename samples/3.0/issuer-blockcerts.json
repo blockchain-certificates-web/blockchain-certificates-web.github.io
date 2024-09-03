@@ -36,6 +36,18 @@
       }
     },
     {
+      "id": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#key-1-btc",
+      "controller": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "kty": "EC",
+        "crv": "secp256k1",
+        "x": "9PchaXjrV0R2nOQrIRKC7hOcX1oxkqNJSnI2sjMQEX8",
+        "y": "RsoYEcz5Hp7WNsOfhKQoEPpXtKHXoGPMA7slpVLxLnE",
+        "kid": "HL3p6Wtct4Tcto1NU1fNzSH-0353orBBSYMYtJnQt7E"
+      }
+    },
+    {
       "id": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#secp256k1-verification-public-key",
       "type": "JsonWebKey2020",
       "controller": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json",
@@ -63,13 +75,22 @@
       "type": "Multikey",
       "publicKeyMultibase": "zQ3shvX9Dd7cAG7ZcJN4d9DksshpVYSGpqEyrLjopoGpk97CR",
       "keyAgreement": false
+    },
+    {
+      "id": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#btc-main-multibase",
+      "controller": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json",
+      "type": "Multikey",
+      "publicKeyMultibase": "zQ3shw8MAkueKou9VhRyX1v2hDQ2WENWVQNkg6ifhn8DG1gQW",
+      "keyAgreement": false
     }
   ],
   "assertionMethod": [
     "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#key-1",
+    "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#key-1-btc",
     "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#secp256k1-verification-public-key",
     "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#secp256k1-derived-public-key",
-    "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#key-1-multibase"
+    "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#key-1-multibase",
+    "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#btc-main-multibase"
   ],
   "revocationList": "https://www.blockcerts.org/samples/3.0/revocation-list-blockcerts.json",
   "email": "",
