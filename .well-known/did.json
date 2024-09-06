@@ -3,8 +3,8 @@
     "https://www.w3.org/ns/did/v1",
     "https://w3id.org/security/multikey/v1"
   ],
-  "id": "did:tdw:QmPUAJjDjEaEX7EAMdeTuFD8FHCv8tchvNDM64YEXNcVkt:blockcerts.org",
-  "controller": "did:tdw:QmPUAJjDjEaEX7EAMdeTuFD8FHCv8tchvNDM64YEXNcVkt:blockcerts.org",
+  "id": "did:tdw:QmfKd3jdBU6LZYyQAP7pQL3X8aEgfqrc9YGiy6Z3om4B3N:blockcerts.org",
+  "controller": "did:tdw:QmfKd3jdBU6LZYyQAP7pQL3X8aEgfqrc9YGiy6Z3om4B3N:blockcerts.org",
   "service": [
     {
       "id": "#service-1",
@@ -13,19 +13,19 @@
     }
   ],
   "assertionMethod": [
-    "did:tdw:QmPUAJjDjEaEX7EAMdeTuFD8FHCv8tchvNDM64YEXNcVkt:blockcerts.org#n8DG1gQW",
-    "did:tdw:QmPUAJjDjEaEX7EAMdeTuFD8FHCv8tchvNDM64YEXNcVkt:blockcerts.org#oGpk97CR"
+    "did:tdw:QmfKd3jdBU6LZYyQAP7pQL3X8aEgfqrc9YGiy6Z3om4B3N:blockcerts.org#n8DG1gQW",
+    "did:tdw:QmfKd3jdBU6LZYyQAP7pQL3X8aEgfqrc9YGiy6Z3om4B3N:blockcerts.org#oGpk97CR"
   ],
   "verificationMethod": [
     {
-      "id": "did:tdw:QmPUAJjDjEaEX7EAMdeTuFD8FHCv8tchvNDM64YEXNcVkt:blockcerts.org#n8DG1gQW",
-      "controller": "did:tdw:QmPUAJjDjEaEX7EAMdeTuFD8FHCv8tchvNDM64YEXNcVkt:blockcerts.org",
+      "id": "did:tdw:QmfKd3jdBU6LZYyQAP7pQL3X8aEgfqrc9YGiy6Z3om4B3N:blockcerts.org#n8DG1gQW",
+      "controller": "did:tdw:QmfKd3jdBU6LZYyQAP7pQL3X8aEgfqrc9YGiy6Z3om4B3N:blockcerts.org",
       "type": "Multikey",
       "publicKeyMultibase": "zQ3shw8MAkueKou9VhRyX1v2hDQ2WENWVQNkg6ifhn8DG1gQW"
     },
     {
-      "id": "did:tdw:QmPUAJjDjEaEX7EAMdeTuFD8FHCv8tchvNDM64YEXNcVkt:blockcerts.org#oGpk97CR",
-      "controller": "did:tdw:QmPUAJjDjEaEX7EAMdeTuFD8FHCv8tchvNDM64YEXNcVkt:blockcerts.org",
+      "id": "did:tdw:QmfKd3jdBU6LZYyQAP7pQL3X8aEgfqrc9YGiy6Z3om4B3N:blockcerts.org#oGpk97CR",
+      "controller": "did:tdw:QmfKd3jdBU6LZYyQAP7pQL3X8aEgfqrc9YGiy6Z3om4B3N:blockcerts.org",
       "type": "Multikey",
       "publicKeyMultibase": "zQ3shvX9Dd7cAG7ZcJN4d9DksshpVYSGpqEyrLjopoGpk97CR"
     }
