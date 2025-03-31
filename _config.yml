@@ -23,7 +23,7 @@ twitter_username: Blockcerts
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
   - jekyll-redirect-from
 exclude:
