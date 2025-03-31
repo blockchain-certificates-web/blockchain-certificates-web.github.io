@@ -29,4 +29,4 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-include: [".well-known"]
+include: [".well-known", "node_modules/@blockcerts/blockcerts-verifier/dist/_commonjs-dynamic-modules-COweQ1RR-BHR_E30J.js"]
