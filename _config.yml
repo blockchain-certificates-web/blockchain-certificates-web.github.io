@@ -31,4 +31,4 @@ exclude:
   - Gemfile.lock
 include:
   - .well-known
-  - node_modules
+  - node_modules/@blockcerts/blockcerts-verifier/dist/*.js
