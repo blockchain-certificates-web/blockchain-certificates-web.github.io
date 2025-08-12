@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VC V1 test suite Degree Credential",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+    },
+    "degree": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+        },
+        "name": {
+          "type": "string",
+        }
+      }
+    }
+  }
+}
