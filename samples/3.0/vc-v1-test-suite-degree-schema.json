@@ -4,16 +4,16 @@
   "type": "object",
   "properties": {
     "id": {
-      "type": "string",
+      "type": "string"
     },
     "degree": {
       "type": "object",
       "properties": {
         "type": {
-          "type": "string",
+          "type": "string"
         },
         "name": {
-          "type": "string",
+          "type": "string"
         }
       }
     }
