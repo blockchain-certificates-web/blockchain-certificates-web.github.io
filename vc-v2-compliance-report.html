@@ -185,7 +185,7 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-        These tests were run on <time>28 August 2025 at 4:15 am UTC</time>
+        These tests were run on <time>28 August 2025 at 10:08 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -293,9 +293,17 @@
                     <a href="https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text&#x3D;MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20it%20produces">A conforming verifier implementation MUST perform verification on a conforming document as described inSection 4.12 Securing Mechanisms.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to verify credential.
+                    Actual message: &quot;undefined&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify credential.
+                    Actual message: &quot;undefined&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-compliance/vc-compliance/data-model/v2/vc-data-model-2.0-test-suite/tests/1.03-conformance.js:70:9)</pre>
+                      </details>
                     </div>
                   </td>
               </tr>
@@ -1331,9 +1339,17 @@
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.">This section contains an algorithm that conforming verifier implementations MUST run when verifying a verifiable credential or a verifiable presentation.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to verify a valid VC.
+                    Actual message: &quot;undefined&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VC.
+                    Actual message: &quot;undefined&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-compliance/vc-compliance/data-model/v2/vc-data-model-2.0-test-suite/tests/7-algorithms.js:40:9)</pre>
+                      </details>
                     </div>
                   </td>
               </tr>

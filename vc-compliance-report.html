@@ -177,105 +177,105 @@ The results of the conformance testing are shown below:
     <tr>
       <td>@context MUST be one or more URIs</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>@context first value MUST be https://www.w3.org/2018/credentials/v1</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>@context subsequent items can be objects that express context information</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`id` properties MUST be a single URI</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`type` properties MUST be one or more URIs</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`type` properties for Credential MUST be `VerifiableCredential` plus specific type</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`credentialSubject` property MUST be present</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`credentialSubject` property MUST be present, may be a set of objects</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`issuer` property MUST be present</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`issuer` property MUST be a single URI</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`issuanceDate` property MUST be present</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`issuanceDate` property MUST be an RFC3339 datetime</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`expirationDate` property MUST be an RFC3339 datetime</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>Presentations MUST be of type `VerifiablePresentation`</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>Presentations MUST include `verifiableCredential` and `proof`</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
@@ -406,7 +406,7 @@ The results of the conformance testing are shown below:
     <tr>
       <td>`credentialStatus` property MUST include `id` and `type`</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
@@ -439,14 +439,14 @@ The results of the conformance testing are shown below:
     <tr>
       <td>`proof` property MUST be present</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`proof` property MUST include specific method using the type property</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
@@ -472,28 +472,28 @@ The results of the conformance testing are shown below:
     <tr>
       <td>each object within `credentialSchema`... MUST specify a `type` property with a valid value</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>each object within `credentialSchema`... MUST specify an `id` property</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`credentialSchema` MUST provide one or more data schemas</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
@@ -512,28 +512,28 @@ The results of the conformance testing are shown below:
     <tr>
       <td>each object within `refreshService`... MUST specify a `type` property with a valid value</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>each object within `refreshService`... MUST specify an `id` property</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`refreshService` MUST provide one or more refresh services</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
@@ -552,14 +552,14 @@ The results of the conformance testing are shown below:
     <tr>
       <td>each object within `termsOfUse`... MUST specify a `type` property with a valid value</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
     <tr>
       <td>`termsOfUse` MUST provide one or more ToU objects</td>
   
-      <td class="success" aria-label="success">✓</td>
+      <td class="failure" aria-label="failure">❌</td>
     
     </tr>
   
@@ -575,20 +575,6 @@ The results of the conformance testing are shown below:
   </thead>
   <tbody>
 
-    <tr>
-      <td>each object within `evidence`... MUST specify a `type` property with a valid value</td>
-  
-      <td class="success" aria-label="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>`evidence` MUST provide one or more evidence objects</td>
-  
-      <td class="success" aria-label="success">✓</td>
-    
-    </tr>
-  
   </tbody>
 </table>
 
