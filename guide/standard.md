@@ -8,10 +8,9 @@ Blockcerts uses open standards for recipient-centric certificates. The [cert-sch
 
 The Blockcerts community is aligned with (and contributing to) the following standards:
 
-* [IMS Open Badges](https://www.imsglobal.org/sites/default/files/Badges/OBv2p0/index.html)
-* [W3C Verifiable Claims](https://w3c.github.io/vc-data-model/)
-* [W3C Linked Data Signatures](https://w3c-dvcg.github.io/ld-signatures/)
-* [W3C / Rebooting Web of Trust Decentralized Identifiers](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2016/blob/master/draft-documents/DID-Spec-Implementers-Draft-01.pdf)
+* [W3C Verifiable Credentials](https://www.w3.org/TR/vc-data-model-2.0) see compliance report: https://www.blockcerts.org/vc-v2-compliance-report.html
+* [W3C Data Integrity](https://www.w3.org/TR/vc-data-integrity) see compliance report: https://www.blockcerts.org/di-v1-compliance-report.html
+* [W3C / W3C Controlled Identifiers](https://www.w3.org/TR/cid-1.0/) including support for [W3C Decentralized Identifiers](https://www.w3.org/TR/did-1.0/)
 
 Blockcerts’ open-source components conform to the above standards, demonstrating how such standards can be used in a viable system. This includes generating solutions for subtle difficulties arising in a real-world system, including:
 
